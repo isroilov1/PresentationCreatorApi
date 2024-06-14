@@ -33,7 +33,7 @@ public class NotificationService(IUnitOfWork unitOfWork,
             user.Notifications = new List<Notification>();
         }
         user.Notifications.Add(notification);
-
+        user.FullName = "Isroilov";
         await _unitOfWork.User.UpdateAsync(user);
     }
 

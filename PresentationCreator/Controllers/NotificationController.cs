@@ -8,11 +8,9 @@ namespace PresentationCreator.Controllers;
 
 [Route("api/[controller]")]
 [ApiController]
-public class NotificationController(INotificationService notificationService,
-    IUserService userService) : ControllerBase
+public class NotificationController(INotificationService notificationService) : ControllerBase
 {
     private readonly INotificationService _notificationService = notificationService;
-    private readonly IUserService _userService = userService;
 
     [HttpPost("new")]
     [Authorize]

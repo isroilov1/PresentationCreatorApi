@@ -2,7 +2,6 @@
 using Application.Interfaces;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using System.Reflection.Metadata.Ecma335;
 
 namespace MovieNTV.Controllers;
 
@@ -15,7 +14,7 @@ public class AdminsController(IAdminService adminService,
     private readonly IUserService _userService = userService;
 
     [HttpPost("id")]
-    [Authorize(Roles = "SuperAdmin")]
+    [Authorize(Roles = "Admin")]
     public async Task<IActionResult> ChangeUserRoleAsync(int id)
     {
         await _adminService.ChangeUserRoleAsync(id);
@@ -23,7 +22,7 @@ public class AdminsController(IAdminService adminService,
     }
 
     [HttpPut]
-    [Authorize(Roles = "SuperAdmin")]
+    [Authorize(Roles = "Admin")]
     public async Task<IActionResult> UpdateUserAsync(int id, [FromForm]UpdateUserDto dto)
     {
         await _userService.UpdateAsync(id, dto);
@@ -31,7 +30,7 @@ public class AdminsController(IAdminService adminService,
     }
 
     [HttpGet("admins")]
-    [Authorize(Roles = "SuperAdmin")]
+    [Authorize(Roles = "Admin")]
     public async Task<IActionResult> GetAllAdminAsync()
         => Ok(await _adminService.GetAllAdminAsync());
 }

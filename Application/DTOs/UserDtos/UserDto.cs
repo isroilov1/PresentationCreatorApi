@@ -27,7 +27,14 @@ public class UserDto : AddUserDto
             PresentationCount = user.PresentationCount,
             TotalPayments = user.TotalPayments,
             PresentationPaths = user.PresentationPaths,
-            Notifications = user.Notifications
+            Notifications = user.Notifications?.Select(n => new Notification
+            {
+                Id = n.Id,
+                Message = n.Message,
+                Status = n.Status,
+                SenderId = n.SenderId,
+                RecipientIds = n.RecipientIds
+            }).ToList()
         };
     }
 }
