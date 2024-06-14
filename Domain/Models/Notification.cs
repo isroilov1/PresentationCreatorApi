@@ -9,6 +9,7 @@ public class Notification : BaseEntity
     public NotificationStatus Status { get; set; } = NotificationStatus.NotRead;
     public NotificationType Type { get; set; }
     public int SenderId { get; set; }
+
     [ForeignKey(nameof(SenderId))]
     public User User { get; set; } = null!;
 

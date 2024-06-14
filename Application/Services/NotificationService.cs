@@ -27,8 +27,14 @@ public class NotificationService(IUnitOfWork unitOfWork,
         if (user is null)
             throw new StatusCodeExeption(HttpStatusCode.NotFound, "Bunday foydalanuvchi mavjud emas!");
 
-        //notification.UserSender = user;
         await _unitOfWork.Notification.CreateAsync(notification);
+        if (user.Notifications == null)
+        {
+            user.Notifications = new List<Notification>();
+        }
+        user.Notifications.Add(notification);
+        user.FullName = "Isroilov";
+        await _unitOfWork.User.UpdateAsync(user);
     }
 
     public async Task DeleteAsync(int id)

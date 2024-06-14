@@ -234,13 +234,13 @@ namespace Data.Migrations
 
             modelBuilder.Entity("Domain.Models.Notification", b =>
                 {
-                    b.HasOne("Domain.Models.User", "UserSender")
+                    b.HasOne("Domain.Models.User", "User")
                         .WithMany("Notifications")
                         .HasForeignKey("SenderId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("UserSender");
+                    b.Navigation("User");
                 });
 
             modelBuilder.Entity("Domain.Models.Page", b =>

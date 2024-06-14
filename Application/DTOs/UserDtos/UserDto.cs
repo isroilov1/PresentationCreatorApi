@@ -8,8 +8,9 @@ public class UserDto : AddUserDto
     public int Balance { get; set; } = 4000;
     public int PresentationCount { get; set; } = 0;
     public Payment? TotalPayments { get; set; }
-    public Notification? Notifications { get; set; }
+    public List<Notification>? Notifications { get; set; }
     public List<Presentation>? PresentationPaths { get; set; }
+
 
     public static implicit operator UserDto(User user)
     {
@@ -26,13 +27,13 @@ public class UserDto : AddUserDto
             PresentationCount = user.PresentationCount,
             TotalPayments = user.TotalPayments,
             PresentationPaths = user.PresentationPaths,
-            Notifications = user.Notifications?.Select(n => new NotificationDto
+            Notifications = user.Notifications?.Select(n => new Notification
             {
                 Id = n.Id,
                 Message = n.Message,
                 Status = n.Status,
                 SenderId = n.SenderId,
-                RecipientIds = n.RecipientIds.ToArray()
+                RecipientIds = n.RecipientIds
             }).ToList()
         };
     }
