@@ -27,8 +27,7 @@ public class UserDto : AddUserDto
             PresentationCount = user.PresentationCount,
             TotalPayments = user.TotalPayments,
             PresentationPaths = user.PresentationPaths,
-            Notifications.CopyTo(user.Notifications)
+            Notifications = user.Notifications
         };
-    };
     }
 }
