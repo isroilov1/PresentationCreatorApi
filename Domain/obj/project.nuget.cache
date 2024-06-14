@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "aErSw8DZk6/c7OSa4YlhVEWdBocKgmdu1R58y1zCCUc+PniUlSo1CnbXC953WyS0RiK7eO9aRjTytSikxbo8kA==",
+  "dgSpecHash": "wliw0QZh1iOgHTD5bO0OOXb7RZkieVMwNM6OLaJYqfrmhJl9fxGIf+BoEVsJR+McRkmddKOw6nTI8TXB6UXMJg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Isroilov\\Source\\Repos\\PresentationCreator\\Domain\\Domain.csproj",
+  "projectFilePath": "C:\\Users\\Isroilov\\source\\repos\\PresentationCreator\\Domain\\Domain.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Isroilov\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
+    "C:\\Users\\Isroilov\\.nuget\\packages\\microsoft.aspnetcore.http.features\\5.0.17\\microsoft.aspnetcore.http.features.5.0.17.nupkg.sha512",
     "C:\\Users\\Isroilov\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\6.0.0\\microsoft.bcl.asyncinterfaces.6.0.0.nupkg.sha512",
     "C:\\Users\\Isroilov\\.nuget\\packages\\microsoft.codeanalysis.analyzers\\3.3.3\\microsoft.codeanalysis.analyzers.3.3.3.nupkg.sha512",
     "C:\\Users\\Isroilov\\.nuget\\packages\\microsoft.codeanalysis.common\\4.5.0\\microsoft.codeanalysis.common.4.5.0.nupkg.sha512",

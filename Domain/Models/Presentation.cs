@@ -1,11 +1,17 @@
-﻿namespace Domain.Models;
+﻿using System.ComponentModel.DataAnnotations.Schema;
 
-public class Presentation
+namespace Domain.Models;
+
+public class Presentation : BaseEntity
 {
-    public int Id { get; set; }
     public string Theme { get; set; } = string.Empty;
     public string Author { get; set; } = string.Empty;
-    public byte PageNumber { get; set; }
+    public byte PageCount { get; set; }
     public int Template { get; set; }
-    public List<string> ImagesPaths { get; set; } = null!;
+    public string Language { get; set; } = string.Empty;
+    public List<Page> Pages { get; set; } = null!;
+    public string FilePath { get; set; } = string.Empty;
+    public int UserId {  get; set; }
+    [ForeignKey(nameof(UserId))]
+    public User User { get; set; } = null!;
 }

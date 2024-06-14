@@ -12,3 +12,9 @@ C:\Users\Isroilov\Source\Repos\PresentationCreator\Application\obj\Debug\net8.0\
 C:\Users\Isroilov\Source\Repos\PresentationCreator\Application\obj\Debug\net8.0\ref\Application.dll
 C:\Users\Isroilov\Source\Repos\PresentationCreator\Application\bin\Debug\net8.0\Application.runtimeconfig.json
 C:\Users\Isroilov\Source\Repos\PresentationCreator\Application\obj\Debug\net8.0\Application.genruntimeconfig.cache
+C:\Users\Isroilov\source\repos\PresentationCreator\Application\obj\Debug\net8.0\Application.csproj.AssemblyReference.cache
+C:\Users\Isroilov\source\repos\PresentationCreator\Application\bin\Debug\net8.0\Data.dll
+C:\Users\Isroilov\source\repos\PresentationCreator\Application\bin\Debug\net8.0\Domain.dll
+C:\Users\Isroilov\source\repos\PresentationCreator\Application\bin\Debug\net8.0\Data.pdb
+C:\Users\Isroilov\source\repos\PresentationCreator\Application\bin\Debug\net8.0\Domain.pdb
+C:\Users\Isroilov\source\repos\PresentationCreator\Application\obj\Debug\net8.0\Applicat.44B5EDA2.Up2Date

@@ -1,11 +1,19 @@
 {
   "Version": 1,
-  "Hash": "SYtme616J8AiXQeI4AUwB047L1pCT+dEf3o2iRss5Fs=",
+  "Hash": "pACzO8AdcZse/xfE9qpTymcPOUzXz7+84fPXGoTPLZk=",
   "Source": "PresentationCreator",
   "BasePath": "_content/PresentationCreator",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
-  "DiscoveryPatterns": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "PresentationCreator\\wwwroot",
+      "Source": "PresentationCreator",
+      "ContentRoot": "C:\\Users\\Isroilov\\source\\repos\\PresentationCreator\\PresentationCreator\\wwwroot\\",
+      "BasePath": "_content/PresentationCreator",
+      "Pattern": "**"
+    }
+  ],
   "Assets": []
 }

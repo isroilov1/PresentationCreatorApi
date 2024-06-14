@@ -3,16 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\Isroilov\\source\\repos\\PresentationCreator\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{E2900C9E-E75C-4622-9089-534E6A74409A}|PresentationCreator\\PresentationCreator.csproj|c:\\users\\isroilov\\source\\repos\\presentationcreator\\presentationcreator\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E2900C9E-E75C-4622-9089-534E6A74409A}|PresentationCreator\\PresentationCreator.csproj|solutionrelative:presentationcreator\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{37C690A7-271A-4E6B-AC7F-37FEBCE91BDD}|Application\\Application.csproj|c:\\users\\isroilov\\source\\repos\\presentationcreator\\application\\dtos\\userdtos\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{37C690A7-271A-4E6B-AC7F-37FEBCE91BDD}|Application\\Application.csproj|solutionrelative:application\\dtos\\userdtos\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E2900C9E-E75C-4622-9089-534E6A74409A}|PresentationCreator\\PresentationCreator.csproj|c:\\users\\isroilov\\source\\repos\\presentationcreator\\presentationcreator\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{E2900C9E-E75C-4622-9089-534E6A74409A}|PresentationCreator\\PresentationCreator.csproj|solutionrelative:presentationcreator\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{37C690A7-271A-4E6B-AC7F-37FEBCE91BDD}|Application\\Application.csproj|c:\\users\\isroilov\\source\\repos\\presentationcreator\\application\\services\\notificationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{37C690A7-271A-4E6B-AC7F-37FEBCE91BDD}|Application\\Application.csproj|solutionrelative:application\\services\\notificationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{67CB3BFB-E880-4BCE-A777-F1BE3E2F5462}|Data\\Data.csproj|c:\\users\\isroilov\\source\\repos\\presentationcreator\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{67CB3BFB-E880-4BCE-A777-F1BE3E2F5462}|Data\\Data.csproj|solutionrelative:data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E2900C9E-E75C-4622-9089-534E6A74409A}|PresentationCreator\\PresentationCreator.csproj|c:\\users\\isroilov\\source\\repos\\presentationcreator\\presentationcreator\\controllers\\notificationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E2900C9E-E75C-4622-9089-534E6A74409A}|PresentationCreator\\PresentationCreator.csproj|solutionrelative:presentationcreator\\controllers\\notificationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{37C690A7-271A-4E6B-AC7F-37FEBCE91BDD}|Application\\Application.csproj|c:\\users\\isroilov\\source\\repos\\presentationcreator\\application\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{37C690A7-271A-4E6B-AC7F-37FEBCE91BDD}|Application\\Application.csproj|solutionrelative:application\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -51,40 +55,53 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\Isroilov\\source\\repos\\PresentationCreator\\PresentationCreator\\Program.cs",
-              "RelativeDocumentMoniker": "PresentationCreator\\Program.cs",
-              "ToolTip": "C:\\Users\\Isroilov\\source\\repos\\PresentationCreator\\PresentationCreator\\Program.cs",
-              "RelativeToolTip": "PresentationCreator\\Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAAAAAA",
+              "Title": "UserDto.cs",
+              "DocumentMoniker": "C:\\Users\\Isroilov\\source\\repos\\PresentationCreator\\Application\\DTOs\\UserDtos\\UserDto.cs",
+              "RelativeDocumentMoniker": "Application\\DTOs\\UserDtos\\UserDto.cs",
+              "ToolTip": "C:\\Users\\Isroilov\\source\\repos\\PresentationCreator\\Application\\DTOs\\UserDtos\\UserDto.cs",
+              "RelativeToolTip": "Application\\DTOs\\UserDtos\\UserDto.cs",
+              "ViewState": "AQIAAAgAAAAAAAAAAAAgwBIAAAAlAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-02T11:46:32.619Z",
+              "WhenOpened": "2024-06-14T10:28:22.312Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\Isroilov\\source\\repos\\PresentationCreator\\PresentationCreator\\appsettings.json",
-              "RelativeDocumentMoniker": "PresentationCreator\\appsettings.json",
-              "ToolTip": "C:\\Users\\Isroilov\\source\\repos\\PresentationCreator\\PresentationCreator\\appsettings.json",
-              "RelativeToolTip": "PresentationCreator\\appsettings.json",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-06-02T11:42:05.255Z",
+              "DocumentIndex": 3,
+              "Title": "UserService.cs",
+              "DocumentMoniker": "C:\\Users\\Isroilov\\source\\repos\\PresentationCreator\\Application\\Services\\UserService.cs",
+              "RelativeDocumentMoniker": "Application\\Services\\UserService.cs",
+              "ToolTip": "C:\\Users\\Isroilov\\source\\repos\\PresentationCreator\\Application\\Services\\UserService.cs",
+              "RelativeToolTip": "Application\\Services\\UserService.cs",
+              "ViewState": "AQIAACAAAAAAAAAAAAAgwDEAAABbAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-14T09:46:35.579Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "AppDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\Isroilov\\source\\repos\\PresentationCreator\\Data\\AppDbContext.cs",
-              "RelativeDocumentMoniker": "Data\\AppDbContext.cs",
-              "ToolTip": "C:\\Users\\Isroilov\\source\\repos\\PresentationCreator\\Data\\AppDbContext.cs",
-              "RelativeToolTip": "Data\\AppDbContext.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAAAAAA",
+              "Title": "NotificationController.cs",
+              "DocumentMoniker": "C:\\Users\\Isroilov\\source\\repos\\PresentationCreator\\PresentationCreator\\Controllers\\NotificationController.cs",
+              "RelativeDocumentMoniker": "PresentationCreator\\Controllers\\NotificationController.cs",
+              "ToolTip": "C:\\Users\\Isroilov\\source\\repos\\PresentationCreator\\PresentationCreator\\Controllers\\NotificationController.cs",
+              "RelativeToolTip": "PresentationCreator\\Controllers\\NotificationController.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAApwBgAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-02T11:31:56.271Z",
+              "WhenOpened": "2024-06-14T09:37:16.765Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "NotificationService.cs",
+              "DocumentMoniker": "C:\\Users\\Isroilov\\source\\repos\\PresentationCreator\\Application\\Services\\NotificationService.cs",
+              "RelativeDocumentMoniker": "Application\\Services\\NotificationService.cs",
+              "ToolTip": "C:\\Users\\Isroilov\\source\\repos\\PresentationCreator\\Application\\Services\\NotificationService.cs",
+              "RelativeToolTip": "Application\\Services\\NotificationService.cs",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAABcAAAAoAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-13T18:34:16.98Z",
               "EditorCaption": ""
             }
           ]
