@@ -10,6 +10,7 @@ public class User : BaseEntity
     public int Balance { get; set; } = 4000;
     public int PresentationCount { get; set; } = 0;
     public int ReferalId { get; set; }
+    public bool ReferalBonus { get; set; }
     public Role Role { get; set; } = Role.User;
     public Payment? TotalPayments { get; set; }
     public List<Notification>? Notifications { get; set; } = new();

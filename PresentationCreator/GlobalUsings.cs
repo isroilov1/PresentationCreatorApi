@@ -21,3 +21,4 @@ global using FluentValidation;
 global using Microsoft.EntityFrameworkCore;
 global using MovieNTV.Configurations;
 global using MovieNTV.Middlewares;
+global using Application.DTOs;

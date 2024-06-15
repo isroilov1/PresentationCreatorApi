@@ -73,17 +73,23 @@ public class NotificationService(IUnitOfWork unitOfWork,
         return notifications.Select(x => (NotificationDto)x).ToList();
     }
 
-    public async Task<NotificationDto> GetByIdAsync(int id)
+    public async Task<NotificationDto> GetByIdAsync(int userId, int id)
     {
         var notification = await _unitOfWork.Notification.GetByIdAsync(id);
         if (notification is null)
             throw new StatusCodeExeption(HttpStatusCode.NotFound, "Bildirishnoma mavjud emas");
+        
+        if (notification.Status == NotificationStatus.NotRead && notification.RecipientIds.Contains(userId))
+        {
+            notification.Status = NotificationStatus.Read;
+            await _unitOfWork.Notification.UpdateAsync(notification);
+        }
         return notification;
     }
 
     public async Task<List<NotificationDto>> GetByUserIdAsync(int userId)
     {
-        var user = await _unitOfWork.User.GetByIdAsync(userId);
+        var user = await _unitOfWork.User.GetByIdIncludeAsync(userId);
         if (user is null)
             throw new StatusCodeExeption(HttpStatusCode.NotFound, "Foydalanuvchi topilmadi");
 

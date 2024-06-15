@@ -1,6 +1,4 @@
-﻿using Application.DTOs;
-
-namespace PresentationCreator.Controllers;
+﻿namespace PresentationCreator.Controllers;
 
 [Route("api/[controller]")]
 [ApiController]
@@ -18,6 +16,7 @@ public class PaymentController(IPaymentService paymentService) : ControllerBase
     }
 
     [HttpGet("{id}")]
+    [Authorize]
     public async Task<IActionResult> GetAsync(int id)
     {
         return Ok(await _paymentService.GetByIdAsync(id));

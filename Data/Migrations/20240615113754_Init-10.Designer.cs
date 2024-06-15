@@ -4,6 +4,7 @@ using Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Data.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240615113754_Init-10")]
+    partial class Init10
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -205,9 +208,6 @@ namespace Data.Migrations
                     b.Property<int>("PresentationCount")
                         .HasColumnType("int");
 
-                    b.Property<bool>("ReferalBonus")
-                        .HasColumnType("bit");
-
                     b.Property<int>("ReferalId")
                         .HasColumnType("int");
 
@@ -223,14 +223,13 @@ namespace Data.Migrations
                         {
                             Id = 1,
                             Balance = 20000,
-                            CreatedAt = new DateTime(2024, 6, 15, 12, 26, 28, 35, DateTimeKind.Utc).AddTicks(7390),
+                            CreatedAt = new DateTime(2024, 6, 15, 11, 37, 54, 529, DateTimeKind.Utc).AddTicks(3504),
                             Email = "isroilov0905@gmail.com",
                             FullName = "Isroilov Ismoiljon",
                             IsVerified = true,
                             Password = "6724ce39c81234bc9a25eca98b634a94a913e514a2191371b63b30dd3869c754",
                             PhoneNumber = "+998997979898",
                             PresentationCount = 0,
-                            ReferalBonus = false,
                             ReferalId = 0,
                             Role = 1
                         });

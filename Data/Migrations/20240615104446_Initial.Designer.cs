@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Data.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20240614162433_qqq")]
-    partial class qqq
+    [Migration("20240615104446_Initial")]
+    partial class Initial
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -223,7 +223,7 @@ namespace Data.Migrations
                         {
                             Id = 1,
                             Balance = 20000,
-                            CreatedAt = new DateTime(2024, 6, 14, 16, 24, 33, 34, DateTimeKind.Utc).AddTicks(5623),
+                            CreatedAt = new DateTime(2024, 6, 15, 10, 44, 46, 17, DateTimeKind.Utc).AddTicks(4822),
                             Email = "isroilov0905@gmail.com",
                             FullName = "Isroilov Ismoiljon",
                             IsVerified = true,

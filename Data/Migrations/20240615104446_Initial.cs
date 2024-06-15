@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace Data.Migrations
 {
     /// <inheritdoc />
-    public partial class qqq : Migration
+    public partial class Initial : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -16,7 +16,7 @@ namespace Data.Migrations
                 keyColumn: "Id",
                 keyValue: 1,
                 column: "CreatedAt",
-                value: new DateTime(2024, 6, 14, 16, 24, 33, 34, DateTimeKind.Utc).AddTicks(5623));
+                value: new DateTime(2024, 6, 15, 10, 44, 46, 17, DateTimeKind.Utc).AddTicks(4822));
         }
 
         /// <inheritdoc />

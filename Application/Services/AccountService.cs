@@ -26,6 +26,13 @@ public class AccountService(IUnitOfWork ofWork,
         if (!user.IsVerified)
             throw new StatusCodeExeption(HttpStatusCode.BadRequest, "Foydalanuvchi verificatsiyadan o'tmagan!");
 
+        var referalId = user.ReferalId;
+        var referalUser = await _ofWork.User.GetByIdAsync(referalId);
+        if (referalUser is not null)
+        {
+            referalUser.Balance += 1000;
+            await _ofWork.User.UpdateAsync(referalUser);
+        }
         return _auth.GeneratedToken(user);
     }
     
@@ -73,19 +80,6 @@ public class AccountService(IUnitOfWork ofWork,
             user.IsVerified = true;
             await _ofWork.User.UpdateAsync(user);
 
-            if (user.ReferalId != 0)
-            {
-                try
-                {
-                    var referalUser = await _ofWork.User.GetByIdAsync(user.ReferalId);
-                    if (referalUser is not null)
-                    {
-                        referalUser.Balance += 1000;
-                        await _ofWork.User.UpdateAsync(referalUser);
-                    }
-                }
-                catch { }
-            }
             return true;
         }
         else

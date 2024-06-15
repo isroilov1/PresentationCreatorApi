@@ -33,6 +33,7 @@ builder.Services.ConfigureSwaggerAuthorize(builder.Configuration);
 builder.Services.AddScoped<IValidator<User>, UserValidator>();
 builder.Services.AddScoped<IValidator<Presentation>, PresentationValidator>();
 builder.Services.AddScoped<IValidator<Notification>, NotificationValidator>();
+builder.Services.AddScoped<IValidator<Payment>, PaymentValidator>();
 
 var app = builder.Build();
 

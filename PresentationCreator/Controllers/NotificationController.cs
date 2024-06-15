@@ -7,7 +7,7 @@ public class NotificationController(INotificationService notificationService) : 
     private readonly INotificationService _notificationService = notificationService;
 
     [HttpPost("new")]
-    [Authorize]
+    [Authorize(Roles = "Admin")]
     public async Task<IActionResult> CreateAsync([FromForm]AddNotificationDto dto)
     {
         var senderId = int.Parse(HttpContext.User.FindFirst("Id")!.Value);
@@ -15,10 +15,21 @@ public class NotificationController(INotificationService notificationService) : 
         return Ok(total);
     }
 
+    [HttpPost("toAdmin")]
+    [Authorize]
+    public async Task<IActionResult> SendToAdminAsync([FromForm] AddNotificationDto dto)
+    {
+        var senderId = int.Parse(HttpContext.User.FindFirst("Id")!.Value);
+        dto.RecipientIds = new List<int> { 1, 2 };
+        var total = await _notificationService.CreateAsync(senderId, dto);
+        return Ok(total);
+    }
+
     [HttpGet("{id}")]
     public async Task<IActionResult> GetAsync(int id)
     {
-        return Ok(await _notificationService.GetByIdAsync(id));
+        var userId = int.Parse(HttpContext.User.FindFirst("Id")!.Value);
+        return Ok(await _notificationService.GetByIdAsync(userId, id));
     }
 
     [HttpGet("notifications")]
@@ -26,6 +37,14 @@ public class NotificationController(INotificationService notificationService) : 
     public async Task<IActionResult> GetAllAsync()
     {
         return Ok(await _notificationService.GetAllAsync());
+    }
+
+    [HttpGet("user")]
+    [Authorize]
+    public async Task<IActionResult> GetUserAsync()
+    {
+        var userId = int.Parse(HttpContext.User.FindFirst("Id")!.Value);
+        return Ok(await _notificationService.GetByUserIdAsync(userId));
     }
 
     [HttpPut]
@@ -45,5 +64,4 @@ public class NotificationController(INotificationService notificationService) : 
         await _notificationService.DeleteAsync(id);
         return Ok();
     }
-
 }

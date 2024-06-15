@@ -6,5 +6,6 @@ public interface IUserService
     Task<UserDto> GetByPhoneNumberAsync(string phoneNumber);
     Task<List<UserDto>> GetAllAsync();
     Task UpdateAsync(int id, UpdateUserDto dto);
+    Task UpdateBalanceAsync(UpdateUserBalanceDto dto);
     Task DeleteAsync(int id);
 }

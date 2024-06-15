@@ -16,6 +16,7 @@ public class AddUserDto
             PhoneNumber = dto.PhoneNumber,
             Password = dto.Password,
             ReferalId = dto.ReferalId,
+            ReferalBonus = false
         };
     }
 }

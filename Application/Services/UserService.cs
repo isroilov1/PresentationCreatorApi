@@ -6,6 +6,8 @@ public class UserService(IUnitOfWork unitOfWork) : IUserService
 
     public async Task DeleteAsync(int id)
     {
+        if (id == 1 || id == 2)
+            throw new StatusCodeExeption(HttpStatusCode.BadRequest, "Bosh adminni o'chirish mumkin emas!");
         var user = await _unitOfWork.User.GetByIdAsync(id);
         if (user is null)
             throw new StatusCodeExeption(HttpStatusCode.NotFound, "Foydalanuvchi topilmadi");
@@ -54,5 +56,27 @@ public class UserService(IUnitOfWork unitOfWork) : IUserService
 
         await _unitOfWork.User.UpdateAsync(user);
         throw new StatusCodeExeption(HttpStatusCode.OK, "Foydalanuvchi ma'lumotlari yangilandi");
+    }
+
+    public async Task UpdateBalanceAsync(UpdateUserBalanceDto dto)
+    {
+        var model = await _unitOfWork.User.GetByIdIncludeAsync(dto.Id);
+        if (model is null)
+            throw new StatusCodeExeption(HttpStatusCode.NotFound, "Foydalanuvchi topilmadi");
+        var user = (User)dto;
+        user.FullName = model.FullName;
+        user.PhoneNumber = model.PhoneNumber;
+        user.Email = model.Email;
+        user.CreatedAt = model.CreatedAt;
+        user.Password = model.Password;
+        user.ReferalId = model.ReferalId;
+        user.PresentationCount = model.PresentationCount;
+        user.IsVerified = model.IsVerified;
+        user.TotalPayments = model.TotalPayments;
+
+        await _unitOfWork.User.UpdateAsync(user);
+        throw new StatusCodeExeption(HttpStatusCode.OK, "Foydalanuvchi ma'lumotlari yangilandi");
+
+
     }
 }
