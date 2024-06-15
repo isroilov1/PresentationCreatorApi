@@ -1,5 +1,4 @@
 ﻿using Application.Common.Exceptions;
-using Application.Common.Helper;
 using Application.DTOs.UserDtos;
 using Application.Interfaces;
 using Data.Interfaces;
@@ -57,7 +56,10 @@ public class UserService(IUnitOfWork unitOfWork) : IUserService
         user.Balance = model.Balance;
         user.ReferalId = model.ReferalId;
         user.PresentationCount = model.PresentationCount;
-        user.IsVerified = false;
+        user.IsVerified = model.IsVerified;
+        user.TotalPayments = model.TotalPayments;
+        user.Role = model.Role;
+
 
         await _unitOfWork.User.UpdateAsync(user);
         throw new StatusCodeExeption(HttpStatusCode.OK, "Foydalanuvchi ma'lumotlari yangilandi");

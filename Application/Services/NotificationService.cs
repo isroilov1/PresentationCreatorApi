@@ -7,6 +7,7 @@ using Application.Interfaces;
 using Data.Interfaces;
 using Domain.Models;
 using FluentValidation;
+using Org.BouncyCastle.Cms;
 using System.Net;
 namespace Application.Services;
 
@@ -23,18 +24,36 @@ public class NotificationService(IUnitOfWork unitOfWork,
             throw new ValidationException(result.GetErrorMessages());
         var notification = (Notification)dto;
         notification.SenderId = senderId;
-        var user = await _unitOfWork.User.GetByIdAsync(senderId);
-        if (user is null)
+        var senderUser = await _unitOfWork.User.GetByIdAsync(senderId);
+        if (senderUser is null)
             throw new StatusCodeExeption(HttpStatusCode.NotFound, "Bunday foydalanuvchi mavjud emas!");
 
         await _unitOfWork.Notification.CreateAsync(notification);
-        if (user.Notifications == null)
+        if (senderUser.Notifications == null)
         {
-            user.Notifications = new List<Notification>();
+            senderUser.Notifications = new List<Notification>();
         }
-        user.Notifications.Add(notification);
-        user.FullName = "Isroilov";
-        await _unitOfWork.User.UpdateAsync(user);
+        senderUser.Notifications.Add(notification);
+        await _unitOfWork.User.UpdateAsync(senderUser);
+
+        var recipientIds = dto.RecipientIds;
+        if (recipientIds == null)
+            throw new StatusCodeExeption(HttpStatusCode.NotFound, "Yuborish uchun foydalanuuvchilar ID raqami kiritilmagan");
+
+        foreach (var recipientId in recipientIds)
+        {
+            if (recipientId == senderId) continue;
+            var recipientUser = await _unitOfWork.User.GetByIdAsync(recipientId);
+            if (recipientUser is not null)
+            {
+                if (recipientUser.Notifications == null)
+                {
+                    recipientUser.Notifications = new List<Notification>();
+                }
+                recipientUser.Notifications.Add(notification);
+                await _unitOfWork.User.UpdateAsync(recipientUser);
+            }
+        }
     }
 
     public async Task DeleteAsync(int id)
