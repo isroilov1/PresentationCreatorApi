@@ -58,8 +58,11 @@ public class UserService(IUnitOfWork unitOfWork) : IUserService
         user.PresentationCount = model.PresentationCount;
         user.IsVerified = model.IsVerified;
         user.TotalPayments = model.TotalPayments;
+<<<<<<< HEAD
         user.Role = model.Role;
 
+=======
+>>>>>>> 83077ba36287467d0854839b78bdc90e4fd06291
 
         await _unitOfWork.User.UpdateAsync(user);
         throw new StatusCodeExeption(HttpStatusCode.OK, "Foydalanuvchi ma'lumotlari yangilandi");
