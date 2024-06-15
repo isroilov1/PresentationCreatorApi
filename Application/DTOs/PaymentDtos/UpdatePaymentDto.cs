@@ -3,6 +3,7 @@ public class UpdatePaymentDto : AddPaymentDto
 {
     public int Id { get; set; }
     public PaymentStatus Status { get; set; }
+    public string AdminCaption { get; set; } = string.Empty;
 
     public static implicit operator Payment(UpdatePaymentDto dto)
     {
@@ -15,7 +16,7 @@ public class UpdatePaymentDto : AddPaymentDto
             Caption = dto.Caption,
             FilePath = filePath,
             Status = dto.Status,
-            UserId = dto.UserId
+            AdminCaption = dto.AdminCaption
         };
     }
 }

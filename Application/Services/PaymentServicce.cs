@@ -1,13 +1,20 @@
-﻿
-using MimeKit;
-
-namespace Application.Services;
+﻿namespace Application.Services;
 
 public class PaymentServicce(IUnitOfWork unitOfWork,
                           IValidator<Payment> validator) : IPaymentService
 {
     private readonly IUnitOfWork _unitOfWork = unitOfWork;
     private readonly IValidator<Payment> _validator = validator;
+
+    public async Task AcceptOrRejectAsync(int id, PaymentStatus status, string caption)
+    {
+        var payment = await _unitOfWork.Payment.GetByIdAsync(id);
+        if (payment is null)
+            throw new StatusCodeExeption(HttpStatusCode.NotFound, "To'lov mavjud emas");
+        payment.Status = status;
+        payment.AdminCaption = caption;
+        await _unitOfWork.Payment.UpdateAsync(payment);
+    }
 
     public async Task CreateAsync(int id, AddPaymentDto dto)
     {
@@ -34,8 +41,8 @@ public class PaymentServicce(IUnitOfWork unitOfWork,
 
     public async Task<List<PaymentDto>> GetAllAsync()
     {
-        var payment = await _unitOfWork.Payment.GetAllAsync();
-        return payment.Select(x => (PaymentDto)x).ToList();
+        var payments = await _unitOfWork.Payment.GetAllAsync();
+        return payments.Select(x => (PaymentDto)x).ToList();
     }
 
     public async Task<PaymentDto> GetByIdAsync(int id)
@@ -46,20 +53,32 @@ public class PaymentServicce(IUnitOfWork unitOfWork,
         return payment;
     }
 
-    public async Task<PaymentDto> GetByPhoneNumberAsync(string phoneNumber)
+    public async Task<List<PaymentDto>> GetByPhoneNumberAsync(string phoneNumber)
     {
         var user = await _unitOfWork.User.GetByPhoneNumberAsync(phoneNumber);
         if (user is null)
             throw new StatusCodeExeption(HttpStatusCode.NotFound, "Ushbu telefon raqam orqali foydalanuvchi topilmadi!");
-        var payment = user.TotalPayments;
-        if (payment is null)
-            throw new StatusCodeExeption(HttpStatusCode.NotFound, "To'lov mavjud emas");
-        return payment;
+        var payments = user.Payments;
+        if (payments is null)
+            throw new StatusCodeExeption(HttpStatusCode.NotFound, "To'lovlar mavjud emas");
+        return payments.Select(x => (PaymentDto)x).ToList();
     }
 
-    public async Task UpdateAsync(int id, UpdatePaymentDto dto)
+    public async Task<List<PaymentDto>> GetByUserIdAsync(int userId)
     {
-        var payment = await _unitOfWork.Payment.GetByIdAsync(id);
+        var user = await _unitOfWork.User.GetByIdIncludeAsync(userId);
+        if (user is null)
+            throw new StatusCodeExeption(HttpStatusCode.NotFound, "Foydalanuvchi topilmadi");
+
+        var payments = user.Payments;
+        if (payments is null)
+            throw new StatusCodeExeption(HttpStatusCode.NotFound, "Ushbu foydalanuvchining to'lovlari mavjud emas!");
+        return payments.Select(x => (PaymentDto)x).ToList();
+    }
+
+    public async Task UpdateAsync(UpdatePaymentDto dto)
+    {
+        var payment = await _unitOfWork.Payment.GetByIdAsync(dto.Id);
         if (payment is null)
             throw new StatusCodeExeption(HttpStatusCode.NotFound, "To'lov mavjud emas");
 

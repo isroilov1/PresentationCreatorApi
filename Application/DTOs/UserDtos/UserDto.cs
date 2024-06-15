@@ -1,11 +1,17 @@
 ﻿namespace Application.DTOs.UserDtos;
-public class UserDto : AddUserDto
+public class UserDto
 {
     public int Id { get; set; }
-    public bool IsVerified { get; set; } = false;
+    public string FullName { get; set; } = string.Empty;
+    public string Email { get; set; } = string.Empty;
+    public string PhoneNumber { get; set; } = string.Empty;
+    public string Password { get; set; } = string.Empty;
     public int Balance { get; set; } = 4000;
+    public int ReferalId { get; set; }
+    public bool IsVerified { get; set; } = false;
     public int PresentationCount { get; set; } = 0;
-    public Payment? TotalPayments { get; set; }
+    public int? TotalPayments { get; set; }
+    public List<Payment>? Payments { get; set; }
     public List<Notification>? Notifications { get; set; }
     public List<Presentation>? PresentationPaths { get; set; }
 
@@ -31,6 +37,15 @@ public class UserDto : AddUserDto
                 Status = n.Status,
                 SenderId = n.SenderId,
                 RecipientIds = n.RecipientIds
+            }).ToList(),
+            Payments = user.Payments?.Select(n => new Payment
+            {
+                Id = n.Id,
+                Summa = n.Summa,
+                Caption = n.Caption,
+                Status = n.Status,
+                FilePath = n.FilePath,
+                UserId = n.UserId
             }).ToList()
         };
     }

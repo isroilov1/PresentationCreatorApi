@@ -5,6 +5,7 @@ public class PaymentDto
     public string Caption { get; set; } = string.Empty;
     public PaymentStatus Status {  get; set; }
     public string FilePath { get; set; } = string.Empty;
+    public string AdminCaption { get; set; } = string.Empty;
     public int UserId { get; set; }
 
     public static implicit operator PaymentDto(Payment payment)
@@ -16,6 +17,7 @@ public class PaymentDto
             Status = payment.Status,
             UserId = payment.UserId,
             FilePath = payment.FilePath,
+            AdminCaption = payment.AdminCaption
         };
     }
 }

@@ -4,6 +4,7 @@ public class UpdateUserBalanceDto
 {
     public int Id { get; set; }
     public int Balance { get; set; }
+    public bool IsAdd { get; set; }
 
     public static implicit operator User(UpdateUserBalanceDto dto)
     {

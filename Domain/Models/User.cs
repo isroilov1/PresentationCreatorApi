@@ -12,7 +12,8 @@ public class User : BaseEntity
     public int ReferalId { get; set; }
     public bool ReferalBonus { get; set; }
     public Role Role { get; set; } = Role.User;
-    public Payment? TotalPayments { get; set; }
+    public int? TotalPayments { get; set; }
+    public List<Payment>? Payments { get; set; } = new();
     public List<Notification>? Notifications { get; set; } = new();
     public List<Presentation>? PresentationPaths { get; set; }
 }

@@ -1,20 +1,24 @@
-﻿
-
-namespace Application.DTOs;
+﻿namespace Application.DTOs;
 public class NotificationDto : AddNotificationDto
 {
     public int Id { get; set; }
     public int SenderId { get; set; }
-    public NotificationStatus Status { get; set; } = NotificationStatus.NotRead;
-
+    public NotificationStatus Status { get; set; }
+    public string Created { get; set; } = string.Empty;
+    
     public static implicit operator NotificationDto(Notification notification)
     {
+        var tzTashkent = TimeZoneInfo.FindSystemTimeZoneById("Asia/Tashkent");
+        var tashkentTime = TimeZoneInfo.ConvertTimeFromUtc(notification.CreatedAt, tzTashkent);
+        string formattedDate = tashkentTime.ToString("dd-MM-yyyy HH:mm");
+
         return new NotificationDto()
         {
             Id = notification.Id,
             SenderId = notification.SenderId,
             Message = notification.Message,
             Status = notification.Status,
+            Created = formattedDate,
             RecipientIds = notification.RecipientIds
         };
     }

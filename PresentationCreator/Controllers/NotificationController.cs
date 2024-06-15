@@ -47,17 +47,16 @@ public class NotificationController(INotificationService notificationService) : 
         return Ok(await _notificationService.GetByUserIdAsync(userId));
     }
 
-    [HttpPut]
+    [HttpPut("update")]
     [Authorize]
     public async Task<IActionResult> UpdateAsync([FromForm] UpdateNotificationDto dto)
     {
         var id = int.Parse(HttpContext.User.FindFirst("Id")!.Value);
-
         await _notificationService.UpdateAsync(id, dto);
         return Ok();
     }
 
-    [HttpDelete("id")]
+    [HttpDelete("delete")]
     [Authorize]
     public async Task<IActionResult> DeleteAsync(int id)
     {

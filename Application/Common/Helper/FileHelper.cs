@@ -20,4 +20,24 @@ public static class FileHelper
 
         return filePath;
     }
+
+    private static async Task<string> SavePaymentFileAsync(IFormFile file)
+    {
+        if (file == null)
+            throw new ArgumentException("File cannot be null");
+
+        var rootPath = Path.Combine("wwwroot", "uploads", "payments");
+        if (!Directory.Exists(rootPath))
+        {
+            Directory.CreateDirectory(rootPath);
+        }
+
+        var filePath = Path.Combine(rootPath, file.FileName);
+        using (var stream = new FileStream(filePath, FileMode.Create))
+        {
+            await file.CopyToAsync(stream);
+        }
+
+        return filePath;
+    }
 }

@@ -63,6 +63,8 @@ public class UserService(IUnitOfWork unitOfWork) : IUserService
         var model = await _unitOfWork.User.GetByIdIncludeAsync(dto.Id);
         if (model is null)
             throw new StatusCodeExeption(HttpStatusCode.NotFound, "Foydalanuvchi topilmadi");
+        dto.Balance = dto.IsAdd ? model.Balance + dto.Balance : model.Balance - dto.Balance;
+
         var user = (User)dto;
         user.FullName = model.FullName;
         user.PhoneNumber = model.PhoneNumber;
@@ -75,8 +77,7 @@ public class UserService(IUnitOfWork unitOfWork) : IUserService
         user.TotalPayments = model.TotalPayments;
 
         await _unitOfWork.User.UpdateAsync(user);
-        throw new StatusCodeExeption(HttpStatusCode.OK, "Foydalanuvchi ma'lumotlari yangilandi");
-
+        throw new StatusCodeExeption(HttpStatusCode.OK, "Foydalanuvchi balansi yangilandi");
 
     }
 }

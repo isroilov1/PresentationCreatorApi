@@ -98,6 +98,10 @@ namespace Data.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
+                    b.Property<string>("AdminCaption")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("Caption")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -120,8 +124,7 @@ namespace Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("UserId")
-                        .IsUnique();
+                    b.HasIndex("UserId");
 
                     b.ToTable("Payments");
                 });
@@ -214,6 +217,9 @@ namespace Data.Migrations
                     b.Property<int>("Role")
                         .HasColumnType("int");
 
+                    b.Property<int?>("TotalPayments")
+                        .HasColumnType("int");
+
                     b.HasKey("Id");
 
                     b.ToTable("Users");
@@ -223,7 +229,7 @@ namespace Data.Migrations
                         {
                             Id = 1,
                             Balance = 20000,
-                            CreatedAt = new DateTime(2024, 6, 15, 12, 26, 28, 35, DateTimeKind.Utc).AddTicks(7390),
+                            CreatedAt = new DateTime(2024, 6, 15, 22, 43, 20, 389, DateTimeKind.Unspecified).AddTicks(8228),
                             Email = "isroilov0905@gmail.com",
                             FullName = "Isroilov Ismoiljon",
                             IsVerified = true,
@@ -261,8 +267,8 @@ namespace Data.Migrations
             modelBuilder.Entity("Domain.Models.Payment", b =>
                 {
                     b.HasOne("Domain.Models.User", "User")
-                        .WithOne("TotalPayments")
-                        .HasForeignKey("Domain.Models.Payment", "UserId")
+                        .WithMany("Payments")
+                        .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
@@ -289,9 +295,9 @@ namespace Data.Migrations
                 {
                     b.Navigation("Notifications");
 
-                    b.Navigation("PresentationPaths");
+                    b.Navigation("Payments");
 
-                    b.Navigation("TotalPayments");
+                    b.Navigation("PresentationPaths");
                 });
 #pragma warning restore 612, 618
         }

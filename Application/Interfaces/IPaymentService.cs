@@ -4,8 +4,10 @@ public interface IPaymentService
 {
     Task CreateAsync(int id, AddPaymentDto dto);
     Task<PaymentDto> GetByIdAsync(int id);
-    Task<PaymentDto> GetByPhoneNumberAsync(string phoneNumber);
+    Task<List<PaymentDto>> GetByUserIdAsync(int userId);
+    Task<List<PaymentDto>> GetByPhoneNumberAsync(string phoneNumber);
     Task<List<PaymentDto>> GetAllAsync();
-    Task UpdateAsync(int id, UpdatePaymentDto dto);
+    Task UpdateAsync(UpdatePaymentDto dto);
+    Task AcceptOrRejectAsync(int id, PaymentStatus status, string caption);
     Task DeleteAsync(int id);
 }

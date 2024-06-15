@@ -20,7 +20,7 @@
             return Ok(await _userService.GetAllAsync());
         }
 
-        [HttpPut]
+        [HttpPut("update")]
         [Authorize]
         public async Task<IActionResult> UpdateAsync([FromForm] UpdateUserDto dto)
         {
@@ -30,11 +30,19 @@
             return Ok();
         }
 
-        [HttpDelete("id")]
-        [Authorize]
+        [HttpDelete("delete")]
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> DeleteAsync(int id)
         {
             await _userService.DeleteAsync(id);
+            return Ok();
+        }
+
+        [HttpPut("updateBalance")]
+        [Authorize(Roles = "Admin")]
+        public async Task<IActionResult> UpdateBalanceAsync([FromForm] UpdateUserBalanceDto dto)
+        {
+            await _userService.UpdateBalanceAsync(dto);
             return Ok();
         }
     }

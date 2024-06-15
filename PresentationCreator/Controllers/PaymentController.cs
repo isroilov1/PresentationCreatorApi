@@ -1,4 +1,6 @@
-﻿namespace PresentationCreator.Controllers;
+﻿using Domain.Enums;
+
+namespace PresentationCreator.Controllers;
 
 [Route("api/[controller]")]
 [ApiController]
@@ -16,10 +18,18 @@ public class PaymentController(IPaymentService paymentService) : ControllerBase
     }
 
     [HttpGet("{id}")]
-    [Authorize]
+    [Authorize(Roles = "Admin")]
     public async Task<IActionResult> GetAsync(int id)
     {
         return Ok(await _paymentService.GetByIdAsync(id));
+    }
+
+    [HttpGet("byPhone")]
+    [Authorize]
+    public async Task<IActionResult> GetUserAsync()
+    {
+        var userId = int.Parse(HttpContext.User.FindFirst("Id")!.Value);
+        return Ok(await _paymentService.GetByUserIdAsync(userId));
     }
 
     [HttpGet("payments")]
@@ -29,18 +39,24 @@ public class PaymentController(IPaymentService paymentService) : ControllerBase
         return Ok(await _paymentService.GetAllAsync());
     }
 
-    [HttpPut]
+    [HttpPut("update")]
     [Authorize]
     public async Task<IActionResult> UpdateAsync([FromForm] UpdatePaymentDto dto)
     {
-        var id = int.Parse(HttpContext.User.FindFirst("Id")!.Value);
-
-        await _paymentService.UpdateAsync(id, dto);
+        await _paymentService.UpdateAsync(dto);
         return Ok();
     }
 
-    [HttpDelete("id")]
-    [Authorize]
+    [HttpPut("accept-reject")]
+    [Authorize(Roles = "Admin")]
+    public async Task<IActionResult> AcceptPaymentAsync([FromForm] int paymentId, [FromForm] PaymentStatus status, [FromForm] string adminCaption)
+    {
+        await _paymentService.AcceptOrRejectAsync(paymentId, status, adminCaption);
+        return Ok();
+    }
+
+    [HttpDelete("delete")]
+    [Authorize(Roles = "Admin")]
     public async Task<IActionResult> DeleteAsync(int id)
     {
         await _paymentService.DeleteAsync(id);
