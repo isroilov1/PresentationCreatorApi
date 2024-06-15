@@ -32,7 +32,6 @@ public class NotificationService(IUnitOfWork unitOfWork,
         {
             senderUser.Notifications = new List<Notification>();
         }
-<<<<<<< HEAD
         senderUser.Notifications.Add(notification);
         await _unitOfWork.User.UpdateAsync(senderUser);
 
@@ -53,31 +52,6 @@ public class NotificationService(IUnitOfWork unitOfWork,
                 recipientUser.Notifications.Add(notification);
                 await _unitOfWork.User.UpdateAsync(recipientUser);
             }
-=======
-        notification.Type = Domain.Enums.NotificationType.Output;
-        senderUser.Notifications.Add(notification);
-        await _unitOfWork.User.UpdateAsync(senderUser);
-
-        var inputNotification = (Notification)dto;
-        var recipients = dto.RecipientIds;
-        if (recipients == null)
-            throw new StatusCodeExeption(HttpStatusCode.NotFound, "Ushbu recipientId raqam orqali foydalanuvchi topilmadi!");
-        
-        foreach (var recipient in recipients)
-        {
-            var recipientUser = await _unitOfWork.User.GetByIdAsync(recipient);
-            if (recipientUser is null)
-                throw new StatusCodeExeption(HttpStatusCode.NotFound, "Bunday foydalanuvchi mavjud emas!");
-
-            await _unitOfWork.Notification.CreateAsync(inputNotification);
-            if (recipientUser.Notifications == null)
-            {
-                recipientUser.Notifications = new List<Notification>();
-            }
-            inputNotification.Type = Domain.Enums.NotificationType.Input;
-            recipientUser.Notifications.Add(inputNotification);
-            await _unitOfWork.User.UpdateAsync(recipientUser);
->>>>>>> 83077ba36287467d0854839b78bdc90e4fd06291
         }
     }
 
