@@ -13,6 +13,7 @@ public class NotificationService(IUnitOfWork unitOfWork,
             throw new ValidationException(result.GetErrorMessages());
         var notification = (Notification)dto;
         notification.SenderId = senderId;
+        notification.Type = NotificationType.Output;
         var senderUser = await _unitOfWork.User.GetByIdAsync(senderId);
         if (senderUser is null)
             throw new StatusCodeExeption(HttpStatusCode.NotFound, "Bunday foydalanuvchi mavjud emas!");
@@ -38,6 +39,7 @@ public class NotificationService(IUnitOfWork unitOfWork,
             {
                 Message = dto.Message,
                 Status = NotificationStatus.NotRead,
+                Type = NotificationType.Input,
                 SenderId = senderId,
                 User = senderUser,
                 RecipientIds = recipientIds
