@@ -23,18 +23,39 @@ public class NotificationService(IUnitOfWork unitOfWork,
             throw new ValidationException(result.GetErrorMessages());
         var notification = (Notification)dto;
         notification.SenderId = senderId;
-        var user = await _unitOfWork.User.GetByIdAsync(senderId);
-        if (user is null)
+        var senderUser = await _unitOfWork.User.GetByIdAsync(senderId);
+        if (senderUser is null)
             throw new StatusCodeExeption(HttpStatusCode.NotFound, "Bunday foydalanuvchi mavjud emas!");
 
         await _unitOfWork.Notification.CreateAsync(notification);
-        if (user.Notifications == null)
+        if (senderUser.Notifications == null)
         {
-            user.Notifications = new List<Notification>();
+            senderUser.Notifications = new List<Notification>();
         }
-        user.Notifications.Add(notification);
-        user.FullName = "Isroilov";
-        await _unitOfWork.User.UpdateAsync(user);
+        notification.Type = Domain.Enums.NotificationType.Output;
+        senderUser.Notifications.Add(notification);
+        await _unitOfWork.User.UpdateAsync(senderUser);
+
+        var inputNotification = (Notification)dto;
+        var recipients = dto.RecipientIds;
+        if (recipients == null)
+            throw new StatusCodeExeption(HttpStatusCode.NotFound, "Ushbu recipientId raqam orqali foydalanuvchi topilmadi!");
+        
+        foreach (var recipient in recipients)
+        {
+            var recipientUser = await _unitOfWork.User.GetByIdAsync(recipient);
+            if (recipientUser is null)
+                throw new StatusCodeExeption(HttpStatusCode.NotFound, "Bunday foydalanuvchi mavjud emas!");
+
+            await _unitOfWork.Notification.CreateAsync(inputNotification);
+            if (recipientUser.Notifications == null)
+            {
+                recipientUser.Notifications = new List<Notification>();
+            }
+            inputNotification.Type = Domain.Enums.NotificationType.Input;
+            recipientUser.Notifications.Add(inputNotification);
+            await _unitOfWork.User.UpdateAsync(recipientUser);
+        }
     }
 
     public async Task DeleteAsync(int id)
