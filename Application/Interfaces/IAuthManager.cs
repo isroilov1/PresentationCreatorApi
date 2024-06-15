@@ -1,6 +1,4 @@
-﻿using Domain.Models;
-
-namespace Application.Interfaces;
+﻿namespace Application.Interfaces;
 
 public interface IAuthManager
 {

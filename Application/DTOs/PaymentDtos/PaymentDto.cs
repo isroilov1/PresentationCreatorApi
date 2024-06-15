@@ -1,9 +1,4 @@
-﻿using Application.Common.Helper;
-using Domain.Enums;
-using Domain.Models;
-using Microsoft.AspNetCore.Http;
-
-namespace Application.DTOs;
+﻿namespace Application.DTOs;
 public class PaymentDto
 {
     public int Summa { get; set; }

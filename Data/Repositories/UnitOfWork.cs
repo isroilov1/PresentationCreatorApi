@@ -1,6 +1,4 @@
-﻿using Data.Interfaces;
-
-namespace Data.Repositories;
+﻿namespace Data.Repositories;
 public class UnitOfWork(AppDbContext appDbContext) : IUnitOfWork
 {
     private readonly AppDbContext _appDbContext = appDbContext;

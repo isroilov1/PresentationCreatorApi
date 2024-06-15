@@ -1,8 +1,4 @@
-﻿
-using System.Security.Cryptography;
-using System.Text;
-
-namespace Application.Common.Security
+﻿namespace Application.Common.Security
 {
     public static class PasswordHasher
     {

@@ -1,15 +1,4 @@
-﻿using Application.Common.Exceptions;
-using Application.Common.Security;
-using Application.Common.Validators;
-using Application.DTOs.UserDtos;
-using Application.Interfaces;
-using Data.Interfaces;
-using Domain.Models;
-using FluentValidation;
-using Microsoft.Extensions.Caching.Memory;
-using System.Net;
-
-namespace Application.Services;
+﻿namespace Application.Services;
 
 public class AccountService(IUnitOfWork ofWork,
                             IAuthManager authManager,

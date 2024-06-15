@@ -1,15 +1,4 @@
-﻿using Application.Common.Exceptions;
-using Application.Common.Validators;
-using Application.DTOs;
-using Application.DTOs.MovieDtos;
-using Application.DTOs.NotificationDtos;
-using Application.Interfaces;
-using Data.Interfaces;
-using Domain.Enums;
-using Domain.Models;
-using FluentValidation;
-using System.Net;
-namespace Application.Services;
+﻿namespace Application.Services;
 
 public class NotificationService(IUnitOfWork unitOfWork,
                           IValidator<Notification> validator) : INotificationService

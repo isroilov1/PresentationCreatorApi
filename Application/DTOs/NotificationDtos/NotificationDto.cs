@@ -1,6 +1,4 @@
-﻿using Application.DTOs.MovieDtos;
-using Domain.Enums;
-using Domain.Models;
+﻿
 
 namespace Application.DTOs;
 public class NotificationDto : AddNotificationDto

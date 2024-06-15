@@ -3,32 +3,36 @@
   "WorkspaceRootPath": "C:\\Users\\Isroilov\\source\\repos\\PresentationCreator\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{E2900C9E-E75C-4622-9089-534E6A74409A}|PresentationCreator\\PresentationCreator.csproj|c:\\users\\isroilov\\source\\repos\\presentationcreator\\presentationcreator\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E2900C9E-E75C-4622-9089-534E6A74409A}|PresentationCreator\\PresentationCreator.csproj|solutionrelative:presentationcreator\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E2900C9E-E75C-4622-9089-534E6A74409A}|PresentationCreator\\PresentationCreator.csproj|c:\\users\\isroilov\\source\\repos\\presentationcreator\\presentationcreator\\globalusings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E2900C9E-E75C-4622-9089-534E6A74409A}|PresentationCreator\\PresentationCreator.csproj|solutionrelative:presentationcreator\\globalusings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{37C690A7-271A-4E6B-AC7F-37FEBCE91BDD}|Application\\Application.csproj|c:\\users\\isroilov\\source\\repos\\presentationcreator\\application\\services\\notificationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{37C690A7-271A-4E6B-AC7F-37FEBCE91BDD}|Application\\Application.csproj|solutionrelative:application\\services\\notificationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E2900C9E-E75C-4622-9089-534E6A74409A}|PresentationCreator\\PresentationCreator.csproj|c:\\users\\isroilov\\source\\repos\\presentationcreator\\presentationcreator\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E2900C9E-E75C-4622-9089-534E6A74409A}|PresentationCreator\\PresentationCreator.csproj|solutionrelative:presentationcreator\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{67CB3BFB-E880-4BCE-A777-F1BE3E2F5462}|Data\\Data.csproj|c:\\users\\isroilov\\source\\repos\\presentationcreator\\data\\repositories\\genericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{67CB3BFB-E880-4BCE-A777-F1BE3E2F5462}|Data\\Data.csproj|solutionrelative:data\\repositories\\genericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E2900C9E-E75C-4622-9089-534E6A74409A}|PresentationCreator\\PresentationCreator.csproj|c:\\users\\isroilov\\source\\repos\\presentationcreator\\presentationcreator\\middlewares\\exceptionhandlemiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E2900C9E-E75C-4622-9089-534E6A74409A}|PresentationCreator\\PresentationCreator.csproj|solutionrelative:presentationcreator\\middlewares\\exceptionhandlemiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{37C690A7-271A-4E6B-AC7F-37FEBCE91BDD}|Application\\Application.csproj|c:\\users\\isroilov\\source\\repos\\presentationcreator\\application\\dtos\\userdtos\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{37C690A7-271A-4E6B-AC7F-37FEBCE91BDD}|Application\\Application.csproj|solutionrelative:application\\dtos\\userdtos\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E2900C9E-E75C-4622-9089-534E6A74409A}|PresentationCreator\\PresentationCreator.csproj|c:\\users\\isroilov\\source\\repos\\presentationcreator\\presentationcreator\\middlewares\\errormessage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E2900C9E-E75C-4622-9089-534E6A74409A}|PresentationCreator\\PresentationCreator.csproj|solutionrelative:presentationcreator\\middlewares\\errormessage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{37C690A7-271A-4E6B-AC7F-37FEBCE91BDD}|Application\\Application.csproj|c:\\users\\isroilov\\source\\repos\\presentationcreator\\application\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{37C690A7-271A-4E6B-AC7F-37FEBCE91BDD}|Application\\Application.csproj|solutionrelative:application\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E2900C9E-E75C-4622-9089-534E6A74409A}|PresentationCreator\\PresentationCreator.csproj|c:\\users\\isroilov\\source\\repos\\presentationcreator\\presentationcreator\\controllers\\notificationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E2900C9E-E75C-4622-9089-534E6A74409A}|PresentationCreator\\PresentationCreator.csproj|solutionrelative:presentationcreator\\controllers\\notificationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{66238928-13BB-4C59-AC8E-6958072C85E7}|Domain\\Domain.csproj|c:\\users\\isroilov\\source\\repos\\presentationcreator\\domain\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{66238928-13BB-4C59-AC8E-6958072C85E7}|Domain\\Domain.csproj|solutionrelative:domain\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E2900C9E-E75C-4622-9089-534E6A74409A}|PresentationCreator\\PresentationCreator.csproj|c:\\users\\isroilov\\source\\repos\\presentationcreator\\presentationcreator\\controllers\\adminscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E2900C9E-E75C-4622-9089-534E6A74409A}|PresentationCreator\\PresentationCreator.csproj|solutionrelative:presentationcreator\\controllers\\adminscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{66238928-13BB-4C59-AC8E-6958072C85E7}|Domain\\Domain.csproj|c:\\users\\isroilov\\source\\repos\\presentationcreator\\domain\\models\\payment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{66238928-13BB-4C59-AC8E-6958072C85E7}|Domain\\Domain.csproj|solutionrelative:domain\\models\\payment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E2900C9E-E75C-4622-9089-534E6A74409A}|PresentationCreator\\PresentationCreator.csproj|c:\\users\\isroilov\\source\\repos\\presentationcreator\\presentationcreator\\controllers\\accountscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E2900C9E-E75C-4622-9089-534E6A74409A}|PresentationCreator\\PresentationCreator.csproj|solutionrelative:presentationcreator\\controllers\\accountscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E2900C9E-E75C-4622-9089-534E6A74409A}|PresentationCreator\\PresentationCreator.csproj|c:\\users\\isroilov\\source\\repos\\presentationcreator\\presentationcreator\\configurations\\swaggerconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E2900C9E-E75C-4622-9089-534E6A74409A}|PresentationCreator\\PresentationCreator.csproj|solutionrelative:presentationcreator\\configurations\\swaggerconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,8 +42,21 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 10,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Isroilov\\source\\repos\\PresentationCreator\\PresentationCreator\\Program.cs",
+              "RelativeDocumentMoniker": "PresentationCreator\\Program.cs",
+              "ToolTip": "C:\\Users\\Isroilov\\source\\repos\\PresentationCreator\\PresentationCreator\\Program.cs",
+              "RelativeToolTip": "PresentationCreator\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-15T09:23:18.347Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
@@ -63,92 +80,92 @@
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "GenericRepository.cs",
-              "DocumentMoniker": "C:\\Users\\Isroilov\\source\\repos\\PresentationCreator\\Data\\Repositories\\GenericRepository.cs",
-              "RelativeDocumentMoniker": "Data\\Repositories\\GenericRepository.cs",
-              "ToolTip": "C:\\Users\\Isroilov\\source\\repos\\PresentationCreator\\Data\\Repositories\\GenericRepository.cs",
-              "RelativeToolTip": "Data\\Repositories\\GenericRepository.cs",
-              "ViewState": "AQIAAAsAAAAAAAAAAAAAwB4AAAAEAAAA",
+              "Title": "ExceptionHandleMiddleware.cs",
+              "DocumentMoniker": "C:\\Users\\Isroilov\\source\\repos\\PresentationCreator\\PresentationCreator\\Middlewares\\ExceptionHandleMiddleware.cs",
+              "RelativeDocumentMoniker": "PresentationCreator\\Middlewares\\ExceptionHandleMiddleware.cs",
+              "ToolTip": "C:\\Users\\Isroilov\\source\\repos\\PresentationCreator\\PresentationCreator\\Middlewares\\ExceptionHandleMiddleware.cs",
+              "RelativeToolTip": "PresentationCreator\\Middlewares\\ExceptionHandleMiddleware.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-15T07:29:59.017Z",
+              "WhenOpened": "2024-06-15T09:23:08.073Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "UserDto.cs",
-              "DocumentMoniker": "C:\\Users\\Isroilov\\source\\repos\\PresentationCreator\\Application\\DTOs\\UserDtos\\UserDto.cs",
-              "RelativeDocumentMoniker": "Application\\DTOs\\UserDtos\\UserDto.cs",
-              "ToolTip": "C:\\Users\\Isroilov\\source\\repos\\PresentationCreator\\Application\\DTOs\\UserDtos\\UserDto.cs",
-              "RelativeToolTip": "Application\\DTOs\\UserDtos\\UserDto.cs",
+              "Title": "ErrorMessage.cs",
+              "DocumentMoniker": "C:\\Users\\Isroilov\\source\\repos\\PresentationCreator\\PresentationCreator\\Middlewares\\ErrorMessage.cs",
+              "RelativeDocumentMoniker": "PresentationCreator\\Middlewares\\ErrorMessage.cs",
+              "ToolTip": "C:\\Users\\Isroilov\\source\\repos\\PresentationCreator\\PresentationCreator\\Middlewares\\ErrorMessage.cs",
+              "RelativeToolTip": "PresentationCreator\\Middlewares\\ErrorMessage.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-15T07:24:54.551Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "NotificationService.cs",
-              "DocumentMoniker": "C:\\Users\\Isroilov\\source\\repos\\PresentationCreator\\Application\\Services\\NotificationService.cs",
-              "RelativeDocumentMoniker": "Application\\Services\\NotificationService.cs",
-              "ToolTip": "C:\\Users\\Isroilov\\source\\repos\\PresentationCreator\\Application\\Services\\NotificationService.cs",
-              "RelativeToolTip": "Application\\Services\\NotificationService.cs",
-              "ViewState": "AQIAAAsAAAAAAAAAAAAAAD4AAAANAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-15T04:31:30.912Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "UsersController.cs",
-              "DocumentMoniker": "C:\\Users\\Isroilov\\source\\repos\\PresentationCreator\\PresentationCreator\\Controllers\\UsersController.cs",
-              "RelativeDocumentMoniker": "PresentationCreator\\Controllers\\UsersController.cs",
-              "ToolTip": "C:\\Users\\Isroilov\\source\\repos\\PresentationCreator\\PresentationCreator\\Controllers\\UsersController.cs",
-              "RelativeToolTip": "PresentationCreator\\Controllers\\UsersController.cs",
-              "ViewState": "AQIAAAsAAAAAAAAAAAAAwC0AAAABAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-15T04:28:12.253Z",
+              "WhenOpened": "2024-06-15T09:23:06.264Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "UserService.cs",
-              "DocumentMoniker": "C:\\Users\\Isroilov\\source\\repos\\PresentationCreator\\Application\\Services\\UserService.cs",
-              "RelativeDocumentMoniker": "Application\\Services\\UserService.cs",
-              "ToolTip": "C:\\Users\\Isroilov\\source\\repos\\PresentationCreator\\Application\\Services\\UserService.cs",
-              "RelativeToolTip": "Application\\Services\\UserService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAApAAAA",
+              "Title": "NotificationController.cs",
+              "DocumentMoniker": "C:\\Users\\Isroilov\\source\\repos\\PresentationCreator\\PresentationCreator\\Controllers\\NotificationController.cs",
+              "RelativeDocumentMoniker": "PresentationCreator\\Controllers\\NotificationController.cs",
+              "ToolTip": "C:\\Users\\Isroilov\\source\\repos\\PresentationCreator\\PresentationCreator\\Controllers\\NotificationController.cs",
+              "RelativeToolTip": "PresentationCreator\\Controllers\\NotificationController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-15T04:25:39.654Z",
+              "WhenOpened": "2024-06-15T09:22:37.648Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "User.cs",
-              "DocumentMoniker": "C:\\Users\\Isroilov\\source\\repos\\PresentationCreator\\Domain\\Models\\User.cs",
-              "RelativeDocumentMoniker": "Domain\\Models\\User.cs",
-              "ToolTip": "C:\\Users\\Isroilov\\source\\repos\\PresentationCreator\\Domain\\Models\\User.cs",
-              "RelativeToolTip": "Domain\\Models\\User.cs",
+              "Title": "AdminsController.cs",
+              "DocumentMoniker": "C:\\Users\\Isroilov\\source\\repos\\PresentationCreator\\PresentationCreator\\Controllers\\AdminsController.cs",
+              "RelativeDocumentMoniker": "PresentationCreator\\Controllers\\AdminsController.cs",
+              "ToolTip": "C:\\Users\\Isroilov\\source\\repos\\PresentationCreator\\PresentationCreator\\Controllers\\AdminsController.cs",
+              "RelativeToolTip": "PresentationCreator\\Controllers\\AdminsController.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-15T04:25:21.166Z",
+              "WhenOpened": "2024-06-15T09:22:32.217Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "GlobalUsings.cs",
+              "DocumentMoniker": "C:\\Users\\Isroilov\\source\\repos\\PresentationCreator\\PresentationCreator\\GlobalUsings.cs",
+              "RelativeDocumentMoniker": "PresentationCreator\\GlobalUsings.cs",
+              "ToolTip": "C:\\Users\\Isroilov\\source\\repos\\PresentationCreator\\PresentationCreator\\GlobalUsings.cs",
+              "RelativeToolTip": "PresentationCreator\\GlobalUsings.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAAAiAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-15T09:20:58.558Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "Payment.cs",
-              "DocumentMoniker": "C:\\Users\\Isroilov\\source\\repos\\PresentationCreator\\Domain\\Models\\Payment.cs",
-              "RelativeDocumentMoniker": "Domain\\Models\\Payment.cs",
-              "ToolTip": "C:\\Users\\Isroilov\\source\\repos\\PresentationCreator\\Domain\\Models\\Payment.cs",
-              "RelativeToolTip": "Domain\\Models\\Payment.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAAAAAA",
+              "Title": "AccountsController.cs",
+              "DocumentMoniker": "C:\\Users\\Isroilov\\source\\repos\\PresentationCreator\\PresentationCreator\\Controllers\\AccountsController.cs",
+              "RelativeDocumentMoniker": "PresentationCreator\\Controllers\\AccountsController.cs",
+              "ToolTip": "C:\\Users\\Isroilov\\source\\repos\\PresentationCreator\\PresentationCreator\\Controllers\\AccountsController.cs",
+              "RelativeToolTip": "PresentationCreator\\Controllers\\AccountsController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-15T04:24:22.65Z",
+              "WhenOpened": "2024-06-15T09:21:59.208Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "SwaggerConfiguration.cs",
+              "DocumentMoniker": "C:\\Users\\Isroilov\\source\\repos\\PresentationCreator\\PresentationCreator\\Configurations\\SwaggerConfiguration.cs",
+              "RelativeDocumentMoniker": "PresentationCreator\\Configurations\\SwaggerConfiguration.cs",
+              "ToolTip": "C:\\Users\\Isroilov\\source\\repos\\PresentationCreator\\PresentationCreator\\Configurations\\SwaggerConfiguration.cs",
+              "RelativeToolTip": "PresentationCreator\\Configurations\\SwaggerConfiguration.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-15T09:21:38.03Z",
               "EditorCaption": ""
             }
           ]

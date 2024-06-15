@@ -1,9 +1,4 @@
-﻿using Application.DTOs.UserDtos;
-using Application.Interfaces;
-using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Mvc;
-
-namespace MovieNTV.Controllers;
+﻿namespace MovieNTV.Controllers;
 
 [Route("api/[controller]")]
 [ApiController]

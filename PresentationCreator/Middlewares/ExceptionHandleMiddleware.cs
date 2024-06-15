@@ -1,8 +1,4 @@
-﻿using Application.Common.Exceptions;
-using Application.DTOs.Common;
-using Newtonsoft.Json;
-
-namespace MovieNTV.Middlewares;
+﻿namespace MovieNTV.Middlewares;
 
 public class ExceptionHandleMiddleware(RequestDelegate next)
 {

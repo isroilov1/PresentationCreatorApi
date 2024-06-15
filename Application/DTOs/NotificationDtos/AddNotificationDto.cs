@@ -1,6 +1,4 @@
-﻿using Domain.Models;
-
-namespace Application.DTOs.MovieDtos;
+﻿namespace Application.DTOs.MovieDtos;
 public class AddNotificationDto
 {
     public string Message { get; set; } = string.Empty;

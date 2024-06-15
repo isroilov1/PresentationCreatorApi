@@ -1,8 +1,4 @@
-﻿using Domain.Enums;
-using Domain.Models;
-using System.ComponentModel.DataAnnotations.Schema;
-
-namespace Application.DTOs.NotificationDtos;
+﻿namespace Application.DTOs.NotificationDtos;
 
 public class UpdateNotificationDto
 {

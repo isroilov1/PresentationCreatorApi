@@ -1,12 +1,4 @@
-﻿using Application.Common.Exceptions;
-using Application.Interfaces;
-using Data.Interfaces;
-using Domain.Enums;
-using Domain.Models;
-using FluentValidation;
-using System.Net;
-
-namespace Application.Services;
+﻿namespace Application.Services;
 
 public class AdminService(IUnitOfWork work) : IAdminService
 {

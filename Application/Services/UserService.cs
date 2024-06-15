@@ -1,11 +1,4 @@
-﻿using Application.Common.Exceptions;
-using Application.DTOs.UserDtos;
-using Application.Interfaces;
-using Data.Interfaces;
-using Domain.Models;
-using System.Net;
-
-namespace Application.Services;
+﻿namespace Application.Services;
 
 public class UserService(IUnitOfWork unitOfWork) : IUserService
 {

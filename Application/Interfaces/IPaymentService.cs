@@ -1,8 +1,4 @@
-﻿using Application.DTOs;
-using Application.DTOs.MovieDtos;
-using Application.DTOs.UserDtos;
-
-namespace Application.Interfaces;
+﻿namespace Application.Interfaces;
 
 public interface IPaymentService
 {

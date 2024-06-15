@@ -1,6 +1,4 @@
-﻿using Application.DTOs.UserDtos;
-
-namespace Application.Interfaces;
+﻿namespace Application.Interfaces;
 public interface IAccountService
 {
     Task<bool> RegistrAsync(AddUserDto dto);

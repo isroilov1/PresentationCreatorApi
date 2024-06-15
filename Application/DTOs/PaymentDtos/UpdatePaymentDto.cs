@@ -1,8 +1,4 @@
-﻿using Application.Common.Helper;
-using Domain.Enums;
-using Domain.Models;
-
-namespace Application.DTOs;
+﻿namespace Application.DTOs;
 public class UpdatePaymentDto : AddPaymentDto
 {
     public int Id { get; set; }

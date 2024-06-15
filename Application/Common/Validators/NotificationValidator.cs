@@ -1,7 +1,4 @@
-﻿using Domain.Models;
-using FluentValidation;
-
-namespace Application.Common.Validators;
+﻿namespace Application.Common.Validators;
 public class NotificationValidator : AbstractValidator<Notification>
 {
     public NotificationValidator()

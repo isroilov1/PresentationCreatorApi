@@ -1,7 +1,4 @@
-﻿using Application.Common.Helper;
-using Domain.Enums;
-using Domain.Models;
-using Microsoft.AspNetCore.Http;
+﻿
 
 namespace Application.DTOs;
 public class AddPaymentDto

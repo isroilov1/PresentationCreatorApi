@@ -1,9 +1,4 @@
-﻿
-using Data.Interfaces;
-using Domain.Models;
-using Microsoft.EntityFrameworkCore;
-
-namespace Data.Repositories;
+﻿namespace Data.Repositories;
 
 public class UserRepository(AppDbContext dbContext) : GenericRepository<User>(dbContext), IUserRepository
 {

@@ -1,15 +1,3 @@
-using Application.Common.Validators;
-using Application.Interfaces;
-using Application.Services;
-using Data;
-using Data.Interfaces;
-using Data.Repositories;
-using Domain.Models;
-using FluentValidation;
-using Microsoft.EntityFrameworkCore;
-using MovieNTV.Configurations;
-using MovieNTV.Middlewares;
-
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
