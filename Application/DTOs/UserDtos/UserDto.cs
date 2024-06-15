@@ -1,5 +1,4 @@
-﻿using Domain.Enums;
-using Domain.Models;
+﻿using Domain.Models;
 
 namespace Application.DTOs.UserDtos;
 public class UserDto : AddUserDto
@@ -11,7 +10,6 @@ public class UserDto : AddUserDto
     public Payment? TotalPayments { get; set; }
     public List<Notification>? Notifications { get; set; }
     public List<Presentation>? PresentationPaths { get; set; }
-
 
     public static implicit operator UserDto(User user)
     {

@@ -10,7 +10,7 @@ public interface INotificationService
     //Task SendMessageByPhoneNumberToUser(string message, string phoneNumber);
     //Task<int> SendMessageToAllUsers(string message);
 
-    Task CreateAsync(int senderId, AddNotificationDto dto);
+    Task<int> CreateAsync(int senderId, AddNotificationDto dto);
     Task<NotificationDto> GetByIdAsync(int id);
     Task<List<NotificationDto>> GetByUserIdAsync(int userId);
     Task<List<NotificationDto>> GetAllAsync();

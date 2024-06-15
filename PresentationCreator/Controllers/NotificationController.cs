@@ -17,8 +17,8 @@ public class NotificationController(INotificationService notificationService) : 
     public async Task<IActionResult> CreateAsync([FromForm]AddNotificationDto dto)
     {
         var senderId = int.Parse(HttpContext.User.FindFirst("Id")!.Value);
-        await _notificationService.CreateAsync(senderId, dto);
-        return Ok();
+        var total = await _notificationService.CreateAsync(senderId, dto);
+        return Ok(total);
     }
 
     [HttpGet("{id}")]

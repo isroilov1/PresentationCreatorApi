@@ -5,6 +5,7 @@ using Application.DTOs.MovieDtos;
 using Application.DTOs.NotificationDtos;
 using Application.Interfaces;
 using Data.Interfaces;
+using Domain.Enums;
 using Domain.Models;
 using FluentValidation;
 using System.Net;
@@ -16,7 +17,7 @@ public class NotificationService(IUnitOfWork unitOfWork,
     private readonly IUnitOfWork _unitOfWork = unitOfWork;
     private readonly IValidator<Notification> _validator = validator;
 
-    public async Task CreateAsync(int senderId, AddNotificationDto dto)
+    public async Task<int> CreateAsync(int senderId, AddNotificationDto dto)
     {
         var result = await _validator.ValidateAsync(dto);
         if (!result.IsValid)
@@ -38,10 +39,20 @@ public class NotificationService(IUnitOfWork unitOfWork,
         var recipientIds = dto.RecipientIds;
         if (recipientIds == null)
             throw new StatusCodeExeption(HttpStatusCode.NotFound, "Yuborish uchun foydalanuuvchilar ID raqami kiritilmagan");
+        recipientIds = recipientIds.Distinct().ToList();
 
+        int totalCountRecipients = 0;
         foreach (var recipientId in recipientIds)
         {
             if (recipientId == senderId) continue;
+            var notification2 = new Notification
+            {
+                Message = dto.Message,
+                Status = NotificationStatus.NotRead,
+                SenderId = senderId,
+                User = senderUser,
+                RecipientIds = recipientIds
+            };
             var recipientUser = await _unitOfWork.User.GetByIdAsync(recipientId);
             if (recipientUser is not null)
             {
@@ -49,10 +60,12 @@ public class NotificationService(IUnitOfWork unitOfWork,
                 {
                     recipientUser.Notifications = new List<Notification>();
                 }
-                recipientUser.Notifications.Add(notification);
+                recipientUser.Notifications.Add(notification2);
                 await _unitOfWork.User.UpdateAsync(recipientUser);
+                totalCountRecipients++;
             }
         }
+        return totalCountRecipients;
     }
 
     public async Task DeleteAsync(int id)
