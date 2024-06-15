@@ -220,7 +220,7 @@ namespace Data.Migrations
                         {
                             Id = 1,
                             Balance = 20000,
-                            CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            CreatedAt = new DateTime(2024, 6, 14, 16, 24, 33, 34, DateTimeKind.Utc).AddTicks(5623),
                             Email = "isroilov0905@gmail.com",
                             FullName = "Isroilov Ismoiljon",
                             IsVerified = true,
