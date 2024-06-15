@@ -7,6 +7,10 @@
       "RelativeMoniker": "D:0:0:{37C690A7-271A-4E6B-AC7F-37FEBCE91BDD}|Application\\Application.csproj|solutionrelative:application\\services\\notificationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{66238928-13BB-4C59-AC8E-6958072C85E7}|Domain\\Domain.csproj|c:\\users\\isroilov\\source\\repos\\presentationcreator\\domain\\models\\notification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{66238928-13BB-4C59-AC8E-6958072C85E7}|Domain\\Domain.csproj|solutionrelative:domain\\models\\notification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{37C690A7-271A-4E6B-AC7F-37FEBCE91BDD}|Application\\Application.csproj|c:\\users\\isroilov\\source\\repos\\presentationcreator\\application\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{37C690A7-271A-4E6B-AC7F-37FEBCE91BDD}|Application\\Application.csproj|solutionrelative:application\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -30,7 +34,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Bookmark",
@@ -58,20 +62,33 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Notification.cs",
+              "DocumentMoniker": "C:\\Users\\Isroilov\\source\\repos\\PresentationCreator\\Domain\\Models\\Notification.cs",
+              "RelativeDocumentMoniker": "Domain\\Models\\Notification.cs",
+              "ToolTip": "C:\\Users\\Isroilov\\source\\repos\\PresentationCreator\\Domain\\Models\\Notification.cs",
+              "RelativeToolTip": "Domain\\Models\\Notification.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-15T06:18:46.205Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
               "Title": "NotificationService.cs",
               "DocumentMoniker": "C:\\Users\\Isroilov\\source\\repos\\PresentationCreator\\Application\\Services\\NotificationService.cs",
               "RelativeDocumentMoniker": "Application\\Services\\NotificationService.cs",
               "ToolTip": "C:\\Users\\Isroilov\\source\\repos\\PresentationCreator\\Application\\Services\\NotificationService.cs",
               "RelativeToolTip": "Application\\Services\\NotificationService.cs",
-              "ViewState": "AQIAABIAAAAAAAAAAAAAACkAAAAAAAAA",
+              "ViewState": "AQIAACoAAAAAAAAAAAAQwBcAAAAtAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-15T04:31:30.912Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "UsersController.cs",
               "DocumentMoniker": "C:\\Users\\Isroilov\\source\\repos\\PresentationCreator\\PresentationCreator\\Controllers\\UsersController.cs",
               "RelativeDocumentMoniker": "PresentationCreator\\Controllers\\UsersController.cs",
@@ -79,11 +96,12 @@
               "RelativeToolTip": "PresentationCreator\\Controllers\\UsersController.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAC0AAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-15T04:28:12.253Z"
+              "WhenOpened": "2024-06-15T04:28:12.253Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "UserService.cs",
               "DocumentMoniker": "C:\\Users\\Isroilov\\source\\repos\\PresentationCreator\\Application\\Services\\UserService.cs",
               "RelativeDocumentMoniker": "Application\\Services\\UserService.cs",
@@ -91,11 +109,12 @@
               "RelativeToolTip": "Application\\Services\\UserService.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAApAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-15T04:25:39.654Z"
+              "WhenOpened": "2024-06-15T04:25:39.654Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "User.cs",
               "DocumentMoniker": "C:\\Users\\Isroilov\\source\\repos\\PresentationCreator\\Domain\\Models\\User.cs",
               "RelativeDocumentMoniker": "Domain\\Models\\User.cs",
@@ -103,11 +122,12 @@
               "RelativeToolTip": "Domain\\Models\\User.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-15T04:25:21.166Z"
+              "WhenOpened": "2024-06-15T04:25:21.166Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "Payment.cs",
               "DocumentMoniker": "C:\\Users\\Isroilov\\source\\repos\\PresentationCreator\\Domain\\Models\\Payment.cs",
               "RelativeDocumentMoniker": "Domain\\Models\\Payment.cs",
@@ -115,7 +135,8 @@
               "RelativeToolTip": "Domain\\Models\\Payment.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-15T04:24:22.65Z"
+              "WhenOpened": "2024-06-15T04:24:22.65Z",
+              "EditorCaption": ""
             }
           ]
         }
