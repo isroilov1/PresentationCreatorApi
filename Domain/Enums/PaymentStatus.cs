@@ -2,7 +2,7 @@
 
 public enum PaymentStatus
 {
-    Accepted = 1,
-    Expected,
+    Expected = 1,
+    Accepted,
     Rejected
 }
