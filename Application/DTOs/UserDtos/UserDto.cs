@@ -33,7 +33,6 @@ public class UserDto : AddUserDto
                 Id = n.Id,
                 Message = n.Message,
                 Status = n.Status,
-                Type = NotificationType.Output,
                 SenderId = n.SenderId,
                 RecipientIds = n.RecipientIds
             }).ToList()
