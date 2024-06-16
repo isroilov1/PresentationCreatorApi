@@ -1,4 +1,6 @@
-﻿namespace Application.DTOs.UserDtos;
+﻿using Domain.Models;
+
+namespace Application.DTOs.UserDtos;
 public class UserDto
 {
     public int Id { get; set; }
@@ -12,11 +14,16 @@ public class UserDto
     public int PresentationCount { get; set; } = 0;
     public int? TotalPayments { get; set; }
     public List<Payment>? Payments { get; set; }
+    public string CreatedAt { get; set; } = string.Empty;
     public List<Notification>? Notifications { get; set; }
     public List<Presentation>? PresentationPaths { get; set; }
 
     public static implicit operator UserDto(User user)
     {
+        var tzTashkent = TimeZoneInfo.FindSystemTimeZoneById("Asia/Tashkent");
+        var tashkentTime = TimeZoneInfo.ConvertTimeFromUtc(user.CreatedAt, tzTashkent);
+        string formattedDate = tashkentTime.ToString("dd-MM-yyyy HH:mm");
+
         return new UserDto()
         {
             Id = user.Id,
@@ -30,6 +37,7 @@ public class UserDto
             PresentationCount = user.PresentationCount,
             TotalPayments = user.TotalPayments,
             PresentationPaths = user.PresentationPaths,
+            CreatedAt = formattedDate,
             Notifications = user.Notifications?.Select(n => new Notification
             {
                 Id = n.Id,

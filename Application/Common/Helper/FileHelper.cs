@@ -1,6 +1,4 @@
-﻿
-
-namespace Application.Common.Helper;
+﻿namespace Application.Common.Helper;
 
 public static class FileHelper
 {

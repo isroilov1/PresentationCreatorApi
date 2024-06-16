@@ -20,7 +20,14 @@ public class UserService(IUnitOfWork unitOfWork) : IUserService
         var users = await _unitOfWork.User.GetAllIncludeAsync();
         if (users is null)
             throw new StatusCodeExeption(HttpStatusCode.NotFound, "Foydalanuvchilar topilmadi!");
-        return users.Select(x => (UserDto)x).ToList();
+        var tzTashkent = TimeZoneInfo.FindSystemTimeZoneById("Asia/Tashkent");
+        return users.Select(user =>
+        {
+            var userDto = (UserDto)user;
+            var tashkentTime = TimeZoneInfo.ConvertTimeFromUtc(user.CreatedAt, tzTashkent);
+            userDto.CreatedAt = tashkentTime.ToString("dd-MM-yyyy HH:mm");
+            return userDto;
+        }).ToList();
     }
 
     public async Task<UserDto> GetByIdAsync(int id)

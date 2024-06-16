@@ -23,11 +23,11 @@ public class PaymentServicce(IUnitOfWork unitOfWork,
             throw new ValidationException(valid.GetErrorMessages());
 
         var payment = (Payment)dto;
-        var user = await _unitOfWork.User.GetByIdAsync(id);
+        var user = await _unitOfWork.User.GetByIdIncludeAsync(id);
         if (user is null)
             throw new StatusCodeExeption(HttpStatusCode.NotFound, "Foydalanuvchi topilmadi!");
         payment.UserId = id;
-        payment.User = user;
+        //payment.User = user;
         await _unitOfWork.Payment.CreateAsync(payment);
     }
     

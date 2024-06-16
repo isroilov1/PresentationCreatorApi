@@ -8,7 +8,7 @@ public class PaymentController(IPaymentService paymentService) : ControllerBase
 {
     private readonly IPaymentService _paymentService = paymentService;
 
-    [HttpPost("add")]
+    [HttpPost("new")]
     [Authorize]
     public async Task<IActionResult> CreateAsync([FromForm] AddPaymentDto dto)
     {
