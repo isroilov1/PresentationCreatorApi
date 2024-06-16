@@ -30,7 +30,7 @@ public class PaymentServicce(IUnitOfWork unitOfWork,
         payment.User = user;
         await _unitOfWork.Payment.CreateAsync(payment);
     }
-
+    
     public async Task DeleteAsync(int id)
     {
         var payment = await _unitOfWork.Payment.GetByIdAsync(id);

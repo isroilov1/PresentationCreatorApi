@@ -101,9 +101,15 @@ public class NotificationService(IUnitOfWork unitOfWork,
 
     public async Task UpdateAsync(int id, UpdateNotificationDto dto)
     {
-        var notification = await _unitOfWork.Notification.GetByIdAsync(id);
-        if (notification is null)
+        var model = await _unitOfWork.Notification.GetByIdAsync(id);
+        if (model is null)
             throw new StatusCodeExeption(HttpStatusCode.NotFound, "Bildirishnoma mavjud emas");
+        var notification = (Notification)dto;
+        notification.SenderId = model.SenderId;
+        notification.User = model.User;
+        notification.Id = model.Id;
+        notification.Status = model.Status;
+        notification.Type = model.Type;
 
         await _unitOfWork.Notification.UpdateAsync(notification);
     }

@@ -49,10 +49,9 @@ public class NotificationController(INotificationService notificationService) : 
 
     [HttpPut("update")]
     [Authorize]
-    public async Task<IActionResult> UpdateAsync([FromForm] UpdateNotificationDto dto)
+    public async Task<IActionResult> UpdateAsync([FromQuery]int notificationId, [FromForm] UpdateNotificationDto dto)
     {
-        var id = int.Parse(HttpContext.User.FindFirst("Id")!.Value);
-        await _notificationService.UpdateAsync(id, dto);
+        await _notificationService.UpdateAsync(notificationId, dto);
         return Ok();
     }
 

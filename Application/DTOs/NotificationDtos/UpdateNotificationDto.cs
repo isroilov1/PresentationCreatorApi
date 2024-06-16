@@ -2,7 +2,6 @@
 
 public class UpdateNotificationDto
 {
-    public int Id { get; set; }
     public string Message { get; set; } = string.Empty;
     public List<int> RecipientIds { get; set; } = null!;
 
@@ -10,7 +9,6 @@ public class UpdateNotificationDto
     {
         return new Notification
         {
-            Id = dto.Id,
             Message = dto.Message,
             RecipientIds = dto.RecipientIds
         };

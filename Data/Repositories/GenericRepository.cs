@@ -1,5 +1,4 @@
 ﻿
-
 namespace Data.Repositories;
 
 public class GenericRepository<T>(AppDbContext dbContext)

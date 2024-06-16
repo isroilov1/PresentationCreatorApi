@@ -26,10 +26,10 @@ public class PaymentController(IPaymentService paymentService) : ControllerBase
 
     [HttpGet("byPhone")]
     [Authorize]
-    public async Task<IActionResult> GetUserAsync()
+    public async Task<IActionResult> GetUserAsync([FromForm]string phone)
     {
         var userId = int.Parse(HttpContext.User.FindFirst("Id")!.Value);
-        return Ok(await _paymentService.GetByUserIdAsync(userId));
+        return Ok(await _paymentService.GetByPhoneNumberAsync(phone));
     }
 
     [HttpGet("payments")]
