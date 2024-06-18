@@ -7,14 +7,12 @@ public class AddPaymentDto
 
     public static implicit operator Payment(AddPaymentDto dto)
     {
-        string rootPath = "wwwroot/uploads/payments";
-        string filePath = FileHelper.SaveFile(dto.File, rootPath);
         return new Payment
         {
             Summa = dto.Summa,
             Caption = dto.Caption,
-            FilePath = filePath,
-            Status = PaymentStatus.Expected
+            Status = PaymentStatus.Expected,
+            FilePath = ""
         };
     }
 }

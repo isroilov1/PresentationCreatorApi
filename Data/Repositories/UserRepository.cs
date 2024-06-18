@@ -12,5 +12,5 @@ public class UserRepository(AppDbContext dbContext) : GenericRepository<User>(db
         => await _dbContext.Users.Include(u => u.Notifications).Include(p => p.Payments).FirstOrDefaultAsync(p => p.Id == id);
 
     public async Task<User?> GetByPhoneNumberAsync(string phoneNumber)
-        => await _dbContext.Users.Include(u => u.Notifications).Include(p => p.Payments).FirstOrDefaultAsync(mail => mail.PhoneNumber == phoneNumber);
+        => await _dbContext.Users.Include(u => u.Notifications).Include(p => p.Payments).FirstOrDefaultAsync(phone => phone.PhoneNumber == phoneNumber);
 }

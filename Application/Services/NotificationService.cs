@@ -41,7 +41,6 @@ public class NotificationService(IUnitOfWork unitOfWork,
                 Status = NotificationStatus.NotRead,
                 Type = NotificationType.Input,
                 SenderId = senderId,
-                User = senderUser,
                 RecipientIds = recipientIds
             };
             var recipientUser = await _unitOfWork.User.GetByIdAsync(recipientId);
@@ -106,7 +105,6 @@ public class NotificationService(IUnitOfWork unitOfWork,
             throw new StatusCodeExeption(HttpStatusCode.NotFound, "Bildirishnoma mavjud emas");
         var notification = (Notification)dto;
         notification.SenderId = model.SenderId;
-        notification.User = model.User;
         notification.Id = model.Id;
         notification.Status = model.Status;
         notification.Type = model.Type;

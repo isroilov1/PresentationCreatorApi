@@ -8,7 +8,7 @@ public class AdminsController(IAdminService adminService,
     private readonly IAdminService _adminService = adminService;
     private readonly IUserService _userService = userService;
 
-    [HttpPost("id")]
+    [HttpPut("changeRole")]
     [Authorize(Roles = "Admin")]
     public async Task<IActionResult> ChangeUserRoleAsync(int id)
     {
@@ -16,7 +16,7 @@ public class AdminsController(IAdminService adminService,
         return Ok();
     }
 
-    [HttpPut]
+    [HttpPost("id")]
     [Authorize(Roles = "Admin")]
     public async Task<IActionResult> UpdateUserAsync(int id, [FromForm]UpdateUserDto dto)
     {
@@ -28,4 +28,12 @@ public class AdminsController(IAdminService adminService,
     [Authorize(Roles = "Admin")]
     public async Task<IActionResult> GetAllAdminAsync()
         => Ok(await _adminService.GetAllAdminAsync());
+
+    [HttpPut("updateBalance")]
+    [Authorize(Roles = "Admin")]
+    public async Task<IActionResult> UpdateBalanceAsync([FromForm] UpdateUserBalanceDto dto)
+    {
+        await _adminService.UpdateBalanceAsync(dto);
+        return Ok();
+    }
 }

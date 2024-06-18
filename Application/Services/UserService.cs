@@ -46,6 +46,14 @@ public class UserService(IUnitOfWork unitOfWork) : IUserService
         return (UserDto)user;
     }
 
+    public async Task<UserDto> GetUserAsync(int id)
+    {
+        var user = await _unitOfWork.User.GetByIdIncludeAsync(id);
+        if (user is null)
+            throw new StatusCodeExeption(HttpStatusCode.NotFound, "Foydalanuvchi topilmadi");
+        return (UserDto)user;
+    }
+
     public async Task UpdateAsync(int id, UpdateUserDto dto)
     {
         var model = await _unitOfWork.User.GetByIdIncludeAsync(id);
@@ -63,28 +71,5 @@ public class UserService(IUnitOfWork unitOfWork) : IUserService
 
         await _unitOfWork.User.UpdateAsync(user);
         throw new StatusCodeExeption(HttpStatusCode.OK, "Foydalanuvchi ma'lumotlari yangilandi");
-    }
-
-    public async Task UpdateBalanceAsync(UpdateUserBalanceDto dto)
-    {
-        var model = await _unitOfWork.User.GetByIdIncludeAsync(dto.Id);
-        if (model is null)
-            throw new StatusCodeExeption(HttpStatusCode.NotFound, "Foydalanuvchi topilmadi");
-        dto.Balance = dto.IsAdd ? model.Balance + dto.Balance : model.Balance - dto.Balance;
-
-        var user = (User)dto;
-        user.FullName = model.FullName;
-        user.PhoneNumber = model.PhoneNumber;
-        user.Email = model.Email;
-        user.CreatedAt = model.CreatedAt;
-        user.Password = model.Password;
-        user.ReferalId = model.ReferalId;
-        user.PresentationCount = model.PresentationCount;
-        user.IsVerified = model.IsVerified;
-        user.TotalPayments = model.TotalPayments;
-
-        await _unitOfWork.User.UpdateAsync(user);
-        throw new StatusCodeExeption(HttpStatusCode.OK, "Foydalanuvchi balansi yangilandi");
-
     }
 }

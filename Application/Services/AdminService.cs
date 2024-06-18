@@ -1,4 +1,5 @@
-﻿namespace Application.Services;
+﻿
+namespace Application.Services;
 
 public class AdminService(IUnitOfWork work) : IAdminService
 {
@@ -39,5 +40,27 @@ public class AdminService(IUnitOfWork work) : IAdminService
 
         user.Balance += bonus;
         await _work.User.UpdateAsync(user);
+    }
+
+    public async Task UpdateBalanceAsync(UpdateUserBalanceDto dto)
+    {
+        var model = await _work.User.GetByIdIncludeAsync(dto.Id);
+        if (model is null)
+            throw new StatusCodeExeption(HttpStatusCode.NotFound, "Foydalanuvchi topilmadi");
+        dto.Balance = dto.IsAdd ? model.Balance + dto.Balance : model.Balance - dto.Balance;
+
+        var user = (User)dto;
+        user.FullName = model.FullName;
+        user.PhoneNumber = model.PhoneNumber;
+        user.Email = model.Email;
+        user.CreatedAt = model.CreatedAt;
+        user.Password = model.Password;
+        user.ReferalId = model.ReferalId;
+        user.PresentationCount = model.PresentationCount;
+        user.IsVerified = model.IsVerified;
+        user.TotalPayments = model.TotalPayments;
+
+        await _work.User.UpdateAsync(user);
+        throw new StatusCodeExeption(HttpStatusCode.OK, "Foydalanuvchi balansi yangilandi");
     }
 }

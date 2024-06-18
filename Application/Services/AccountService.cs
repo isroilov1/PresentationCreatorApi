@@ -1,4 +1,7 @@
-﻿namespace Application.Services;
+﻿using Domain.Models;
+using Org.BouncyCastle.Cms;
+
+namespace Application.Services;
 
 public class AccountService(IUnitOfWork ofWork,
                             IAuthManager authManager,
@@ -28,9 +31,25 @@ public class AccountService(IUnitOfWork ofWork,
 
         var referalId = user.ReferalId;
         var referalUser = await _ofWork.User.GetByIdAsync(referalId);
-        if (referalUser is not null)
+        if (referalUser is not null && !user.ReferalBonus)
         {
+            user.ReferalBonus = true;
+            await _ofWork.User.UpdateAsync(user);
+
             referalUser.Balance += 1000;
+            var recipientIds = new List<int> { referalUser.Id };
+            var notification = new Notification
+            {
+                Message = $"{user.FullName} muvaffaqqiyatli qo'shildi. Sizning hisobingizga 1000 so'm referal bonusi yuborildi!",
+                Status = NotificationStatus.NotRead,
+                Type = NotificationType.Input,
+                SenderId = 1,
+                RecipientIds = recipientIds
+            };
+            await _ofWork.Notification.CreateAsync(notification);
+            if (user.Notifications == null)
+                user.Notifications = new List<Notification>();
+            user.Notifications.Add(notification);
             await _ofWork.User.UpdateAsync(referalUser);
         }
         return _auth.GeneratedToken(user);
@@ -72,18 +91,16 @@ public class AccountService(IUnitOfWork ofWork,
         var user = await _ofWork.User.GetByEmailAsync(email);
         if (user is null)
             throw new StatusCodeExeption(HttpStatusCode.NotFound, "Foydalanuvchi topilmadi");
-        if (_cache.TryGetValue(email, out var result))
-        {
-            if (!code.Equals(result))
+
+        if (!_cache.TryGetValue(email, out var result))
+            throw new StatusCodeExeption(HttpStatusCode.BadRequest, "Kod amal qilish muddati tugagan");
+        if (!code.Equals(result))
                 throw new StatusCodeExeption(HttpStatusCode.Conflict, "Kod noto'g'ri!");
 
             user.IsVerified = true;
             await _ofWork.User.UpdateAsync(user);
 
             return true;
-        }
-        else
-            throw new StatusCodeExeption(HttpStatusCode.BadRequest, "Kod amal qilish muddati tugagan");
     }
     private string GeneratedCode()
         => (new Random().Next(10000, 99999)).ToString();

@@ -7,17 +7,25 @@
         private readonly IUserService _userService = userService;
 
         [HttpGet("{id}")]
-        //[Authorize(Roles = "Admin")]
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> GetAsync(int id)
         {
             return Ok(await _userService.GetByIdAsync(id));
         }
 
         [HttpGet("users")]
-        //[Authorize(Roles = "Admin")]
+        [Authorize]
         public async Task<IActionResult> GetAllAsync()
         {
             return Ok(await _userService.GetAllAsync());
+        }
+
+        [HttpGet("user")]
+        [Authorize(Roles = "Admin")]
+        public async Task<IActionResult> GetUserAsync()
+        {
+            var id = int.Parse(HttpContext.User.FindFirst("Id")!.Value);
+            return Ok(await _userService.GetByIdAsync(id));
         }
 
         [HttpPut("update")]
@@ -35,14 +43,6 @@
         public async Task<IActionResult> DeleteAsync(int id)
         {
             await _userService.DeleteAsync(id);
-            return Ok();
-        }
-
-        [HttpPut("updateBalance")]
-        [Authorize(Roles = "Admin")]
-        public async Task<IActionResult> UpdateBalanceAsync([FromForm] UpdateUserBalanceDto dto)
-        {
-            await _userService.UpdateBalanceAsync(dto);
             return Ok();
         }
     }

@@ -3,5 +3,5 @@
 public enum NotificationType
 {
     Output = 1,
-    Input = 2
+    Input
 }

@@ -24,11 +24,18 @@ public class PaymentController(IPaymentService paymentService) : ControllerBase
         return Ok(await _paymentService.GetByIdAsync(id));
     }
 
-    [HttpGet("byPhone")]
+    [HttpGet("user")]
     [Authorize]
-    public async Task<IActionResult> GetUserAsync([FromForm]string phone)
+    public async Task<IActionResult> GetUserAsync()
     {
         var userId = int.Parse(HttpContext.User.FindFirst("Id")!.Value);
+        return Ok(await _paymentService.GetByUserIdAsync(userId));
+    }
+
+    [HttpGet("byPhone")]
+    [Authorize(Roles = "Admin")]
+    public async Task<IActionResult> GetUserByPhoneAsync([FromForm]string phone)
+    {
         return Ok(await _paymentService.GetByPhoneNumberAsync(phone));
     }
 
@@ -51,7 +58,8 @@ public class PaymentController(IPaymentService paymentService) : ControllerBase
     [Authorize(Roles = "Admin")]
     public async Task<IActionResult> AcceptPaymentAsync([FromForm] int paymentId, [FromForm] PaymentStatus status, [FromForm] string adminCaption)
     {
-        await _paymentService.AcceptOrRejectAsync(paymentId, status, adminCaption);
+        var accepterId = int.Parse(HttpContext.User.FindFirst("Id")!.Value);
+        await _paymentService.AcceptOrRejectAsync(paymentId, status, adminCaption, accepterId);
         return Ok();
     }
 

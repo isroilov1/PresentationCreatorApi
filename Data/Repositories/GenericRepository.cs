@@ -1,5 +1,4 @@
-﻿
-namespace Data.Repositories;
+﻿namespace Data.Repositories;
 
 public class GenericRepository<T>(AppDbContext dbContext)
     : IGenericRepository<T> where T : BaseEntity

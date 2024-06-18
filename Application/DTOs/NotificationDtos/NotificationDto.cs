@@ -1,4 +1,6 @@
-﻿namespace Application.DTOs;
+﻿using Domain.Models;
+
+namespace Application.DTOs;
 public class NotificationDto : AddNotificationDto
 {
     public int Id { get; set; }
@@ -10,7 +12,7 @@ public class NotificationDto : AddNotificationDto
     {
         var tzTashkent = TimeZoneInfo.FindSystemTimeZoneById("Asia/Tashkent");
         var tashkentTime = TimeZoneInfo.ConvertTimeFromUtc(notification.CreatedAt, tzTashkent);
-        string formattedDate = tashkentTime.ToString("dd-MM-yyyy HH:mm");
+        string formattedDate = tashkentTime.ToString("dd-MM-yyyy HH");
 
         return new NotificationDto()
         {

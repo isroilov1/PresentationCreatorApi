@@ -8,6 +8,8 @@ public class BaseEntity
     public BaseEntity()
     {
         var tzTashkent = TimeZoneInfo.FindSystemTimeZoneById("Asia/Tashkent");
-        CreatedAt = TimeZoneInfo.ConvertTimeFromUtc(DateTime.UtcNow, tzTashkent);
+        var tashkentTime = TimeZoneInfo.ConvertTimeFromUtc(DateTime.UtcNow, tzTashkent);
+        var adjustedTime = tashkentTime.AddHours(-5);
+        CreatedAt = adjustedTime;
     }
 }

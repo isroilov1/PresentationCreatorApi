@@ -50,9 +50,12 @@ namespace Data.Migrations
                     b.Property<int>("Type")
                         .HasColumnType("int");
 
+                    b.Property<int?>("UserId")
+                        .HasColumnType("int");
+
                     b.HasKey("Id");
 
-                    b.HasIndex("SenderId");
+                    b.HasIndex("UserId");
 
                     b.ToTable("Notification");
                 });
@@ -229,7 +232,7 @@ namespace Data.Migrations
                         {
                             Id = 1,
                             Balance = 20000,
-                            CreatedAt = new DateTime(2024, 6, 15, 22, 43, 20, 389, DateTimeKind.Unspecified).AddTicks(8228),
+                            CreatedAt = new DateTime(2024, 6, 18, 9, 25, 43, 40, DateTimeKind.Unspecified).AddTicks(1128),
                             Email = "isroilov0905@gmail.com",
                             FullName = "Isroilov Ismoiljon",
                             IsVerified = true,
@@ -244,13 +247,9 @@ namespace Data.Migrations
 
             modelBuilder.Entity("Domain.Models.Notification", b =>
                 {
-                    b.HasOne("Domain.Models.User", "User")
+                    b.HasOne("Domain.Models.User", null)
                         .WithMany("Notifications")
-                        .HasForeignKey("SenderId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("User");
+                        .HasForeignKey("UserId");
                 });
 
             modelBuilder.Entity("Domain.Models.Page", b =>
