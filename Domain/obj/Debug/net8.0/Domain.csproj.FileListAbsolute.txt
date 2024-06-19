@@ -28,3 +28,18 @@ D:\Programming\PresentationCreatorApi\Domain\obj\Debug\net8.0\refint\Domain.dll
 D:\Programming\PresentationCreatorApi\Domain\obj\Debug\net8.0\Domain.pdb
 D:\Programming\PresentationCreatorApi\Domain\obj\Debug\net8.0\Domain.genruntimeconfig.cache
 D:\Programming\PresentationCreatorApi\Domain\obj\Debug\net8.0\ref\Domain.dll
+D:\Dot net Projects\PresentationCreatorApi\Domain\bin\Debug\net8.0\Domain.deps.json
+D:\Dot net Projects\PresentationCreatorApi\Domain\bin\Debug\net8.0\Domain.runtimeconfig.json
+D:\Dot net Projects\PresentationCreatorApi\Domain\bin\Debug\net8.0\Domain.dll
+D:\Dot net Projects\PresentationCreatorApi\Domain\bin\Debug\net8.0\Domain.pdb
+D:\Dot net Projects\PresentationCreatorApi\Domain\obj\Debug\net8.0\Domain.csproj.AssemblyReference.cache
+D:\Dot net Projects\PresentationCreatorApi\Domain\obj\Debug\net8.0\Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\Dot net Projects\PresentationCreatorApi\Domain\obj\Debug\net8.0\Domain.AssemblyInfoInputs.cache
+D:\Dot net Projects\PresentationCreatorApi\Domain\obj\Debug\net8.0\Domain.AssemblyInfo.cs
+D:\Dot net Projects\PresentationCreatorApi\Domain\obj\Debug\net8.0\Domain.csproj.CoreCompileInputs.cache
+D:\Dot net Projects\PresentationCreatorApi\Domain\obj\Debug\net8.0\Domain.sourcelink.json
+D:\Dot net Projects\PresentationCreatorApi\Domain\obj\Debug\net8.0\Domain.dll
+D:\Dot net Projects\PresentationCreatorApi\Domain\obj\Debug\net8.0\refint\Domain.dll
+D:\Dot net Projects\PresentationCreatorApi\Domain\obj\Debug\net8.0\Domain.pdb
+D:\Dot net Projects\PresentationCreatorApi\Domain\obj\Debug\net8.0\Domain.genruntimeconfig.cache
+D:\Dot net Projects\PresentationCreatorApi\Domain\obj\Debug\net8.0\ref\Domain.dll

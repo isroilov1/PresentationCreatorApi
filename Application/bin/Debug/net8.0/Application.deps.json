@@ -12,6 +12,7 @@
           "Domain": "1.0.0",
           "FluentValidation": "11.9.2",
           "MailKit": "4.6.0",
+          "Microsoft.AspNetCore.Http.Features": "5.0.17",
           "Microsoft.EntityFrameworkCore.Design": "8.0.6",
           "Microsoft.Extensions.Configuration.Abstractions": "8.0.0",
           "MimeKit": "4.6.0"

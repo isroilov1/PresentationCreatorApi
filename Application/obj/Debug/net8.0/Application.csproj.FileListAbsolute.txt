@@ -38,3 +38,23 @@ D:\Programming\PresentationCreatorApi\Application\obj\Debug\net8.0\refint\Applic
 D:\Programming\PresentationCreatorApi\Application\obj\Debug\net8.0\Application.pdb
 D:\Programming\PresentationCreatorApi\Application\obj\Debug\net8.0\Application.genruntimeconfig.cache
 D:\Programming\PresentationCreatorApi\Application\obj\Debug\net8.0\ref\Application.dll
+D:\Dot net Projects\PresentationCreatorApi\Application\bin\Debug\net8.0\Application.deps.json
+D:\Dot net Projects\PresentationCreatorApi\Application\bin\Debug\net8.0\Application.runtimeconfig.json
+D:\Dot net Projects\PresentationCreatorApi\Application\bin\Debug\net8.0\Application.dll
+D:\Dot net Projects\PresentationCreatorApi\Application\bin\Debug\net8.0\Application.pdb
+D:\Dot net Projects\PresentationCreatorApi\Application\bin\Debug\net8.0\Data.dll
+D:\Dot net Projects\PresentationCreatorApi\Application\bin\Debug\net8.0\Domain.dll
+D:\Dot net Projects\PresentationCreatorApi\Application\bin\Debug\net8.0\Data.pdb
+D:\Dot net Projects\PresentationCreatorApi\Application\bin\Debug\net8.0\Domain.pdb
+D:\Dot net Projects\PresentationCreatorApi\Application\obj\Debug\net8.0\Application.csproj.AssemblyReference.cache
+D:\Dot net Projects\PresentationCreatorApi\Application\obj\Debug\net8.0\Application.GeneratedMSBuildEditorConfig.editorconfig
+D:\Dot net Projects\PresentationCreatorApi\Application\obj\Debug\net8.0\Application.AssemblyInfoInputs.cache
+D:\Dot net Projects\PresentationCreatorApi\Application\obj\Debug\net8.0\Application.AssemblyInfo.cs
+D:\Dot net Projects\PresentationCreatorApi\Application\obj\Debug\net8.0\Application.csproj.CoreCompileInputs.cache
+D:\Dot net Projects\PresentationCreatorApi\Application\obj\Debug\net8.0\Application.sourcelink.json
+D:\Dot net Projects\PresentationCreatorApi\Application\obj\Debug\net8.0\Applicat.44B5EDA2.Up2Date
+D:\Dot net Projects\PresentationCreatorApi\Application\obj\Debug\net8.0\Application.dll
+D:\Dot net Projects\PresentationCreatorApi\Application\obj\Debug\net8.0\refint\Application.dll
+D:\Dot net Projects\PresentationCreatorApi\Application\obj\Debug\net8.0\Application.pdb
+D:\Dot net Projects\PresentationCreatorApi\Application\obj\Debug\net8.0\Application.genruntimeconfig.cache
+D:\Dot net Projects\PresentationCreatorApi\Application\obj\Debug\net8.0\ref\Application.dll

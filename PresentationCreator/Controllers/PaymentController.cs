@@ -54,15 +54,6 @@ public class PaymentController(IPaymentService paymentService) : ControllerBase
         return Ok();
     }
 
-    [HttpPut("accept-reject")]
-    [Authorize(Roles = "Admin")]
-    public async Task<IActionResult> AcceptPaymentAsync([FromForm] int paymentId, [FromForm] PaymentStatus status, [FromForm] string adminCaption)
-    {
-        var accepterId = int.Parse(HttpContext.User.FindFirst("Id")!.Value);
-        await _paymentService.AcceptOrRejectAsync(paymentId, status, adminCaption, accepterId);
-        return Ok();
-    }
-
     [HttpDelete("delete")]
     [Authorize(Roles = "Admin")]
     public async Task<IActionResult> DeleteAsync(int id)

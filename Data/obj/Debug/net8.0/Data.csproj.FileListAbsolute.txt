@@ -34,3 +34,21 @@ D:\Programming\PresentationCreatorApi\Data\obj\Debug\net8.0\refint\Data.dll
 D:\Programming\PresentationCreatorApi\Data\obj\Debug\net8.0\Data.pdb
 D:\Programming\PresentationCreatorApi\Data\obj\Debug\net8.0\Data.genruntimeconfig.cache
 D:\Programming\PresentationCreatorApi\Data\obj\Debug\net8.0\ref\Data.dll
+D:\Dot net Projects\PresentationCreatorApi\Data\bin\Debug\net8.0\Data.deps.json
+D:\Dot net Projects\PresentationCreatorApi\Data\bin\Debug\net8.0\Data.runtimeconfig.json
+D:\Dot net Projects\PresentationCreatorApi\Data\bin\Debug\net8.0\Data.dll
+D:\Dot net Projects\PresentationCreatorApi\Data\bin\Debug\net8.0\Data.pdb
+D:\Dot net Projects\PresentationCreatorApi\Data\bin\Debug\net8.0\Domain.dll
+D:\Dot net Projects\PresentationCreatorApi\Data\bin\Debug\net8.0\Domain.pdb
+D:\Dot net Projects\PresentationCreatorApi\Data\obj\Debug\net8.0\Data.csproj.AssemblyReference.cache
+D:\Dot net Projects\PresentationCreatorApi\Data\obj\Debug\net8.0\Data.GeneratedMSBuildEditorConfig.editorconfig
+D:\Dot net Projects\PresentationCreatorApi\Data\obj\Debug\net8.0\Data.AssemblyInfoInputs.cache
+D:\Dot net Projects\PresentationCreatorApi\Data\obj\Debug\net8.0\Data.AssemblyInfo.cs
+D:\Dot net Projects\PresentationCreatorApi\Data\obj\Debug\net8.0\Data.csproj.CoreCompileInputs.cache
+D:\Dot net Projects\PresentationCreatorApi\Data\obj\Debug\net8.0\Data.sourcelink.json
+D:\Dot net Projects\PresentationCreatorApi\Data\obj\Debug\net8.0\Data.csproj.Up2Date
+D:\Dot net Projects\PresentationCreatorApi\Data\obj\Debug\net8.0\Data.dll
+D:\Dot net Projects\PresentationCreatorApi\Data\obj\Debug\net8.0\refint\Data.dll
+D:\Dot net Projects\PresentationCreatorApi\Data\obj\Debug\net8.0\Data.pdb
+D:\Dot net Projects\PresentationCreatorApi\Data\obj\Debug\net8.0\Data.genruntimeconfig.cache
+D:\Dot net Projects\PresentationCreatorApi\Data\obj\Debug\net8.0\ref\Data.dll

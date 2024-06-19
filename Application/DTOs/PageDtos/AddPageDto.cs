@@ -3,7 +3,6 @@
 public class AddPageDto
 {
     public string Title { get; set; } = string.Empty; // request with title
-    public PresentationPageType PageType { get; set; }  
     public IFormFile Image { get; set; } = null!;
     
     public static implicit operator Page(AddPageDto dto)

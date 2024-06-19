@@ -10,7 +10,7 @@ public class User : BaseEntity
     public int Balance { get; set; } = 4000;
     public int PresentationCount { get; set; } = 0;
     public int ReferalId { get; set; }
-    public bool ReferalBonus { get; set; } = false;
+    public bool ReferalBonus { get; set; } = false; 
     public Role Role { get; set; } = Role.User;
     public int TotalPayments { get; set; } = 0;
     public int TelegramId { get; set; }
