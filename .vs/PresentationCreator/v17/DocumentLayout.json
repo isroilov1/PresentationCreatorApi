@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "D:\\Programming\\PresentationCreatorApi\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{37C690A7-271A-4E6B-AC7F-37FEBCE91BDD}|Application\\Application.csproj|d:\\programming\\presentationcreatorapi\\application\\dtos\\notificationdtos\\notificationdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{37C690A7-271A-4E6B-AC7F-37FEBCE91BDD}|Application\\Application.csproj|solutionrelative:application\\dtos\\notificationdtos\\notificationdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{E2900C9E-E75C-4622-9089-534E6A74409A}|PresentationCreator\\PresentationCreator.csproj|d:\\programming\\presentationcreatorapi\\presentationcreator\\controllers\\notificationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E2900C9E-E75C-4622-9089-534E6A74409A}|PresentationCreator\\PresentationCreator.csproj|solutionrelative:presentationcreator\\controllers\\notificationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -45,47 +49,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 204,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 6,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "INotificationService.cs",
-              "DocumentMoniker": "D:\\Programming\\PresentationCreatorApi\\Application\\Interfaces\\INotificationService.cs",
-              "RelativeDocumentMoniker": "Application\\Interfaces\\INotificationService.cs",
-              "ToolTip": "D:\\Programming\\PresentationCreatorApi\\Application\\Interfaces\\INotificationService.cs",
-              "RelativeToolTip": "Application\\Interfaces\\INotificationService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAwAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-19T10:33:28.497Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "NotificationController.cs",
-              "DocumentMoniker": "D:\\Programming\\PresentationCreatorApi\\PresentationCreator\\Controllers\\NotificationController.cs",
-              "RelativeDocumentMoniker": "PresentationCreator\\Controllers\\NotificationController.cs",
-              "ToolTip": "D:\\Programming\\PresentationCreatorApi\\PresentationCreator\\Controllers\\NotificationController.cs*",
-              "RelativeToolTip": "PresentationCreator\\Controllers\\NotificationController.cs*",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAABFAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-19T10:31:29.242Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "NotificationService.cs",
-              "DocumentMoniker": "D:\\Programming\\PresentationCreatorApi\\Application\\Services\\NotificationService.cs",
-              "RelativeDocumentMoniker": "Application\\Services\\NotificationService.cs",
-              "ToolTip": "D:\\Programming\\PresentationCreatorApi\\Application\\Services\\NotificationService.cs",
-              "RelativeToolTip": "Application\\Services\\NotificationService.cs",
-              "ViewState": "AQIAAE8AAAAAAAAAAAAkwJEAAAAUAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-19T10:30:05.355Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{5a4e9529-b6a0-46b5-be4f-0f0b239bc0eb}"
@@ -112,7 +77,59 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 0,
+              "Title": "NotificationDto.cs",
+              "DocumentMoniker": "D:\\Programming\\PresentationCreatorApi\\Application\\DTOs\\NotificationDtos\\NotificationDto.cs",
+              "RelativeDocumentMoniker": "Application\\DTOs\\NotificationDtos\\NotificationDto.cs",
+              "ToolTip": "D:\\Programming\\PresentationCreatorApi\\Application\\DTOs\\NotificationDtos\\NotificationDto.cs",
+              "RelativeToolTip": "Application\\DTOs\\NotificationDtos\\NotificationDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAA2AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-19T10:55:17.694Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "INotificationService.cs",
+              "DocumentMoniker": "D:\\Programming\\PresentationCreatorApi\\Application\\Interfaces\\INotificationService.cs",
+              "RelativeDocumentMoniker": "Application\\Interfaces\\INotificationService.cs",
+              "ToolTip": "D:\\Programming\\PresentationCreatorApi\\Application\\Interfaces\\INotificationService.cs",
+              "RelativeToolTip": "Application\\Interfaces\\INotificationService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAwAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-19T10:33:28.497Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "NotificationController.cs",
+              "DocumentMoniker": "D:\\Programming\\PresentationCreatorApi\\PresentationCreator\\Controllers\\NotificationController.cs",
+              "RelativeDocumentMoniker": "PresentationCreator\\Controllers\\NotificationController.cs",
+              "ToolTip": "D:\\Programming\\PresentationCreatorApi\\PresentationCreator\\Controllers\\NotificationController.cs",
+              "RelativeToolTip": "PresentationCreator\\Controllers\\NotificationController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAZAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-19T10:31:29.242Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "NotificationService.cs",
+              "DocumentMoniker": "D:\\Programming\\PresentationCreatorApi\\Application\\Services\\NotificationService.cs",
+              "RelativeDocumentMoniker": "Application\\Services\\NotificationService.cs",
+              "ToolTip": "D:\\Programming\\PresentationCreatorApi\\Application\\Services\\NotificationService.cs",
+              "RelativeToolTip": "Application\\Services\\NotificationService.cs",
+              "ViewState": "AQIAAE8AAAAAAAAAAAAkwJEAAAAUAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-19T10:30:05.355Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "AccountService.cs",
               "DocumentMoniker": "D:\\Programming\\PresentationCreatorApi\\Application\\Services\\AccountService.cs",
               "RelativeDocumentMoniker": "Application\\Services\\AccountService.cs",
@@ -125,7 +142,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "UserService.cs",
               "DocumentMoniker": "D:\\Programming\\PresentationCreatorApi\\Application\\Services\\UserService.cs",
               "RelativeDocumentMoniker": "Application\\Services\\UserService.cs",
@@ -138,7 +155,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "20240619100737_Initv20.cs",
               "DocumentMoniker": "D:\\Programming\\PresentationCreatorApi\\Data\\Migrations\\20240619100737_Initv20.cs",
               "RelativeDocumentMoniker": "Data\\Migrations\\20240619100737_Initv20.cs",
@@ -151,7 +168,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "UserDto.cs",
               "DocumentMoniker": "D:\\Programming\\PresentationCreatorApi\\Application\\DTOs\\UserDtos\\UserDto.cs",
               "RelativeDocumentMoniker": "Application\\DTOs\\UserDtos\\UserDto.cs",
@@ -164,7 +181,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\Programming\\PresentationCreatorApi\\PresentationCreator\\Program.cs",
               "RelativeDocumentMoniker": "PresentationCreator\\Program.cs",
@@ -177,7 +194,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "Microsoft.NET.Sdk.ImportWorkloads.targets",
               "DocumentMoniker": "C:\\Program Files\\dotnet\\sdk\\8.0.204\\Sdks\\Microsoft.NET.Sdk\\targets\\Microsoft.NET.Sdk.ImportWorkloads.targets",
               "ToolTip": "C:\\Program Files\\dotnet\\sdk\\8.0.204\\Sdks\\Microsoft.NET.Sdk\\targets\\Microsoft.NET.Sdk.ImportWorkloads.targets",

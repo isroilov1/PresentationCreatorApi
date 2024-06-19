@@ -4,7 +4,7 @@ public class PaymentDto
     public int Id { get; set; }
     public int Summa { get; set; }
     public string Caption { get; set; } = string.Empty;
-    public PaymentStatus Status {  get; set; }
+    public string Status { get; set; } = string.Empty;
     public string FilePath { get; set; } = string.Empty;
     public string AdminCaption { get; set; } = string.Empty;
     public int UserId { get; set; }
@@ -21,7 +21,7 @@ public class PaymentDto
             Id = payment.Id,
             Summa = payment.Summa,
             Caption = payment.Caption,
-            Status = payment.Status,
+            Status = payment.Status.ToString(),
             UserId = payment.UserId,
             FilePath = payment.FilePath,
             AdminCaption = payment.AdminCaption,
