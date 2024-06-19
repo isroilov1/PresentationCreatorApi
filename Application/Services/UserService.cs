@@ -8,7 +8,7 @@ public class UserService(IUnitOfWork unitOfWork) : IUserService
     {
         if (id == 1 || id == 2)
             throw new StatusCodeExeption(HttpStatusCode.BadRequest, "Bosh adminni o'chirish mumkin emas!");
-        var user = await _unitOfWork.User.GetByIdAsync(id);
+        var user = await _unitOfWork.User.GetByIdIncludeAsync(id);
         if (user is null)
             throw new StatusCodeExeption(HttpStatusCode.NotFound, "Foydalanuvchi topilmadi");
         await _unitOfWork.User.DeleteAsync(user);

@@ -1,4 +1,6 @@
-﻿namespace Application.Services;
+﻿using Org.BouncyCastle.Cms;
+
+namespace Application.Services;
 
 public class NotificationService(IUnitOfWork unitOfWork,
                           IValidator<Notification> validator) : INotificationService
@@ -20,9 +22,8 @@ public class NotificationService(IUnitOfWork unitOfWork,
 
         await _unitOfWork.Notification.CreateAsync(notification);
         if (senderUser.Notifications == null)
-        {
             senderUser.Notifications = new List<Notification>();
-        }
+        
         senderUser.Notifications.Add(notification);
         await _unitOfWork.User.UpdateAsync(senderUser);
 
@@ -96,6 +97,53 @@ public class NotificationService(IUnitOfWork unitOfWork,
         if (notifications is null)
             throw new StatusCodeExeption(HttpStatusCode.NotFound, "Ushbu foydalanuvchining xabarlari mavjud emas!");
         return notifications.Select(x => (NotificationDto)x).ToList();
+    }
+
+    public async Task<bool> SendMessageToAdmin(int senderId ,string message)
+    {
+        var adminsId = (await _unitOfWork.User.GetAllIncludeAsync())!
+                                              .Where(u => u.Role == Role.Admin)
+                                              .Select(x => x.Id).ToList();
+
+        var sender = await _unitOfWork.User.GetByIdIncludeAsync(senderId);
+        if (sender is null)
+            throw new StatusCodeExeption(HttpStatusCode.NotFound, "Foydalanuvchi topilmadi");
+
+        var notification = new Notification
+        {
+            Message = message,
+            Status = NotificationStatus.NotRead,
+            Type = NotificationType.Input,
+            SenderId = senderId,
+            RecipientIds = adminsId
+        };
+
+        await _unitOfWork.Notification.CreateAsync(notification);
+        if (sender.Notifications == null)
+            sender.Notifications = new List<Notification>();
+        sender.Notifications.Add(notification);
+        await _unitOfWork.User.UpdateAsync(sender);
+
+        foreach(var adminId in adminsId)
+        {
+            var notification2 = new Notification
+            {
+                Message = message,
+                Status = NotificationStatus.NotRead,
+                Type = NotificationType.Input,
+                SenderId = senderId,
+                RecipientIds = adminsId
+            };
+            await _unitOfWork.Notification.CreateAsync(notification2);
+            var admin = await _unitOfWork.User.GetByIdIncludeAsync(adminId);
+            if (admin!.Notifications == null)
+            {
+                admin.Notifications = new List<Notification>();
+            }
+            admin.Notifications.Add(notification2);
+            await _unitOfWork.User.UpdateAsync(admin);
+        }
+        return true;
     }
 
     public async Task UpdateAsync(int id, UpdateNotificationDto dto)
