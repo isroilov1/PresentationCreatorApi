@@ -148,3 +148,303 @@ C:\Users\Isroilov\source\repos\PresentationCreator\PresentationCreator\bin\Debug
 C:\Users\Isroilov\source\repos\PresentationCreator\PresentationCreator\bin\Debug\net8.0\Application.dll
 C:\Users\Isroilov\source\repos\PresentationCreator\PresentationCreator\bin\Debug\net8.0\Application.pdb
 C:\Users\Isroilov\source\repos\PresentationCreator\PresentationCreator\bin\Debug\net8.0\PresentationCreator.staticwebassets.runtime.json
+D:\Programming\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\appsettings.Development.json
+D:\Programming\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\appsettings.json
+D:\Programming\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\PresentationCreator.staticwebassets.runtime.json
+D:\Programming\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\PresentationCreator.exe
+D:\Programming\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\PresentationCreator.deps.json
+D:\Programming\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\PresentationCreator.runtimeconfig.json
+D:\Programming\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\PresentationCreator.dll
+D:\Programming\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\PresentationCreator.pdb
+D:\Programming\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\Azure.Core.dll
+D:\Programming\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\Azure.Identity.dll
+D:\Programming\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\BouncyCastle.Cryptography.dll
+D:\Programming\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\FluentValidation.dll
+D:\Programming\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\Humanizer.dll
+D:\Programming\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\MailKit.dll
+D:\Programming\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+D:\Programming\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\Microsoft.Bcl.AsyncInterfaces.dll
+D:\Programming\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\Microsoft.CodeAnalysis.dll
+D:\Programming\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\Microsoft.CodeAnalysis.CSharp.dll
+D:\Programming\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\Microsoft.CodeAnalysis.CSharp.Workspaces.dll
+D:\Programming\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\Microsoft.CodeAnalysis.Workspaces.dll
+D:\Programming\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\Microsoft.Data.SqlClient.dll
+D:\Programming\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.dll
+D:\Programming\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+D:\Programming\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Design.dll
+D:\Programming\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Relational.dll
+D:\Programming\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+D:\Programming\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\Microsoft.Extensions.DependencyModel.dll
+D:\Programming\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\Microsoft.Identity.Client.dll
+D:\Programming\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\Microsoft.Identity.Client.Extensions.Msal.dll
+D:\Programming\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\Microsoft.IdentityModel.Abstractions.dll
+D:\Programming\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\Programming\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\Microsoft.IdentityModel.Logging.dll
+D:\Programming\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.dll
+D:\Programming\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\Programming\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\Microsoft.IdentityModel.Tokens.dll
+D:\Programming\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\Microsoft.OpenApi.dll
+D:\Programming\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\Microsoft.SqlServer.Server.dll
+D:\Programming\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\Microsoft.Win32.SystemEvents.dll
+D:\Programming\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\MimeKit.dll
+D:\Programming\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\Mono.TextTemplating.dll
+D:\Programming\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\Newtonsoft.Json.dll
+D:\Programming\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\Swashbuckle.AspNetCore.Swagger.dll
+D:\Programming\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+D:\Programming\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+D:\Programming\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\System.CodeDom.dll
+D:\Programming\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\System.Composition.AttributedModel.dll
+D:\Programming\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\System.Composition.Convention.dll
+D:\Programming\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\System.Composition.Hosting.dll
+D:\Programming\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\System.Composition.Runtime.dll
+D:\Programming\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\System.Composition.TypedParts.dll
+D:\Programming\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\System.Configuration.ConfigurationManager.dll
+D:\Programming\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\System.Drawing.Common.dll
+D:\Programming\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll
+D:\Programming\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\System.Memory.Data.dll
+D:\Programming\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\System.Runtime.Caching.dll
+D:\Programming\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\System.Security.Cryptography.ProtectedData.dll
+D:\Programming\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\System.Security.Permissions.dll
+D:\Programming\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\System.Windows.Extensions.dll
+D:\Programming\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.resources.dll
+D:\Programming\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.resources.dll
+D:\Programming\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.resources.dll
+D:\Programming\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.resources.dll
+D:\Programming\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.resources.dll
+D:\Programming\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.resources.dll
+D:\Programming\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.resources.dll
+D:\Programming\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.resources.dll
+D:\Programming\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.resources.dll
+D:\Programming\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.resources.dll
+D:\Programming\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.resources.dll
+D:\Programming\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.resources.dll
+D:\Programming\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.resources.dll
+D:\Programming\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Programming\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Programming\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Programming\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Programming\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Programming\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Programming\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Programming\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Programming\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Programming\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Programming\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Programming\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Programming\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Programming\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\Programming\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\Programming\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\Programming\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\Programming\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\Programming\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\Programming\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\Programming\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\Programming\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\Programming\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\Programming\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\Programming\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\Programming\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\Programming\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\Programming\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\Programming\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\Programming\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\Programming\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\Programming\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\Programming\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\Programming\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\Programming\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\Programming\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\Programming\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\Programming\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\Programming\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\Programming\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\runtimes\unix\lib\net6.0\Microsoft.Data.SqlClient.dll
+D:\Programming\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\runtimes\win\lib\net6.0\Microsoft.Data.SqlClient.dll
+D:\Programming\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+D:\Programming\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\Programming\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\Programming\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+D:\Programming\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\runtimes\win\lib\net6.0\Microsoft.Win32.SystemEvents.dll
+D:\Programming\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\runtimes\unix\lib\net6.0\System.Drawing.Common.dll
+D:\Programming\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Drawing.Common.dll
+D:\Programming\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Runtime.Caching.dll
+D:\Programming\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
+D:\Programming\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
+D:\Programming\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\Application.dll
+D:\Programming\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\Data.dll
+D:\Programming\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\Domain.dll
+D:\Programming\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\Application.pdb
+D:\Programming\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\Data.pdb
+D:\Programming\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\Domain.pdb
+D:\Programming\PresentationCreatorApi\PresentationCreator\obj\Debug\net8.0\PresentationCreator.csproj.AssemblyReference.cache
+D:\Programming\PresentationCreatorApi\PresentationCreator\obj\Debug\net8.0\PresentationCreator.GeneratedMSBuildEditorConfig.editorconfig
+D:\Programming\PresentationCreatorApi\PresentationCreator\obj\Debug\net8.0\PresentationCreator.AssemblyInfoInputs.cache
+D:\Programming\PresentationCreatorApi\PresentationCreator\obj\Debug\net8.0\PresentationCreator.AssemblyInfo.cs
+D:\Programming\PresentationCreatorApi\PresentationCreator\obj\Debug\net8.0\PresentationCreator.csproj.CoreCompileInputs.cache
+D:\Programming\PresentationCreatorApi\PresentationCreator\obj\Debug\net8.0\PresentationCreator.MvcApplicationPartsAssemblyInfo.cs
+D:\Programming\PresentationCreatorApi\PresentationCreator\obj\Debug\net8.0\PresentationCreator.MvcApplicationPartsAssemblyInfo.cache
+D:\Programming\PresentationCreatorApi\PresentationCreator\obj\Debug\net8.0\PresentationCreator.sourcelink.json
+D:\Programming\PresentationCreatorApi\PresentationCreator\obj\Debug\net8.0\staticwebassets.build.json
+D:\Programming\PresentationCreatorApi\PresentationCreator\obj\Debug\net8.0\staticwebassets.development.json
+D:\Programming\PresentationCreatorApi\PresentationCreator\obj\Debug\net8.0\staticwebassets\msbuild.PresentationCreator.Microsoft.AspNetCore.StaticWebAssets.props
+D:\Programming\PresentationCreatorApi\PresentationCreator\obj\Debug\net8.0\staticwebassets\msbuild.build.PresentationCreator.props
+D:\Programming\PresentationCreatorApi\PresentationCreator\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.PresentationCreator.props
+D:\Programming\PresentationCreatorApi\PresentationCreator\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.PresentationCreator.props
+D:\Programming\PresentationCreatorApi\PresentationCreator\obj\Debug\net8.0\staticwebassets.pack.json
+D:\Programming\PresentationCreatorApi\PresentationCreator\obj\Debug\net8.0\scopedcss\bundle\PresentationCreator.styles.css
+D:\Programming\PresentationCreatorApi\PresentationCreator\obj\Debug\net8.0\Presenta.990CE51E.Up2Date
+D:\Programming\PresentationCreatorApi\PresentationCreator\obj\Debug\net8.0\PresentationCreator.dll
+D:\Programming\PresentationCreatorApi\PresentationCreator\obj\Debug\net8.0\refint\PresentationCreator.dll
+D:\Programming\PresentationCreatorApi\PresentationCreator\obj\Debug\net8.0\PresentationCreator.pdb
+D:\Programming\PresentationCreatorApi\PresentationCreator\obj\Debug\net8.0\PresentationCreator.genruntimeconfig.cache
+D:\Programming\PresentationCreatorApi\PresentationCreator\obj\Debug\net8.0\ref\PresentationCreator.dll
+D:\Dot net Projects\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\appsettings.Development.json
+D:\Dot net Projects\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\appsettings.json
+D:\Dot net Projects\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\PresentationCreator.staticwebassets.runtime.json
+D:\Dot net Projects\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\PresentationCreator.exe
+D:\Dot net Projects\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\PresentationCreator.deps.json
+D:\Dot net Projects\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\PresentationCreator.runtimeconfig.json
+D:\Dot net Projects\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\PresentationCreator.dll
+D:\Dot net Projects\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\PresentationCreator.pdb
+D:\Dot net Projects\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\Azure.Core.dll
+D:\Dot net Projects\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\Azure.Identity.dll
+D:\Dot net Projects\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\BouncyCastle.Cryptography.dll
+D:\Dot net Projects\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\FluentValidation.dll
+D:\Dot net Projects\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\Humanizer.dll
+D:\Dot net Projects\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\MailKit.dll
+D:\Dot net Projects\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+D:\Dot net Projects\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\Microsoft.Bcl.AsyncInterfaces.dll
+D:\Dot net Projects\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\Microsoft.CodeAnalysis.dll
+D:\Dot net Projects\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\Microsoft.CodeAnalysis.CSharp.dll
+D:\Dot net Projects\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\Microsoft.CodeAnalysis.CSharp.Workspaces.dll
+D:\Dot net Projects\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\Microsoft.CodeAnalysis.Workspaces.dll
+D:\Dot net Projects\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\Microsoft.Data.SqlClient.dll
+D:\Dot net Projects\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.dll
+D:\Dot net Projects\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+D:\Dot net Projects\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Design.dll
+D:\Dot net Projects\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Relational.dll
+D:\Dot net Projects\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+D:\Dot net Projects\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\Microsoft.Extensions.DependencyModel.dll
+D:\Dot net Projects\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\Microsoft.Identity.Client.dll
+D:\Dot net Projects\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\Microsoft.Identity.Client.Extensions.Msal.dll
+D:\Dot net Projects\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\Microsoft.IdentityModel.Abstractions.dll
+D:\Dot net Projects\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\Dot net Projects\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\Microsoft.IdentityModel.Logging.dll
+D:\Dot net Projects\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.dll
+D:\Dot net Projects\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\Dot net Projects\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\Microsoft.IdentityModel.Tokens.dll
+D:\Dot net Projects\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\Microsoft.OpenApi.dll
+D:\Dot net Projects\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\Microsoft.SqlServer.Server.dll
+D:\Dot net Projects\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\Microsoft.Win32.SystemEvents.dll
+D:\Dot net Projects\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\MimeKit.dll
+D:\Dot net Projects\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\Mono.TextTemplating.dll
+D:\Dot net Projects\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\Newtonsoft.Json.dll
+D:\Dot net Projects\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\Swashbuckle.AspNetCore.Swagger.dll
+D:\Dot net Projects\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+D:\Dot net Projects\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+D:\Dot net Projects\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\System.CodeDom.dll
+D:\Dot net Projects\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\System.Composition.AttributedModel.dll
+D:\Dot net Projects\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\System.Composition.Convention.dll
+D:\Dot net Projects\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\System.Composition.Hosting.dll
+D:\Dot net Projects\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\System.Composition.Runtime.dll
+D:\Dot net Projects\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\System.Composition.TypedParts.dll
+D:\Dot net Projects\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\System.Configuration.ConfigurationManager.dll
+D:\Dot net Projects\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\System.Drawing.Common.dll
+D:\Dot net Projects\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll
+D:\Dot net Projects\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\System.Memory.Data.dll
+D:\Dot net Projects\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\System.Runtime.Caching.dll
+D:\Dot net Projects\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\System.Security.Cryptography.ProtectedData.dll
+D:\Dot net Projects\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\System.Security.Permissions.dll
+D:\Dot net Projects\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\System.Windows.Extensions.dll
+D:\Dot net Projects\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.resources.dll
+D:\Dot net Projects\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.resources.dll
+D:\Dot net Projects\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.resources.dll
+D:\Dot net Projects\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.resources.dll
+D:\Dot net Projects\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.resources.dll
+D:\Dot net Projects\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.resources.dll
+D:\Dot net Projects\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.resources.dll
+D:\Dot net Projects\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.resources.dll
+D:\Dot net Projects\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.resources.dll
+D:\Dot net Projects\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.resources.dll
+D:\Dot net Projects\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.resources.dll
+D:\Dot net Projects\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.resources.dll
+D:\Dot net Projects\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.resources.dll
+D:\Dot net Projects\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Dot net Projects\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Dot net Projects\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Dot net Projects\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Dot net Projects\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Dot net Projects\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Dot net Projects\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Dot net Projects\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Dot net Projects\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Dot net Projects\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Dot net Projects\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Dot net Projects\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Dot net Projects\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Dot net Projects\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\Dot net Projects\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\Dot net Projects\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\Dot net Projects\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\Dot net Projects\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\Dot net Projects\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\Dot net Projects\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\Dot net Projects\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\Dot net Projects\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\Dot net Projects\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\Dot net Projects\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\Dot net Projects\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\Dot net Projects\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\Dot net Projects\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\Dot net Projects\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\Dot net Projects\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\Dot net Projects\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\Dot net Projects\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\Dot net Projects\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\Dot net Projects\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\Dot net Projects\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\Dot net Projects\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\Dot net Projects\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\Dot net Projects\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\Dot net Projects\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\Dot net Projects\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\Dot net Projects\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\runtimes\unix\lib\net6.0\Microsoft.Data.SqlClient.dll
+D:\Dot net Projects\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\runtimes\win\lib\net6.0\Microsoft.Data.SqlClient.dll
+D:\Dot net Projects\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+D:\Dot net Projects\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\Dot net Projects\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\Dot net Projects\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+D:\Dot net Projects\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\runtimes\win\lib\net6.0\Microsoft.Win32.SystemEvents.dll
+D:\Dot net Projects\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\runtimes\unix\lib\net6.0\System.Drawing.Common.dll
+D:\Dot net Projects\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Drawing.Common.dll
+D:\Dot net Projects\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Runtime.Caching.dll
+D:\Dot net Projects\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
+D:\Dot net Projects\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
+D:\Dot net Projects\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\Application.dll
+D:\Dot net Projects\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\Data.dll
+D:\Dot net Projects\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\Domain.dll
+D:\Dot net Projects\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\Application.pdb
+D:\Dot net Projects\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\Data.pdb
+D:\Dot net Projects\PresentationCreatorApi\PresentationCreator\bin\Debug\net8.0\Domain.pdb
+D:\Dot net Projects\PresentationCreatorApi\PresentationCreator\obj\Debug\net8.0\PresentationCreator.csproj.AssemblyReference.cache
+D:\Dot net Projects\PresentationCreatorApi\PresentationCreator\obj\Debug\net8.0\PresentationCreator.GeneratedMSBuildEditorConfig.editorconfig
+D:\Dot net Projects\PresentationCreatorApi\PresentationCreator\obj\Debug\net8.0\PresentationCreator.AssemblyInfoInputs.cache
+D:\Dot net Projects\PresentationCreatorApi\PresentationCreator\obj\Debug\net8.0\PresentationCreator.AssemblyInfo.cs
+D:\Dot net Projects\PresentationCreatorApi\PresentationCreator\obj\Debug\net8.0\PresentationCreator.csproj.CoreCompileInputs.cache
+D:\Dot net Projects\PresentationCreatorApi\PresentationCreator\obj\Debug\net8.0\PresentationCreator.MvcApplicationPartsAssemblyInfo.cs
+D:\Dot net Projects\PresentationCreatorApi\PresentationCreator\obj\Debug\net8.0\PresentationCreator.MvcApplicationPartsAssemblyInfo.cache
+D:\Dot net Projects\PresentationCreatorApi\PresentationCreator\obj\Debug\net8.0\PresentationCreator.sourcelink.json
+D:\Dot net Projects\PresentationCreatorApi\PresentationCreator\obj\Debug\net8.0\staticwebassets.build.json
+D:\Dot net Projects\PresentationCreatorApi\PresentationCreator\obj\Debug\net8.0\staticwebassets.development.json
+D:\Dot net Projects\PresentationCreatorApi\PresentationCreator\obj\Debug\net8.0\staticwebassets\msbuild.PresentationCreator.Microsoft.AspNetCore.StaticWebAssets.props
+D:\Dot net Projects\PresentationCreatorApi\PresentationCreator\obj\Debug\net8.0\staticwebassets\msbuild.build.PresentationCreator.props
+D:\Dot net Projects\PresentationCreatorApi\PresentationCreator\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.PresentationCreator.props
+D:\Dot net Projects\PresentationCreatorApi\PresentationCreator\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.PresentationCreator.props
+D:\Dot net Projects\PresentationCreatorApi\PresentationCreator\obj\Debug\net8.0\staticwebassets.pack.json
+D:\Dot net Projects\PresentationCreatorApi\PresentationCreator\obj\Debug\net8.0\scopedcss\bundle\PresentationCreator.styles.css
+D:\Dot net Projects\PresentationCreatorApi\PresentationCreator\obj\Debug\net8.0\Presenta.990CE51E.Up2Date
+D:\Dot net Projects\PresentationCreatorApi\PresentationCreator\obj\Debug\net8.0\PresentationCreator.dll
+D:\Dot net Projects\PresentationCreatorApi\PresentationCreator\obj\Debug\net8.0\refint\PresentationCreator.dll
+D:\Dot net Projects\PresentationCreatorApi\PresentationCreator\obj\Debug\net8.0\PresentationCreator.pdb
+D:\Dot net Projects\PresentationCreatorApi\PresentationCreator\obj\Debug\net8.0\PresentationCreator.genruntimeconfig.cache
+D:\Dot net Projects\PresentationCreatorApi\PresentationCreator\obj\Debug\net8.0\ref\PresentationCreator.dll

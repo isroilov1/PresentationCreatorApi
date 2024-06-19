@@ -1,15 +1,3 @@
-using Application.Common.Validators;
-using Application.Interfaces;
-using Application.Services;
-using Data;
-using Data.Interfaces;
-using Data.Repositories;
-using Domain.Models;
-using FluentValidation;
-using Microsoft.EntityFrameworkCore;
-using MovieNTV.Configurations;
-using MovieNTV.Middlewares;
-
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
@@ -35,6 +23,8 @@ builder.Services.AddTransient<IUserService, UserService>();
 builder.Services.AddTransient<IEmailService, EmailService>();
 builder.Services.AddTransient<IAdminService, AdminService>();
 builder.Services.AddTransient<INotificationService, NotificationService>();
+builder.Services.AddTransient<IPaymentService, PaymentServicce>();
+
 
 // Configure
 builder.Services.ConfigureJwtAuthorize(builder.Configuration);
@@ -44,6 +34,7 @@ builder.Services.ConfigureSwaggerAuthorize(builder.Configuration);
 builder.Services.AddScoped<IValidator<User>, UserValidator>();
 builder.Services.AddScoped<IValidator<Presentation>, PresentationValidator>();
 builder.Services.AddScoped<IValidator<Notification>, NotificationValidator>();
+builder.Services.AddScoped<IValidator<Payment>, PaymentValidator>();
 
 var app = builder.Build();
 

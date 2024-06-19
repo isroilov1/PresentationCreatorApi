@@ -50,9 +50,12 @@ namespace Data.Migrations
                     b.Property<int>("Type")
                         .HasColumnType("int");
 
+                    b.Property<int?>("UserId")
+                        .HasColumnType("int");
+
                     b.HasKey("Id");
 
-                    b.HasIndex("SenderId");
+                    b.HasIndex("UserId");
 
                     b.ToTable("Notification");
                 });
@@ -68,9 +71,12 @@ namespace Data.Migrations
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("datetime2");
 
-                    b.Property<string>("ImagesPaths")
+                    b.Property<string>("ImagesPath")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("PageType")
+                        .HasColumnType("int");
 
                     b.Property<int>("PresentationId")
                         .HasColumnType("int");
@@ -98,6 +104,10 @@ namespace Data.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
+                    b.Property<string>("AdminCaption")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("Caption")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -120,8 +130,7 @@ namespace Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("UserId")
-                        .IsUnique();
+                    b.HasIndex("UserId");
 
                     b.ToTable("Payments");
                 });
@@ -205,10 +214,19 @@ namespace Data.Migrations
                     b.Property<int>("PresentationCount")
                         .HasColumnType("int");
 
+                    b.Property<bool>("ReferalBonus")
+                        .HasColumnType("bit");
+
                     b.Property<int>("ReferalId")
                         .HasColumnType("int");
 
                     b.Property<int>("Role")
+                        .HasColumnType("int");
+
+                    b.Property<int>("TelegramId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("TotalPayments")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
@@ -220,27 +238,26 @@ namespace Data.Migrations
                         {
                             Id = 1,
                             Balance = 20000,
-                            CreatedAt = new DateTime(2024, 6, 14, 16, 24, 33, 34, DateTimeKind.Utc).AddTicks(5623),
+                            CreatedAt = new DateTime(2024, 6, 19, 13, 51, 49, 344, DateTimeKind.Unspecified).AddTicks(2220),
                             Email = "isroilov0905@gmail.com",
                             FullName = "Isroilov Ismoiljon",
                             IsVerified = true,
                             Password = "6724ce39c81234bc9a25eca98b634a94a913e514a2191371b63b30dd3869c754",
                             PhoneNumber = "+998997979898",
                             PresentationCount = 0,
+                            ReferalBonus = false,
                             ReferalId = 0,
-                            Role = 1
+                            Role = 1,
+                            TelegramId = 0,
+                            TotalPayments = 0
                         });
                 });
 
             modelBuilder.Entity("Domain.Models.Notification", b =>
                 {
-                    b.HasOne("Domain.Models.User", "User")
+                    b.HasOne("Domain.Models.User", null)
                         .WithMany("Notifications")
-                        .HasForeignKey("SenderId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("User");
+                        .HasForeignKey("UserId");
                 });
 
             modelBuilder.Entity("Domain.Models.Page", b =>
@@ -257,8 +274,8 @@ namespace Data.Migrations
             modelBuilder.Entity("Domain.Models.Payment", b =>
                 {
                     b.HasOne("Domain.Models.User", "User")
-                        .WithOne("TotalPayments")
-                        .HasForeignKey("Domain.Models.Payment", "UserId")
+                        .WithMany("Payments")
+                        .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
@@ -285,9 +302,9 @@ namespace Data.Migrations
                 {
                     b.Navigation("Notifications");
 
-                    b.Navigation("PresentationPaths");
+                    b.Navigation("Payments");
 
-                    b.Navigation("TotalPayments");
+                    b.Navigation("PresentationPaths");
                 });
 #pragma warning restore 612, 618
         }

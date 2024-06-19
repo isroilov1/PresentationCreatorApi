@@ -1,7 +1,4 @@
-﻿using Domain.Enums;
-using Domain.Models;
-
-namespace Application.DTOs.UserDtos;
+﻿namespace Application.DTOs.UserDtos;
 public class AddUserDto
 {
     public string FullName { get; set; } = string.Empty;
@@ -19,6 +16,7 @@ public class AddUserDto
             PhoneNumber = dto.PhoneNumber,
             Password = dto.Password,
             ReferalId = dto.ReferalId,
+            ReferalBonus = false
         };
     }
 }

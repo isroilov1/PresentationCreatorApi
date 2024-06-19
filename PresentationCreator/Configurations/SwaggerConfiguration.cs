@@ -1,6 +1,4 @@
-﻿using Microsoft.OpenApi.Models;
-
-namespace MovieNTV.Configurations;
+﻿namespace MovieNTV.Configurations;
 public static class SwaggerConfiguration
 {
     public static void ConfigureSwaggerAuthorize(this IServiceCollection services,

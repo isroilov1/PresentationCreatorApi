@@ -1,9 +1,4 @@
-﻿using Application.DTOs.UserDtos;
-using Application.Interfaces;
-using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Mvc;
-
-namespace PresentationCreator.Controllers;
+﻿namespace PresentationCreator.Controllers;
 
 [Route("api/[controller]")]
 [ApiController]

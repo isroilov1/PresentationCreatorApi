@@ -1,17 +1,10 @@
-﻿using Application.DTOs;
-using Application.DTOs.MovieDtos;
-using Application.DTOs.NotificationDtos;
-
-namespace Application.Interfaces;
+﻿namespace Application.Interfaces;
 
 public interface INotificationService
 {
-    //Task SendMessageByIdToUser(string message, int id);
-    //Task SendMessageByPhoneNumberToUser(string message, string phoneNumber);
-    //Task<int> SendMessageToAllUsers(string message);
-
-    Task CreateAsync(int senderId, AddNotificationDto dto);
-    Task<NotificationDto> GetByIdAsync(int id);
+    Task<int> CreateAsync(int senderId, AddNotificationDto dto);
+    Task<bool> SendMessageToAdmin(int senderId, string message);
+    Task<NotificationDto> GetByIdAsync(int userId, int id);
     Task<List<NotificationDto>> GetByUserIdAsync(int userId);
     Task<List<NotificationDto>> GetAllAsync();
     Task UpdateAsync(int id, UpdateNotificationDto dto);

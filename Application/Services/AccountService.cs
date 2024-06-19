@@ -1,13 +1,5 @@
-﻿using Application.Common.Exceptions;
-using Application.Common.Security;
-using Application.Common.Validators;
-using Application.DTOs.UserDtos;
-using Application.Interfaces;
-using Data.Interfaces;
-using Domain.Models;
-using FluentValidation;
-using Microsoft.Extensions.Caching.Memory;
-using System.Net;
+﻿using Domain.Models;
+using Org.BouncyCastle.Cms;
 
 namespace Application.Services;
 
@@ -37,6 +29,31 @@ public class AccountService(IUnitOfWork ofWork,
         if (!user.IsVerified)
             throw new StatusCodeExeption(HttpStatusCode.BadRequest, "Foydalanuvchi verificatsiyadan o'tmagan!");
 
+        var referalId = user.ReferalId;
+        var referalUser = await _ofWork.User.GetByIdIncludeAsync(referalId);
+
+        if (referalUser is not null && !user.ReferalBonus)
+        {
+            user.ReferalBonus = true;
+            await _ofWork.User.UpdateAsync(user);
+
+            referalUser.Balance += 1000;
+            var recipientIds = new List<int> { referalUser.Id };
+            var notification = new Notification
+            {
+                Message = $"{user.FullName} muvaffaqqiyatli qo'shildi. Sizning hisobingizga 1000 so'm referal bonusi yuborildi!",
+                Status = NotificationStatus.NotRead,
+                Type = NotificationType.Input,
+                SenderId = 1,
+                RecipientIds = recipientIds
+            };
+            await _ofWork.Notification.CreateAsync(notification);
+
+            if (referalUser.Notifications == null)
+                referalUser.Notifications = new List<Notification>();
+            referalUser.Notifications.Add(notification);
+            await _ofWork.User.UpdateAsync(referalUser);
+        }
         return _auth.GeneratedToken(user);
     }
     
@@ -76,31 +93,16 @@ public class AccountService(IUnitOfWork ofWork,
         var user = await _ofWork.User.GetByEmailAsync(email);
         if (user is null)
             throw new StatusCodeExeption(HttpStatusCode.NotFound, "Foydalanuvchi topilmadi");
-        if (_cache.TryGetValue(email, out var result))
-        {
-            if (!code.Equals(result))
+
+        if (!_cache.TryGetValue(email, out var result))
+            throw new StatusCodeExeption(HttpStatusCode.BadRequest, "Kod amal qilish muddati tugagan");
+        if (!code.Equals(result))
                 throw new StatusCodeExeption(HttpStatusCode.Conflict, "Kod noto'g'ri!");
 
             user.IsVerified = true;
             await _ofWork.User.UpdateAsync(user);
 
-            if (user.ReferalId != 0)
-            {
-                try
-                {
-                    var referalUser = await _ofWork.User.GetByIdAsync(user.ReferalId);
-                    if (referalUser is not null)
-                    {
-                        referalUser.Balance += 1000;
-                        await _ofWork.User.UpdateAsync(referalUser);
-                    }
-                }
-                catch { }
-            }
             return true;
-        }
-        else
-            throw new StatusCodeExeption(HttpStatusCode.BadRequest, "Kod amal qilish muddati tugagan");
     }
     private string GeneratedCode()
         => (new Random().Next(10000, 99999)).ToString();

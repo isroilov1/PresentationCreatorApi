@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="TalabajonApp.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:TalabajonApp"
+    Shell.FlyoutBehavior="Disabled"
+    Title="TalabajonApp">
+
+    <ShellContent
+        Shell.NavBarIsVisible="true"
+        Title="Home"
+        ContentTemplate="{DataTemplate view:MainPage}"
+        Route="MainPage" />
+
+</Shell>

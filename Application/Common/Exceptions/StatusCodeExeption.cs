@@ -1,7 +1,4 @@
-﻿using System.Net;
-
-
-namespace Application.Common.Exceptions;
+﻿namespace Application.Common.Exceptions;
 
 public class StatusCodeExeption : Exception
 {

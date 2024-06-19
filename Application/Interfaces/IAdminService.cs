@@ -1,6 +1,4 @@
-﻿using Domain.Models;
-
-namespace Application.Interfaces;
+﻿namespace Application.Interfaces;
 
 public interface IAdminService
 {
@@ -8,4 +6,5 @@ public interface IAdminService
     Task DeleteUserAsync(int id);
     Task<List<User>> GetAllAdminAsync();
     Task GieveBonusAsync(int id, int bonus);
+    Task UpdateBalanceAsync(UpdateUserBalanceDto dto);
 }

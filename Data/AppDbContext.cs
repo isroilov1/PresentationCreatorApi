@@ -1,8 +1,4 @@
-﻿using Domain.Enums;
-using Domain.Models;
-using Microsoft.EntityFrameworkCore;
-
-namespace Data;
+﻿namespace Data;
 public class AppDbContext(DbContextOptions<AppDbContext> options)
     : DbContext(options)
 {

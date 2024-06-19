@@ -1,15 +1,13 @@
-﻿using Application.DTOs;
-using Application.DTOs.MovieDtos;
-using Application.DTOs.UserDtos;
-
-namespace Application.Interfaces;
+﻿namespace Application.Interfaces;
 
 public interface IPaymentService
 {
-    Task CreateAsync(AddPaymentDto dto);
+    Task CreateAsync(int id, AddPaymentDto dto);
     Task<PaymentDto> GetByIdAsync(int id);
-    Task<NotificationDto> GetByPhoneNumberAsync(string phoneNumber);
-    Task<List<NotificationDto>> GetAllAsync();
-    Task UpdateAsync(int id, UpdateUserDto dto);
+    Task<List<PaymentDto>> GetByUserIdAsync(int userId);
+    Task<List<PaymentDto>> GetByPhoneNumberAsync(string phoneNumber);
+    Task<List<PaymentDto>> GetAllAsync();
+    Task UpdateAsync(UpdatePaymentDto dto);
+    Task AcceptOrRejectAsync(int id, PaymentStatus status, string caption, int accepterId);
     Task DeleteAsync(int id);
 }

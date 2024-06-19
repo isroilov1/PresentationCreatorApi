@@ -1,11 +1,4 @@
-﻿using Application.Interfaces;
-using Microsoft.Extensions.Configuration;
-using MailKit.Net.Smtp;
-using MimeKit;
-using MimeKit.Text;
-using MailKit.Security;
-
-namespace Application.Services;
+﻿namespace Application.Services;
 
 public class EmailService(IConfiguration config) : IEmailService
 {

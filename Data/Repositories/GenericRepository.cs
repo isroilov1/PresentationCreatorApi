@@ -1,8 +1,4 @@
-﻿using Data.Interfaces;
-using Domain.Models;
-using Microsoft.EntityFrameworkCore;
-
-namespace Data.Repositories;
+﻿namespace Data.Repositories;
 
 public class GenericRepository<T>(AppDbContext dbContext)
     : IGenericRepository<T> where T : BaseEntity

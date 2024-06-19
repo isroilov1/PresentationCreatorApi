@@ -1,7 +1,4 @@
-﻿using FluentValidation.Results;
-using System.Text;
-
-namespace Application.Common.Validators;
+﻿namespace Application.Common.Validators;
 
 public static class Extensions
 {

@@ -5,11 +5,11 @@ VisualStudioVersion = 17.9.34701.34
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PresentationCreator", "PresentationCreator\PresentationCreator.csproj", "{E2900C9E-E75C-4622-9089-534E6A74409A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain", "Domain\Domain.csproj", "{66238928-13BB-4C59-AC8E-6958072C85E7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Domain", "Domain\Domain.csproj", "{66238928-13BB-4C59-AC8E-6958072C85E7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Application", "Application\Application.csproj", "{37C690A7-271A-4E6B-AC7F-37FEBCE91BDD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Application", "Application\Application.csproj", "{37C690A7-271A-4E6B-AC7F-37FEBCE91BDD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Data", "Data\Data.csproj", "{67CB3BFB-E880-4BCE-A777-F1BE3E2F5462}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Data", "Data\Data.csproj", "{67CB3BFB-E880-4BCE-A777-F1BE3E2F5462}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

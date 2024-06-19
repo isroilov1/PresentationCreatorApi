@@ -1,11 +1,4 @@
-﻿using Application.Common.Exceptions;
-using Application.DTOs.UserDtos;
-using Application.Interfaces;
-using Data.Interfaces;
-using Domain.Models;
-using System.Net;
-
-namespace Application.Services;
+﻿namespace Application.Services;
 
 public class UserService(IUnitOfWork unitOfWork) : IUserService
 {
@@ -13,7 +6,9 @@ public class UserService(IUnitOfWork unitOfWork) : IUserService
 
     public async Task DeleteAsync(int id)
     {
-        var user = await _unitOfWork.User.GetByIdAsync(id);
+        if (id == 1 || id == 2)
+            throw new StatusCodeExeption(HttpStatusCode.BadRequest, "Bosh adminni o'chirish mumkin emas!");
+        var user = await _unitOfWork.User.GetByIdIncludeAsync(id);
         if (user is null)
             throw new StatusCodeExeption(HttpStatusCode.NotFound, "Foydalanuvchi topilmadi");
         await _unitOfWork.User.DeleteAsync(user);
@@ -25,7 +20,14 @@ public class UserService(IUnitOfWork unitOfWork) : IUserService
         var users = await _unitOfWork.User.GetAllIncludeAsync();
         if (users is null)
             throw new StatusCodeExeption(HttpStatusCode.NotFound, "Foydalanuvchilar topilmadi!");
-        return users.Select(x => (UserDto)x).ToList();
+        var tzTashkent = TimeZoneInfo.FindSystemTimeZoneById("Asia/Tashkent");
+        return users.Select(user =>
+        {
+            var userDto = (UserDto)user;
+            var tashkentTime = TimeZoneInfo.ConvertTimeFromUtc(user.CreatedAt, tzTashkent);
+            userDto.CreatedAt = tashkentTime.ToString("dd-MM-yyyy HH:mm");
+            return userDto;
+        }).ToList();
     }
 
     public async Task<UserDto> GetByIdAsync(int id)
@@ -39,6 +41,14 @@ public class UserService(IUnitOfWork unitOfWork) : IUserService
     public async Task<UserDto> GetByPhoneNumberAsync(string phoneNumber)
     {
         var user = await _unitOfWork.User.GetByPhoneNumberAsync(phoneNumber);
+        if (user is null)
+            throw new StatusCodeExeption(HttpStatusCode.NotFound, "Foydalanuvchi topilmadi");
+        return (UserDto)user;
+    }
+
+    public async Task<UserDto> GetUserAsync(int id)
+    {
+        var user = await _unitOfWork.User.GetByIdIncludeAsync(id);
         if (user is null)
             throw new StatusCodeExeption(HttpStatusCode.NotFound, "Foydalanuvchi topilmadi");
         return (UserDto)user;
