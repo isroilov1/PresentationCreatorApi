@@ -25,6 +25,7 @@ builder.Services.AddTransient<IAdminService, AdminService>();
 builder.Services.AddTransient<INotificationService, NotificationService>();
 builder.Services.AddTransient<IPaymentService, PaymentServicce>();
 
+
 // Configure
 builder.Services.ConfigureJwtAuthorize(builder.Configuration);
 builder.Services.ConfigureSwaggerAuthorize(builder.Configuration);

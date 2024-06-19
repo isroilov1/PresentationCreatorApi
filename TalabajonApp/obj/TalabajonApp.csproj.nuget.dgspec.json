@@ -1,25 +1,21 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Isroilov\\source\\repos\\PresentationCreator\\TalabajonApp\\TalabajonApp.csproj": {}
+    "D:\\Programming\\PresentationCreatorApi\\TalabajonApp\\TalabajonApp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Isroilov\\source\\repos\\PresentationCreator\\TalabajonApp\\TalabajonApp.csproj": {
+    "D:\\Programming\\PresentationCreatorApi\\TalabajonApp\\TalabajonApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Isroilov\\source\\repos\\PresentationCreator\\TalabajonApp\\TalabajonApp.csproj",
+        "projectUniqueName": "D:\\Programming\\PresentationCreatorApi\\TalabajonApp\\TalabajonApp.csproj",
         "projectName": "TalabajonApp",
-        "projectPath": "C:\\Users\\Isroilov\\source\\repos\\PresentationCreator\\TalabajonApp\\TalabajonApp.csproj",
-        "packagesPath": "C:\\Users\\Isroilov\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Isroilov\\source\\repos\\PresentationCreator\\TalabajonApp\\obj\\",
+        "projectPath": "D:\\Programming\\PresentationCreatorApi\\TalabajonApp\\TalabajonApp.csproj",
+        "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
+        "outputPath": "D:\\Programming\\PresentationCreatorApi\\TalabajonApp\\obj\\",
         "projectStyle": "PackageReference",
         "crossTargeting": true,
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Isroilov\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -30,19 +26,18 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net8.0-android34.0": {
+          "net8.0-android": {
             "targetAlias": "net8.0-android",
             "projectReferences": {}
           },
-          "net8.0-ios17.2": {
+          "net8.0-ios": {
             "targetAlias": "net8.0-ios",
             "projectReferences": {}
           },
-          "net8.0-maccatalyst17.2": {
+          "net8.0-maccatalyst": {
             "targetAlias": "net8.0-maccatalyst",
             "projectReferences": {}
           },
@@ -63,7 +58,7 @@
         }
       },
       "frameworks": {
-        "net8.0-android34.0": {
+        "net8.0-android": {
           "targetAlias": "net8.0-android",
           "dependencies": {
             "Microsoft.Extensions.Logging.Debug": {
@@ -72,17 +67,11 @@
             },
             "Microsoft.Maui.Controls": {
               "target": "Package",
-              "version": "[8.0.40, )"
+              "version": "(, )"
             },
             "Microsoft.Maui.Controls.Compatibility": {
               "target": "Package",
-              "version": "[8.0.40, )"
-            },
-            "Microsoft.NET.ILLink.Tasks": {
-              "suppressParent": "All",
-              "target": "Package",
-              "version": "[8.0.5, )",
-              "autoReferenced": true
+              "version": "(, )"
             }
           },
           "imports": [
@@ -97,16 +86,13 @@
           "assetTargetFallback": true,
           "warn": true,
           "frameworkReferences": {
-            "Microsoft.Android": {
-              "privateAssets": "all"
-            },
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
         },
-        "net8.0-ios17.2": {
+        "net8.0-ios": {
           "targetAlias": "net8.0-ios",
           "dependencies": {
             "Microsoft.Extensions.Logging.Debug": {
@@ -115,17 +101,11 @@
             },
             "Microsoft.Maui.Controls": {
               "target": "Package",
-              "version": "[8.0.40, )"
+              "version": "(, )"
             },
             "Microsoft.Maui.Controls.Compatibility": {
               "target": "Package",
-              "version": "[8.0.40, )"
-            },
-            "Microsoft.NET.ILLink.Tasks": {
-              "suppressParent": "All",
-              "target": "Package",
-              "version": "[8.0.5, )",
-              "autoReferenced": true
+              "version": "(, )"
             }
           },
           "imports": [
@@ -140,16 +120,13 @@
           "assetTargetFallback": true,
           "warn": true,
           "frameworkReferences": {
-            "Microsoft.iOS": {
-              "privateAssets": "all"
-            },
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
         },
-        "net8.0-maccatalyst17.2": {
+        "net8.0-maccatalyst": {
           "targetAlias": "net8.0-maccatalyst",
           "dependencies": {
             "Microsoft.Extensions.Logging.Debug": {
@@ -158,21 +135,14 @@
             },
             "Microsoft.Maui.Controls": {
               "target": "Package",
-              "version": "[8.0.40, )"
+              "version": "(, )"
             },
             "Microsoft.Maui.Controls.Compatibility": {
               "target": "Package",
-              "version": "[8.0.40, )"
-            },
-            "Microsoft.NET.ILLink.Tasks": {
-              "suppressParent": "All",
-              "target": "Package",
-              "version": "[8.0.5, )",
-              "autoReferenced": true
+              "version": "(, )"
             }
           },
           "imports": [
-            "xamarinios10",
             "net461",
             "net462",
             "net47",
@@ -184,14 +154,11 @@
           "assetTargetFallback": true,
           "warn": true,
           "frameworkReferences": {
-            "Microsoft.MacCatalyst": {
-              "privateAssets": "all"
-            },
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
         },
         "net8.0-windows10.0.19041": {
           "targetAlias": "net8.0-windows10.0.19041.0",
@@ -202,11 +169,11 @@
             },
             "Microsoft.Maui.Controls": {
               "target": "Package",
-              "version": "[8.0.40, )"
+              "version": "(, )"
             },
             "Microsoft.Maui.Controls.Compatibility": {
               "target": "Package",
-              "version": "[8.0.40, )"
+              "version": "(, )"
             }
           },
           "imports": [
@@ -234,30 +201,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300\\RuntimeIdentifierGraph.json"
-        }
-      },
-      "runtimes": {
-        "android-arm": {
-          "#import": []
-        },
-        "android-arm64": {
-          "#import": []
-        },
-        "android-x64": {
-          "#import": []
-        },
-        "android-x86": {
-          "#import": []
-        },
-        "iossimulator-x64": {
-          "#import": []
-        },
-        "maccatalyst-x64": {
-          "#import": []
-        },
-        "win10-x64": {
-          "#import": []
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
