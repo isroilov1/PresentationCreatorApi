@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "pACzO8AdcZse/xfE9qpTymcPOUzXz7+84fPXGoTPLZk=",
+  "Hash": "9vccTVJ0uWT16uzzohOi1+pfJZEesF1YX0Dl+gz+AGs=",
   "Source": "PresentationCreator",
   "BasePath": "_content/PresentationCreator",
   "Mode": "Default",
@@ -10,7 +10,7 @@
     {
       "Name": "PresentationCreator\\wwwroot",
       "Source": "PresentationCreator",
-      "ContentRoot": "C:\\Users\\Isroilov\\source\\repos\\PresentationCreator\\PresentationCreator\\wwwroot\\",
+      "ContentRoot": "D:\\Programming\\PresentationCreatorApi\\PresentationCreator\\wwwroot\\",
       "BasePath": "_content/PresentationCreator",
       "Pattern": "**"
     }
