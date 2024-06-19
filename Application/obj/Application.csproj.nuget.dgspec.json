@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Programming\\PresentationCreatorApi\\Application\\Application.csproj": {}
+    "D:\\Dot net Projects\\PresentationCreatorApi\\Application\\Application.csproj": {}
   },
   "projects": {
-    "D:\\Programming\\PresentationCreatorApi\\Application\\Application.csproj": {
+    "D:\\Dot net Projects\\PresentationCreatorApi\\Application\\Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Programming\\PresentationCreatorApi\\Application\\Application.csproj",
+        "projectUniqueName": "D:\\Dot net Projects\\PresentationCreatorApi\\Application\\Application.csproj",
         "projectName": "Application",
-        "projectPath": "D:\\Programming\\PresentationCreatorApi\\Application\\Application.csproj",
-        "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-        "outputPath": "D:\\Programming\\PresentationCreatorApi\\Application\\obj\\",
+        "projectPath": "D:\\Dot net Projects\\PresentationCreatorApi\\Application\\Application.csproj",
+        "packagesPath": "C:\\Users\\Victus\\.nuget\\packages\\",
+        "outputPath": "D:\\Dot net Projects\\PresentationCreatorApi\\Application\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Victus\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,17 +26,18 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\Programming\\PresentationCreatorApi\\Data\\Data.csproj": {
-                "projectPath": "D:\\Programming\\PresentationCreatorApi\\Data\\Data.csproj"
+              "D:\\Dot net Projects\\PresentationCreatorApi\\Data\\Data.csproj": {
+                "projectPath": "D:\\Dot net Projects\\PresentationCreatorApi\\Data\\Data.csproj"
               },
-              "D:\\Programming\\PresentationCreatorApi\\Domain\\Domain.csproj": {
-                "projectPath": "D:\\Programming\\PresentationCreatorApi\\Domain\\Domain.csproj"
+              "D:\\Dot net Projects\\PresentationCreatorApi\\Domain\\Domain.csproj": {
+                "projectPath": "D:\\Dot net Projects\\PresentationCreatorApi\\Domain\\Domain.csproj"
               }
             }
           }
@@ -59,6 +64,10 @@
             "MailKit": {
               "target": "Package",
               "version": "[4.6.0, )"
+            },
+            "Microsoft.AspNetCore.Http.Features": {
+              "target": "Package",
+              "version": "[5.0.17, )"
             },
             "Microsoft.EntityFrameworkCore.Design": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
@@ -91,21 +100,25 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\Programming\\PresentationCreatorApi\\Data\\Data.csproj": {
+    "D:\\Dot net Projects\\PresentationCreatorApi\\Data\\Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Programming\\PresentationCreatorApi\\Data\\Data.csproj",
+        "projectUniqueName": "D:\\Dot net Projects\\PresentationCreatorApi\\Data\\Data.csproj",
         "projectName": "Data",
-        "projectPath": "D:\\Programming\\PresentationCreatorApi\\Data\\Data.csproj",
-        "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-        "outputPath": "D:\\Programming\\PresentationCreatorApi\\Data\\obj\\",
+        "projectPath": "D:\\Dot net Projects\\PresentationCreatorApi\\Data\\Data.csproj",
+        "packagesPath": "C:\\Users\\Victus\\.nuget\\packages\\",
+        "outputPath": "D:\\Dot net Projects\\PresentationCreatorApi\\Data\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Victus\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -113,14 +126,15 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\Programming\\PresentationCreatorApi\\Domain\\Domain.csproj": {
-                "projectPath": "D:\\Programming\\PresentationCreatorApi\\Domain\\Domain.csproj"
+              "D:\\Dot net Projects\\PresentationCreatorApi\\Domain\\Domain.csproj": {
+                "projectPath": "D:\\Dot net Projects\\PresentationCreatorApi\\Domain\\Domain.csproj"
               }
             }
           }
@@ -171,21 +185,25 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\Programming\\PresentationCreatorApi\\Domain\\Domain.csproj": {
+    "D:\\Dot net Projects\\PresentationCreatorApi\\Domain\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Programming\\PresentationCreatorApi\\Domain\\Domain.csproj",
+        "projectUniqueName": "D:\\Dot net Projects\\PresentationCreatorApi\\Domain\\Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "D:\\Programming\\PresentationCreatorApi\\Domain\\Domain.csproj",
-        "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-        "outputPath": "D:\\Programming\\PresentationCreatorApi\\Domain\\obj\\",
+        "projectPath": "D:\\Dot net Projects\\PresentationCreatorApi\\Domain\\Domain.csproj",
+        "packagesPath": "C:\\Users\\Victus\\.nuget\\packages\\",
+        "outputPath": "D:\\Dot net Projects\\PresentationCreatorApi\\Domain\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Victus\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -193,6 +211,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -243,7 +262,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

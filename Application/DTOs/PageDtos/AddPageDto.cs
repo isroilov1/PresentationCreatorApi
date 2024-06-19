@@ -11,7 +11,6 @@ public class AddPageDto
         return new Page()
         {
             Title = dto.Title,
-            PageType = dto.PageType,
             ImagesPath = ""
         };
     }
