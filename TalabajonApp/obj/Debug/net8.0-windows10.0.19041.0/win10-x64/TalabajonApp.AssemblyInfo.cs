@@ -18,7 +18,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TalabajonApp")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+45d083fd48a24ab0d84eb942e477c056c8b544d4")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+36653c89d896010ce46adfdc15a0d8fc7b683051")]
 [assembly: System.Reflection.AssemblyProductAttribute("TalabajonApp")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TalabajonApp")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

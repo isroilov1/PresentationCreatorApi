@@ -3,32 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\Isroilov\\source\\repos\\PresentationCreator\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{631C79E9-C0D3-46FD-B7FF-E712581F07E7}|TalabajonApp\\TalabajonApp.csproj|c:\\users\\isroilov\\source\\repos\\presentationcreator\\talabajonapp\\view\\mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{631C79E9-C0D3-46FD-B7FF-E712581F07E7}|TalabajonApp\\TalabajonApp.csproj|solutionrelative:talabajonapp\\view\\mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{E2900C9E-E75C-4622-9089-534E6A74409A}|PresentationCreator\\PresentationCreator.csproj|c:\\users\\isroilov\\source\\repos\\presentationcreator\\presentationcreator\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{E2900C9E-E75C-4622-9089-534E6A74409A}|PresentationCreator\\PresentationCreator.csproj|solutionrelative:presentationcreator\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{37C690A7-271A-4E6B-AC7F-37FEBCE91BDD}|Application\\Application.csproj|c:\\users\\isroilov\\source\\repos\\presentationcreator\\application\\services\\paymentservicce.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{37C690A7-271A-4E6B-AC7F-37FEBCE91BDD}|Application\\Application.csproj|solutionrelative:application\\services\\paymentservicce.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{631C79E9-C0D3-46FD-B7FF-E712581F07E7}|TalabajonApp\\TalabajonApp.csproj|c:\\users\\isroilov\\source\\repos\\presentationcreator\\talabajonapp\\view\\detailspage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{631C79E9-C0D3-46FD-B7FF-E712581F07E7}|TalabajonApp\\TalabajonApp.csproj|solutionrelative:talabajonapp\\view\\detailspage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{631C79E9-C0D3-46FD-B7FF-E712581F07E7}|TalabajonApp\\TalabajonApp.csproj|c:\\users\\isroilov\\source\\repos\\presentationcreator\\talabajonapp\\appshell.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{631C79E9-C0D3-46FD-B7FF-E712581F07E7}|TalabajonApp\\TalabajonApp.csproj|solutionrelative:talabajonapp\\appshell.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{37C690A7-271A-4E6B-AC7F-37FEBCE91BDD}|Application\\Application.csproj|c:\\users\\isroilov\\source\\repos\\presentationcreator\\application\\services\\accountservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{37C690A7-271A-4E6B-AC7F-37FEBCE91BDD}|Application\\Application.csproj|solutionrelative:application\\services\\accountservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{37C690A7-271A-4E6B-AC7F-37FEBCE91BDD}|Application\\Application.csproj|c:\\users\\isroilov\\source\\repos\\presentationcreator\\application\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{37C690A7-271A-4E6B-AC7F-37FEBCE91BDD}|Application\\Application.csproj|solutionrelative:application\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{66238928-13BB-4C59-AC8E-6958072C85E7}|Domain\\Domain.csproj|c:\\users\\isroilov\\source\\repos\\presentationcreator\\domain\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{66238928-13BB-4C59-AC8E-6958072C85E7}|Domain\\Domain.csproj|solutionrelative:domain\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{37C690A7-271A-4E6B-AC7F-37FEBCE91BDD}|Application\\Application.csproj|c:\\users\\isroilov\\source\\repos\\presentationcreator\\application\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{37C690A7-271A-4E6B-AC7F-37FEBCE91BDD}|Application\\Application.csproj|solutionrelative:application\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/PresentationDb/True/SqlTable/dbo.Notification.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
@@ -75,20 +63,33 @@
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\Isroilov\\source\\repos\\PresentationCreator\\PresentationCreator\\appsettings.json",
+              "RelativeDocumentMoniker": "PresentationCreator\\appsettings.json",
+              "ToolTip": "C:\\Users\\Isroilov\\source\\repos\\PresentationCreator\\PresentationCreator\\appsettings.json",
+              "RelativeToolTip": "PresentationCreator\\appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABkAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-06-19T02:20:01.583Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
               "Title": "PaymentServicce.cs",
               "DocumentMoniker": "C:\\Users\\Isroilov\\source\\repos\\PresentationCreator\\Application\\Services\\PaymentServicce.cs",
               "RelativeDocumentMoniker": "Application\\Services\\PaymentServicce.cs",
               "ToolTip": "C:\\Users\\Isroilov\\source\\repos\\PresentationCreator\\Application\\Services\\PaymentServicce.cs",
               "RelativeToolTip": "Application\\Services\\PaymentServicce.cs",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAAACgAAAAiAAAA",
+              "ViewState": "AQIAAA4AAAAAAAAAAAAIwBkAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-18T10:17:08.282Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 3,
               "Title": "User.cs",
               "DocumentMoniker": "C:\\Users\\Isroilov\\source\\repos\\PresentationCreator\\Domain\\Models\\User.cs",
               "RelativeDocumentMoniker": "Domain\\Models\\User.cs",
@@ -100,7 +101,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 5,
               "Title": "BaseEntity.cs",
               "DocumentMoniker": "C:\\Users\\Isroilov\\source\\repos\\PresentationCreator\\Domain\\Models\\BaseEntity.cs",
               "RelativeDocumentMoniker": "Domain\\Models\\BaseEntity.cs",
@@ -112,7 +113,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 4,
               "Title": "dbo.Notification [Data]",
               "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/PresentationDb/True/SqlTable/dbo.Notification.sql",
               "ToolTip": "dbo.Notification [Data]",
@@ -123,68 +124,20 @@
         },
         {
           "DockedWidth": 188,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "DetailsPage.xaml",
-              "DocumentMoniker": "C:\\Users\\Isroilov\\source\\repos\\PresentationCreator\\TalabajonApp\\View\\DetailsPage.xaml",
-              "RelativeDocumentMoniker": "TalabajonApp\\View\\DetailsPage.xaml",
-              "ToolTip": "C:\\Users\\Isroilov\\source\\repos\\PresentationCreator\\TalabajonApp\\View\\DetailsPage.xaml",
-              "RelativeToolTip": "TalabajonApp\\View\\DetailsPage.xaml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-06-18T11:34:45.87Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "MainPage.xaml",
-              "DocumentMoniker": "C:\\Users\\Isroilov\\source\\repos\\PresentationCreator\\TalabajonApp\\View\\MainPage.xaml",
-              "RelativeDocumentMoniker": "TalabajonApp\\View\\MainPage.xaml",
-              "ToolTip": "C:\\Users\\Isroilov\\source\\repos\\PresentationCreator\\TalabajonApp\\View\\MainPage.xaml",
-              "RelativeToolTip": "TalabajonApp\\View\\MainPage.xaml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAANAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-06-18T11:34:24.744Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "AppShell.xaml",
-              "DocumentMoniker": "C:\\Users\\Isroilov\\source\\repos\\PresentationCreator\\TalabajonApp\\AppShell.xaml",
-              "RelativeDocumentMoniker": "TalabajonApp\\AppShell.xaml",
-              "ToolTip": "C:\\Users\\Isroilov\\source\\repos\\PresentationCreator\\TalabajonApp\\AppShell.xaml",
-              "RelativeToolTip": "TalabajonApp\\AppShell.xaml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-06-18T11:31:13.58Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "AccountService.cs",
-              "DocumentMoniker": "C:\\Users\\Isroilov\\source\\repos\\PresentationCreator\\Application\\Services\\AccountService.cs",
-              "RelativeDocumentMoniker": "Application\\Services\\AccountService.cs",
-              "ToolTip": "C:\\Users\\Isroilov\\source\\repos\\PresentationCreator\\Application\\Services\\AccountService.cs",
-              "RelativeToolTip": "Application\\Services\\AccountService.cs",
-              "ViewState": "AQIAABEAAAAAAAAAAAAAwBwAAAAKAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-18T10:16:43.498Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
               "Title": "UserService.cs",
               "DocumentMoniker": "C:\\Users\\Isroilov\\source\\repos\\PresentationCreator\\Application\\Services\\UserService.cs",
               "RelativeDocumentMoniker": "Application\\Services\\UserService.cs",
               "ToolTip": "C:\\Users\\Isroilov\\source\\repos\\PresentationCreator\\Application\\Services\\UserService.cs",
               "RelativeToolTip": "Application\\Services\\UserService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAFAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-18T09:49:27.463Z"
+              "WhenOpened": "2024-06-18T09:49:27.463Z",
+              "EditorCaption": ""
             }
           ]
         }
