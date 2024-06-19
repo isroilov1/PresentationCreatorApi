@@ -30,7 +30,8 @@ public class AccountService(IUnitOfWork ofWork,
             throw new StatusCodeExeption(HttpStatusCode.BadRequest, "Foydalanuvchi verificatsiyadan o'tmagan!");
 
         var referalId = user.ReferalId;
-        var referalUser = await _ofWork.User.GetByIdAsync(referalId);
+        var referalUser = await _ofWork.User.GetByIdIncludeAsync(referalId);
+
         if (referalUser is not null && !user.ReferalBonus)
         {
             user.ReferalBonus = true;
@@ -47,9 +48,10 @@ public class AccountService(IUnitOfWork ofWork,
                 RecipientIds = recipientIds
             };
             await _ofWork.Notification.CreateAsync(notification);
-            if (user.Notifications == null)
-                user.Notifications = new List<Notification>();
-            user.Notifications.Add(notification);
+
+            if (referalUser.Notifications == null)
+                referalUser.Notifications = new List<Notification>();
+            referalUser.Notifications.Add(notification);
             await _ofWork.User.UpdateAsync(referalUser);
         }
         return _auth.GeneratedToken(user);

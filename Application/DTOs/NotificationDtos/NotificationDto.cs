@@ -6,6 +6,7 @@ public class NotificationDto : AddNotificationDto
     public int Id { get; set; }
     public int SenderId { get; set; }
     public NotificationStatus Status { get; set; }
+    public NotificationType Type { get; set; }
     public string Created { get; set; } = string.Empty;
     
     public static implicit operator NotificationDto(Notification notification)
@@ -20,6 +21,7 @@ public class NotificationDto : AddNotificationDto
             SenderId = notification.SenderId,
             Message = notification.Message,
             Status = notification.Status,
+            Type = notification.Type,
             Created = formattedDate,
             RecipientIds = notification.RecipientIds
         };

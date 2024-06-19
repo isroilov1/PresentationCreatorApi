@@ -10,6 +10,7 @@ public class UserDto
     public string Password { get; set; } = string.Empty;
     public int Balance { get; set; } = 4000;
     public int ReferalId { get; set; }
+    public string Role { get; set; } = string.Empty;
     public bool IsVerified { get; set; } = false;
     public int PresentationCount { get; set; } = 0;
     public int? TotalPayments { get; set; }
@@ -38,6 +39,7 @@ public class UserDto
             TotalPayments = user.TotalPayments,
             PresentationPaths = user.PresentationPaths,
             CreatedAt = formattedDate,
+            Role =  user.Role.ToString(),
             Notifications = user.Notifications?.Select(n => new Notification
             {
                 Id = n.Id,

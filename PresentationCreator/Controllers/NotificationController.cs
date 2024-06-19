@@ -17,12 +17,10 @@ public class NotificationController(INotificationService notificationService) : 
 
     [HttpPost("toAdmin")]
     [Authorize]
-    public async Task<IActionResult> SendToAdminAsync([FromForm] AddNotificationDto dto)
+    public async Task<IActionResult> SendToAdminAsync(string message)
     {
         var senderId = int.Parse(HttpContext.User.FindFirst("Id")!.Value);
-        dto.RecipientIds = new List<int> { 1, 2 };
-        var total = await _notificationService.CreateAsync(senderId, dto);
-        return Ok(total);
+        return Ok(await _notificationService.SendMessageToAdmin(senderId, message));
     }
 
     [HttpGet("{id}")]
