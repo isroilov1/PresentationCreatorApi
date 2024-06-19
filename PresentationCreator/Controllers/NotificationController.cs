@@ -1,10 +1,13 @@
-﻿namespace PresentationCreator.Controllers;
+﻿using Microsoft.Extensions.Caching.Memory;
+
+namespace PresentationCreator.Controllers;
 
 [Route("api/[controller]")]
 [ApiController]
-public class NotificationController(INotificationService notificationService) : ControllerBase
+public class NotificationController(INotificationService notificationService, IMemoryCache cache) : ControllerBase
 {
     private readonly INotificationService _notificationService = notificationService;
+    private readonly IMemoryCache _cache = cache;
 
     [HttpPost("new")]
     [Authorize(Roles = "Admin")]
@@ -34,7 +37,16 @@ public class NotificationController(INotificationService notificationService) : 
     [Authorize(Roles = "Admin")]
     public async Task<IActionResult> GetAllAsync()
     {
-        return Ok(await _notificationService.GetAllAsync());
+        var cacheKey = "Notifications";
+        //return Ok(await _notificationService.GetAllAsync());
+        if (_cache.TryGetValue(cacheKey, out List<NotificationDto> notifications))
+        {
+            return Ok(notifications);
+        }
+        notifications = await _notificationService.GetAllAsync();
+        _cache.Set(cacheKey, notifications, TimeSpan.FromSeconds(5));
+
+        return Ok(notifications);
     }
 
     [HttpGet("user")]
