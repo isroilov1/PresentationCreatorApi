@@ -1,4 +1,8 @@
-﻿namespace Application.DTOs;
+﻿using Microsoft.AspNetCore.Http;
+using PresentationCreatorAPI.Entites;
+using PresentationCreatorAPI.Enums;
+
+namespace Application.DTOs;
 public class UpdatePaymentDto
 {
     public int Id { get; set; }

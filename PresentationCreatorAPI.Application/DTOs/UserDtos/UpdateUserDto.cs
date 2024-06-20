@@ -1,4 +1,6 @@
-﻿namespace Application.DTOs.UserDtos;
+﻿using PresentationCreatorAPI.Entites;
+
+namespace Application.DTOs.UserDtos;
 
 public class UpdateUserDto
 {
