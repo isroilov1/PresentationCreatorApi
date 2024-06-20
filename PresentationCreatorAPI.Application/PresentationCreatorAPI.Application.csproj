@@ -7,12 +7,12 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="DTOs\UserDTOs\" />
-    <Folder Include="DTOs\PaymentDTOs\" />
-    <Folder Include="DTOs\PageDTOs\" />
-    <Folder Include="DTOs\NotificationDTOs\" />
-    <Folder Include="Interfaces\" />
-    <Folder Include="Services\" />
+    <Compile Remove="Interfaces\**" />
+    <Compile Remove="Services\**" />
+    <EmbeddedResource Remove="Interfaces\**" />
+    <EmbeddedResource Remove="Services\**" />
+    <None Remove="Interfaces\**" />
+    <None Remove="Services\**" />
   </ItemGroup>
 
   <ItemGroup>
