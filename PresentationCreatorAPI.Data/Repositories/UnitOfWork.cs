@@ -1,5 +1,5 @@
 ﻿using PresentationCreatorAPI.Data;
-using PresentationCreatorAPI.Interfaces;
+using PresentationCreatorAPI.Data.Interfaces;
 using PresentationCreatorAPI.Repositories;
 
 namespace PresentationCreatorAPI.Repositories;

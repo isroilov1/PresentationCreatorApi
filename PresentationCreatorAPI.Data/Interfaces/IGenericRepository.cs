@@ -1,4 +1,4 @@
-﻿namespace PresentationCreatorAPI.Interfaces;
+﻿namespace PresentationCreatorAPI.Data.Interfaces;
 
 public interface IGenericRepository<T>
 {

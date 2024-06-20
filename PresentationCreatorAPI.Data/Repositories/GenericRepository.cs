@@ -1,4 +1,4 @@
-﻿using PresentationCreatorAPI.Interfaces;
+﻿using PresentationCreatorAPI.Data.Interfaces;
 using Microsoft.EntityFrameworkCore;
 using PresentationCreatorAPI.Entites;
 
