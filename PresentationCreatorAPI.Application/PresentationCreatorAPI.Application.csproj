@@ -7,12 +7,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="Interfaces\**" />
-    <Compile Remove="Services\**" />
-    <EmbeddedResource Remove="Interfaces\**" />
-    <EmbeddedResource Remove="Services\**" />
-    <None Remove="Interfaces\**" />
-    <None Remove="Services\**" />
+    <Compile Remove="Interfacess\**" />
+    <EmbeddedResource Remove="Interfacess\**" />
+    <None Remove="Interfacess\**" />
   </ItemGroup>
 
   <ItemGroup>
@@ -22,6 +19,11 @@
 
   <ItemGroup>
     <ProjectReference Include="..\PresentationCreatorAPI.Domain\PresentationCreatorAPI.Domain.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Interfaces\" />
+    <Folder Include="Services\" />
   </ItemGroup>
 
 </Project>

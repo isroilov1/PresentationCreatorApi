@@ -1,6 +1,6 @@
 ﻿using PresentationCreatorAPI.Entites;
 
-namespace PresentationCreatorAPI.Interfaces;
+namespace PresentationCreatorAPI.Data.Interfaces;
 
 public interface IUserRepository : IGenericRepository<User>
 {

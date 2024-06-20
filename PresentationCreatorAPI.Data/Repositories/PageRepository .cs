@@ -1,5 +1,5 @@
 ﻿using PresentationCreatorAPI.Entites;
-using PresentationCreatorAPI.Interfaces;
+using PresentationCreatorAPI.Data.Interfaces;
 
 namespace PresentationCreatorAPI.Data;
 

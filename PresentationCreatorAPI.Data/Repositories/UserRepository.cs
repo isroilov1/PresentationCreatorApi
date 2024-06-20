@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using PresentationCreatorAPI.Data;
 using PresentationCreatorAPI.Entites;
-using PresentationCreatorAPI.Interfaces;
+using PresentationCreatorAPI.Data.Interfaces;
 
 namespace PresentationCreatorAPI.Repositories;
 
