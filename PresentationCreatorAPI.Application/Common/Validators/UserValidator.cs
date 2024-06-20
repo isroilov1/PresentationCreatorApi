@@ -39,4 +39,4 @@ public class UserValidator : AbstractValidator<User>
              .WithMessage("Password maximum 50 xona bolishi kerak");
     }
 }
-// hello world
+// hello world ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
