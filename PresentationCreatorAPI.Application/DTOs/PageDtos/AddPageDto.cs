@@ -2,7 +2,7 @@
 using PresentationCreatorAPI.Entites;
 using PresentationCreatorAPI.Enums;
 
-namespace Application.DTOs.PageDtos;
+namespace PresentationCreatorAPI.Application.DTOs.PageDtos;
 
 public class AddPageDto
 {

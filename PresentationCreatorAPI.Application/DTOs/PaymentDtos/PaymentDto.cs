@@ -1,6 +1,6 @@
 ﻿using PresentationCreatorAPI.Entites;
 
-namespace Application.DTOs;
+namespace PresentationCreatorAPI.Application.DTOs;
 public class PaymentDto
 {
     public int Id { get; set; }
