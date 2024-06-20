@@ -6,4 +6,20 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="Common\Validators\" />
+    <Folder Include="Common\Security\" />
+    <Folder Include="DTOs\UserDTOs\" />
+    <Folder Include="DTOs\PaymentDTOs\" />
+    <Folder Include="DTOs\PageDTOs\" />
+    <Folder Include="DTOs\NotificationDTOs\" />
+    <Folder Include="Interfaces\" />
+    <Folder Include="GlobalUsings\" />
+    <Folder Include="Services\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Http.Features" Version="5.0.17" />
+  </ItemGroup>
+
 </Project>
