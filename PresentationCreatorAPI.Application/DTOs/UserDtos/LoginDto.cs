@@ -1,4 +1,4 @@
-﻿namespace Application.DTOs.UserDtos;
+﻿namespace PresentationCreatorAPI.Application.DTOs.UserDtos;
 
 public class LoginDto
 {

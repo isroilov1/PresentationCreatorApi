@@ -1,4 +1,8 @@
-﻿namespace Application.DTOs.PageDtos;
+﻿using Microsoft.AspNetCore.Http;
+using PresentationCreatorAPI.Entites;
+using PresentationCreatorAPI.Enums;
+
+namespace Application.DTOs.PageDtos;
 
 public class AddPageDto
 {

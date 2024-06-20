@@ -1,4 +1,8 @@
-﻿namespace Application.DTOs;
+﻿using Microsoft.AspNetCore.Http;
+using PresentationCreatorAPI.Entites;
+using PresentationCreatorAPI.Enums;
+
+namespace Application.DTOs;
 public class AddPaymentDto
 {
     public int Summa { get; set; }

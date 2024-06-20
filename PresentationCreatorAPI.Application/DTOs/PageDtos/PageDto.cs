@@ -1,4 +1,6 @@
-﻿namespace Application.DTOs.PageDtos;
+﻿using PresentationCreatorAPI.Entites;
+
+namespace Application.DTOs.PageDtos;
 
 public class PageDto
 {
