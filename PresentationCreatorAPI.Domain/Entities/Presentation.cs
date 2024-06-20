@@ -1,4 +1,4 @@
-﻿namespace Domain.Models;
+﻿namespace PresentationCreatorAPI.Entites;
 
 public class Presentation : BaseEntity
 {

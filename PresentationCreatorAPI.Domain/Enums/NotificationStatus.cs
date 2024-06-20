@@ -1,4 +1,4 @@
-﻿namespace Domain.Enums;
+﻿namespace PresentationCreatorAPI.Enums;
 
 public enum NotificationStatus
 {
