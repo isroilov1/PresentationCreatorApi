@@ -8,6 +8,7 @@ public interface IPaymentService
     Task<List<PaymentDto>> GetByPhoneNumberAsync(string phoneNumber);
     Task<List<PaymentDto>> GetAllAsync();
     Task UpdateAsync(UpdatePaymentDto dto);
-    Task AcceptOrRejectAsync(int id, PaymentStatus status, string caption, int accepterId);
+    Task AcceptPaymentAsync(int id, PaymentStatus status, string caption, int accepterId);
+    Task RejectPaymentAsync(int id, PaymentStatus status, string caption, int accepterId);
     Task DeleteAsync(int id);
 }

@@ -157,6 +157,48 @@
   },
   {
     "ContainingType": "MovieNTV.Controllers.AdminsController",
+    "Method": "AcceptPaymentAsync",
+    "RelativePath": "api/Admins/payment/accept",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "paymentId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "adminCaption",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MovieNTV.Controllers.AdminsController",
+    "Method": "RejectPaymentAsync",
+    "RelativePath": "api/Admins/payment/reject",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "paymentId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "adminCaption",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MovieNTV.Controllers.AdminsController",
     "Method": "UpdateBalanceAsync",
     "RelativePath": "api/Admins/updateBalance",
     "HttpMethod": "PUT",
@@ -308,32 +350,6 @@
         "Name": "id",
         "Type": "System.Int32",
         "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "PresentationCreator.Controllers.PaymentController",
-    "Method": "AcceptPaymentAsync",
-    "RelativePath": "api/Payment/accept-reject",
-    "HttpMethod": "PUT",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "paymentId",
-        "Type": "System.Int32",
-        "IsRequired": false
-      },
-      {
-        "Name": "status",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
-        "Name": "adminCaption",
-        "Type": "System.String",
-        "IsRequired": false
       }
     ],
     "ReturnTypes": []

@@ -1,6 +1,4 @@
-﻿using Domain.Enums;
-
-namespace MovieNTV.Controllers;
+﻿namespace MovieNTV.Controllers;
 
 [Route("api/[controller]")]
 [ApiController]
@@ -33,12 +31,23 @@ public class AdminsController(IAdminService adminService,
     public async Task<IActionResult> GetAllAdminAsync()
         => Ok(await _adminService.GetAllAdminAsync());
 
-    [HttpPut("accept-reject")]
+    [HttpPut("payment/accept")]
     [Authorize(Roles = "Admin")]
-    public async Task<IActionResult> AcceptPaymentAsync([FromForm] int paymentId, [FromForm] PaymentStatus status, [FromForm] string adminCaption)
+    public async Task<IActionResult> AcceptPaymentAsync([FromForm] int paymentId, [FromForm] string adminCaption)
     {
         var accepterId = int.Parse(HttpContext.User.FindFirst("Id")!.Value);
-        await _paymentService.AcceptOrRejectAsync(paymentId, status, adminCaption, accepterId);
+        var status = PaymentStatus.Accepted;
+        await _paymentService.AcceptPaymentAsync(paymentId, status, adminCaption, accepterId);
+        return Ok();
+    }
+
+    [HttpPut("payment/reject")]
+    [Authorize(Roles = "Admin")]
+    public async Task<IActionResult> RejectPaymentAsync([FromForm] int paymentId, [FromForm] string adminCaption)
+    {
+        var accepterId = int.Parse(HttpContext.User.FindFirst("Id")!.Value);
+        var status = PaymentStatus.Rejected;
+        await _paymentService.AcceptPaymentAsync(paymentId, status, adminCaption, accepterId);
         return Ok();
     }
 

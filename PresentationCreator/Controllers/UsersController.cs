@@ -21,7 +21,7 @@
         }
 
         [HttpGet("user")]
-        [Authorize(Roles = "Admin")]
+        [Authorize]
         public async Task<IActionResult> GetUserAsync()
         {
             var id = int.Parse(HttpContext.User.FindFirst("Id")!.Value);
