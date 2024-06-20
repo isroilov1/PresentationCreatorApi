@@ -1,12 +1,15 @@
-using Microsoft.EntityFrameworkCore;
-using PresentationCreatorAPI.Data;
-using PresentationCreatorAPI.Data.Interfaces;
-using PresentationCreatorAPI.Repositories;
-using System;
+using PresentationCreatorAPI.Application.Interfaces;
+using PresentationCreatorAPI.Application.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
+builder.Services.AddControllers();
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen();
+
+// Cache
+builder.Services.AddMemoryCache();
+
 builder.Services.AddDbContext<AppDbContext>(options =>
 {
     options.UseSqlServer(builder.Configuration.GetConnectionString("LocalDb"));
@@ -16,14 +19,28 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 // Unit Of Work
 builder.Services.AddTransient<IUnitOfWork, UnitOfWork>();
 
-builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
-builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+// Service
+builder.Services.AddTransient<IAccountService, AccountService>();
+builder.Services.AddTransient<IAuthManager, AuthManager>();
+builder.Services.AddTransient<IUserService, UserService>();
+builder.Services.AddTransient<IEmailService, EmailService>();
+builder.Services.AddTransient<IAdminService, AdminService>();
+builder.Services.AddTransient<INotificationService, NotificationService>();
+builder.Services.AddTransient<IPaymentService, PaymentServicce>();
+
+
+// Configure
+builder.Services.ConfigureJwtAuthorize(builder.Configuration);
+builder.Services.ConfigureSwaggerAuthorize(builder.Configuration);
+
+//Validator
+builder.Services.AddScoped<IValidator<User>, UserValidator>();
+builder.Services.AddScoped<IValidator<Presentation>, PresentationValidator>();
+builder.Services.AddScoped<IValidator<Notification>, NotificationValidator>();
+builder.Services.AddScoped<IValidator<Payment>, PaymentValidator>();
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
@@ -32,8 +49,12 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
+app.UseAuthentication();
+
 app.UseAuthorization();
 
 app.MapControllers();
+
+app.UseMiddleware<ExceptionHandleMiddleware>();
 
 app.Run();
