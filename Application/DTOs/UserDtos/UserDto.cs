@@ -12,10 +12,10 @@ public class UserDto
     public bool IsVerified { get; set; } = false;
     public int PresentationCount { get; set; } = 0;
     public int? TotalPayments { get; set; }
-    public int PaymentsCount { get; set; } = 0;
-    public int NotificationsCount { get; set; } = 0;
     public string CreatedAt { get; set; } = string.Empty;
-    public List<Presentation>? PresentationPaths { get; set; }
+    public int PaymentsCount { get; set; }
+    public int NotificationsCount { get; set; }
+    public int PresentationsCount { get; set; }
 
     public static implicit operator UserDto(User user)
     {
@@ -29,17 +29,17 @@ public class UserDto
             FullName = user.FullName,
             Email = user.Email,
             PhoneNumber = user.PhoneNumber,
-            CreatedAt = formattedDate,
-            IsVerified = user.IsVerified,
             Balance = user.Balance,
             Password = user.Password,
+            IsVerified = user.IsVerified,
             Role = user.Role.ToString(),
-            PresentationCount = user.PresentationCount,
-            TotalPayments = user.TotalPayments,
+            CreatedAt = formattedDate,
             ReferalId = user.ReferalId,
+            TotalPayments = user.TotalPayments,
+            PresentationCount = user.PresentationCount,
+            PresentationsCount = user.Presentations?.Count() ?? 0,
             PaymentsCount = user.Payments?.Count() ?? 0,
-            NotificationsCount = user.Notifications?.Count() ?? 0,
-            PresentationPaths = user.PresentationPaths,
+            NotificationsCount = user.Notifications?.Count() ?? 0
             //Notifications = user.Notifications?.Select(n => new Notification
             //{
             //    Id = n.Id,
@@ -60,3 +60,4 @@ public class UserDto
         };
     }
 }
+

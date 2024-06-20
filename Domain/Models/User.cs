@@ -16,5 +16,5 @@ public class User : BaseEntity
     public int TelegramId { get; set; }
     public List<Payment>? Payments { get; set; } = new();
     public List<Notification>? Notifications { get; set; } = new();
-    public List<Presentation>? PresentationPaths { get; set; }
+    public List<Presentation>? Presentations { get; set; }
 }
