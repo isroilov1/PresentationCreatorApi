@@ -1,6 +1,20 @@
+using Microsoft.EntityFrameworkCore;
+using PresentationCreatorAPI.Data;
+using PresentationCreatorAPI.Interfaces;
+using PresentationCreatorAPI.Repositories;
+using System;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+builder.Services.AddDbContext<AppDbContext>(options =>
+{
+    options.UseSqlServer(builder.Configuration.GetConnectionString("LocalDb"));
+    options.UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking);
+});
+
+// Unit Of Work
+builder.Services.AddTransient<IUnitOfWork, UnitOfWork>();
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
