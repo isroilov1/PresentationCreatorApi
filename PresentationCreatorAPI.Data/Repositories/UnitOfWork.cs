@@ -1,4 +1,8 @@
-﻿namespace Data.Repositories;
+﻿using PresentationCreatorAPI.Data;
+using PresentationCreatorAPI.Interfaces;
+using PresentationCreatorAPI.Repositories;
+
+namespace PresentationCreatorAPI.Repositories;
 public class UnitOfWork(AppDbContext appDbContext) : IUnitOfWork
 {
     private readonly AppDbContext _appDbContext = appDbContext;

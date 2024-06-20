@@ -1,4 +1,4 @@
-﻿namespace Data.Interfaces;
+﻿namespace PresentationCreatorAPI.Interfaces;
 public interface IUnitOfWork
 {
     IPresentationRepository Presentation{ get; }

@@ -1,4 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using PresentationCreatorAPI.Entites;
+using PresentationCreatorAPI.Enums;
 
 namespace PresentationCreatorAPI.Data;
 public class AppDbContext(DbContextOptions<AppDbContext> options)

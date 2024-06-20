@@ -1,4 +1,8 @@
-﻿namespace PresentationCreatorAPI.Data;
+﻿using PresentationCreatorAPI.Interfaces;
+using Microsoft.EntityFrameworkCore;
+using PresentationCreatorAPI.Entites;
+
+namespace PresentationCreatorAPI.Data;
 
 public class GenericRepository<T>(AppDbContext dbContext)
     : IGenericRepository<T> where T : BaseEntity

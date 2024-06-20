@@ -1,6 +1,6 @@
-﻿using Domain.Models;
+﻿using PresentationCreatorAPI.Entites;
 
-namespace Data.Interfaces;
+namespace PresentationCreatorAPI.Interfaces;
 
 public interface IPresentationRepository : IGenericRepository<Presentation>
 {

@@ -1,4 +1,9 @@
-﻿namespace Data.Repositories;
+﻿using Microsoft.EntityFrameworkCore;
+using PresentationCreatorAPI.Data;
+using PresentationCreatorAPI.Entites;
+using PresentationCreatorAPI.Interfaces;
+
+namespace PresentationCreatorAPI.Repositories;
 
 public class UserRepository(AppDbContext dbContext) : GenericRepository<User>(dbContext), IUserRepository
 {
