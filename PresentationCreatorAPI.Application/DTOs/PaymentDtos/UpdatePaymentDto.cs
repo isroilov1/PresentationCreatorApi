@@ -2,7 +2,7 @@
 using PresentationCreatorAPI.Entites;
 using PresentationCreatorAPI.Enums;
 
-namespace Application.DTOs;
+namespace PresentationCreatorAPI.Application.DTOs;
 public class UpdatePaymentDto
 {
     public int Id { get; set; }
