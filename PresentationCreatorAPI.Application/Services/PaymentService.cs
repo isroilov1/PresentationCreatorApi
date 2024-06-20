@@ -17,7 +17,7 @@ public class PaymentServicce(IUnitOfWork unitOfWork,
     private readonly IUnitOfWork _unitOfWork = unitOfWork;
     private readonly IValidator<Payment> _validator = validator;
 
-    public async Task AcceptOrRejectAsync(int id, PaymentStatus status, string caption, int accepterId)
+    public async Task AcceptPaymentAsync(int id, PaymentStatus status, string caption, int accepterId)
     {
         var payment = await _unitOfWork.Payment.GetByIdAsync(id);
         if (payment is null)
@@ -144,6 +144,62 @@ public class PaymentServicce(IUnitOfWork unitOfWork,
         if (payments is null)
             throw new StatusCodeException(HttpStatusCode.NotFound, "Ushbu foydalanuvchining to'lovlari mavjud emas!");
         return payments.Select(x => (PaymentDto)x).ToList();
+    }
+
+    public async Task RejectPaymentAsync(int id, PaymentStatus status, string caption, int accepterId)
+    {
+        var payment = await _unitOfWork.Payment.GetByIdAsync(id);
+        if (payment is null)
+            throw new StatusCodeException(HttpStatusCode.NotFound, "To'lov mavjud emas");
+        if (payment.Status == PaymentStatus.Accepted)
+            throw new StatusCodeException(HttpStatusCode.AlreadyReported, "Qabul qilingan to'lovni o'zgartira olmaysiz!");
+        if (status == PaymentStatus.Expected)
+            throw new StatusCodeException(HttpStatusCode.BadRequest, "To'lov statusini kutilayotgan kabi o'zgartira olmaysiz!");
+        payment.Status = status;
+        payment.AdminCaption = caption;
+        await _unitOfWork.Payment.UpdateAsync(payment);
+
+        var user = await _unitOfWork.User.GetByIdAsync(payment.UserId);
+        if (user is null)
+            throw new StatusCodeException(HttpStatusCode.NotFound, "Ushbu to'lov egasi topilmadi");
+
+        var message = $"To'lov rad qilindi!\n\nPayment Id: {id}\nSumma: {payment.Summa}";
+
+        var senderUser = await _unitOfWork.User.GetByIdAsync(accepterId);
+        if (senderUser is null)
+            throw new StatusCodeException(HttpStatusCode.NotFound, "Tasdiqlayotgan admin akaunti bilan bog'liq muammo yuzaga keldi!");
+
+        var recipientIds = new List<int> { payment.UserId };
+        var notificationToUser = new Notification
+        {
+            Message = message,
+            Status = NotificationStatus.NotRead,
+            Type = NotificationType.Input,
+            SenderId = accepterId,
+            RecipientIds = recipientIds
+        };
+        await _unitOfWork.Notification.CreateAsync(notificationToUser);
+        if (user.Notifications == null)
+            user.Notifications = new List<Notification>();
+        user.Notifications.Add(notificationToUser);
+        user.TotalPayments = user.TotalPayments + payment.Summa;
+        await _unitOfWork.User.UpdateAsync(user);
+
+        var notificationToAdmin = new Notification
+        {
+            Message = message,
+            Status = NotificationStatus.NotRead,
+            Type = NotificationType.Output,
+            SenderId = accepterId,
+            RecipientIds = recipientIds
+        };
+        await _unitOfWork.Notification.CreateAsync(notificationToAdmin);
+
+        if (senderUser.Notifications == null)
+            senderUser.Notifications = new List<Notification>();
+
+        senderUser.Notifications.Add(notificationToAdmin);
+        await _unitOfWork.User.UpdateAsync(senderUser);
     }
 
     public async Task UpdateAsync(UpdatePaymentDto dto)
