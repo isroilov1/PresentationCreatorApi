@@ -6,7 +6,7 @@ namespace PresentationCreatorAPI.Application.DTOs.PageDtos;
 
 public class AddPageDto
 {
-    public string Title { get; set; } = string.Empty; // request with title
+    public string Title { get; set; } = string.Empty; // request with
     public PresentationPageType PageType { get; set; }  
     public IFormFile Image { get; set; } = null!;
     
