@@ -12,7 +12,6 @@ public class UpdatePaymentDto
     public PaymentStatus Status { get; set; }
     public string AdminCaption { get; set; } = string.Empty;
 
-
     public static implicit operator Payment(UpdatePaymentDto dto)
     {
         return new Payment
