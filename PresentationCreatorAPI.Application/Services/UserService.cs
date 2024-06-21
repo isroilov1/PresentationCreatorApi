@@ -51,13 +51,13 @@ public class UserService(IUnitOfWork unitOfWork,
         {
             var data = JsonConvert.DeserializeObject<List<UserDto>>(entities);
 
-            return JsonConvert.SerializeObject(data); //Formatting.Indented
+            return JsonConvert.SerializeObject(data, Formatting.Indented); //Formatting.Indented
         }
 
         var users = await _unitOfWork.User.GetAllAsync();
         var json = JsonConvert.SerializeObject(users);
         await _redisService.SetAsync(CACHE_KEY, json);
-        return JsonConvert.SerializeObject(users.Select(u => (UserDto)u));
+        return JsonConvert.SerializeObject(users.Select(u => (UserDto)u), Formatting.Indented);
     }
 
     public async Task<UserDto> GetByIdAsync(int id)
