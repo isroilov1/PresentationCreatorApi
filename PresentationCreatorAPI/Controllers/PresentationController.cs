@@ -1,6 +1,5 @@
 ﻿using PresentationCreatorAPI.Application.DTOs.PresentationDtos;
 using PresentationCreatorAPI.Application.Interfaces;
-using PresentationCreatorAPI.Application.Services;
 
 namespace PresentationCreatorAPI.Controllers;
 
