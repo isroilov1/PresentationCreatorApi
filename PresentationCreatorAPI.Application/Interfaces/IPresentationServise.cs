@@ -7,7 +7,7 @@ namespace PresentationCreatorAPI.Application.Interfaces;
 
 public interface IPresentationServise
 {
-    Task CreateAsync(AddPresentationDto dto);
+    Task CreateAsync(AddPresentationDto dto, int userId);
     Task UpdateAsync(UpdatePresentationDto dto);
     Task<PageDto> GetByIdAsync(int id);
     Task<List<PresentationDto>> GetAllPagesAsync();

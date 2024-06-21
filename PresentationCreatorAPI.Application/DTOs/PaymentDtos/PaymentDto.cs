@@ -16,7 +16,7 @@ public class PaymentDto
     {
         var tzTashkent = TimeZoneInfo.FindSystemTimeZoneById("Asia/Tashkent");
         var tashkentTime = TimeZoneInfo.ConvertTimeFromUtc(payment.CreatedAt, tzTashkent);
-        string formattedDate = tashkentTime.ToString("dd-MM-yyyy HH");
+        string formattedDate = tashkentTime.ToString("dd-MM-yyyy HH:mm");
 
         return new PaymentDto
         {
