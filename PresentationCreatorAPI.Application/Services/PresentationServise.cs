@@ -26,7 +26,7 @@ public class PresentationServise(IUnitOfWork unitOfWork,
 
         var presentation = (Presentation)dto;
         string rootPath = $"uploads/presentations/{userId}";
-        string filePath = FileHelper.SaveFile(dto.File, rootPath);
+        string filePath = FileHelper.SavePresentationFile(dto.File, rootPath);
         presentation.FilePath = filePath;
 
         var user = await _unitOfWork.User.GetByIdIncludeAsync(userId);
