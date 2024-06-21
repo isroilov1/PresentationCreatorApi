@@ -39,6 +39,7 @@ builder.Services.AddTransient<IEmailService, EmailService>();
 builder.Services.AddTransient<IAdminService, AdminService>();
 builder.Services.AddTransient<INotificationService, NotificationService>();
 builder.Services.AddTransient<IPaymentService, PaymentServicce>();
+builder.Services.AddTransient<IPresentationServise, PresentationServise>();
 builder.Services.AddTransient<IRedisService, RedisService>();
 
 // Configure
@@ -50,6 +51,7 @@ builder.Services.AddScoped<IValidator<User>, UserValidator>();
 builder.Services.AddScoped<IValidator<Presentation>, PresentationValidator>();
 builder.Services.AddScoped<IValidator<Notification>, NotificationValidator>();
 builder.Services.AddScoped<IValidator<Payment>, PaymentValidator>();
+builder.Services.AddScoped<IValidator<Page>, PageValidator>();
 
 // cors policy
 builder.Services.AddCors(options =>
