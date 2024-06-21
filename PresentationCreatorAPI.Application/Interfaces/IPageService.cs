@@ -6,7 +6,7 @@ namespace PresentationCreatorAPI.Application.Interfaces;
 
 public interface IPageService
 {
-    Task CreateThemePageAsync(string theme, string author);
+    Task CreateThemePageAsync(Presentation presentation);
     Task CreatePlanPageAsync(string plan);
     Task CreateInformationPageAsync(string title);
     Task CreateInformationWithImagePageAsync(string title);
