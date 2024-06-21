@@ -2,7 +2,7 @@
 
 public enum PresentationPageType
 {
-    Topic = 1,
+    Theme = 1,
     Plan,
     Information,
     InformationWithImage,
