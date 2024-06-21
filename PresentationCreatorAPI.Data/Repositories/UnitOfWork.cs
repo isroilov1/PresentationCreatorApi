@@ -14,4 +14,6 @@ public class UnitOfWork(AppDbContext appDbContext) : IUnitOfWork
     public INotificationRepository Notification => new NotificationRepository(_appDbContext);
 
     public IUserRepository User => new UserRepository(_appDbContext);
+
+    public IPageRepository Page => new PageRepository(_appDbContext);
 }

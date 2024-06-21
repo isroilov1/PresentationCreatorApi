@@ -34,15 +34,16 @@ public class PageService(IUnitOfWork unitOfWork,
         throw new NotImplementedException();
     }
 
-    public Task CreateThemePageAsync(string theme, string author)
+    public async Task CreateThemePageAsync(Presentation presentation)
     {
         var page = new Page
         {
-            Title = theme,
-            Text = author,
-            PageType = PresentationPageType.Theme
+            Title = presentation.Theme,
+            Text = presentation.Author,
+            PageType = PresentationPageType.Theme,
+            PresentationId = presentation.Id
         };
-        throw new NotImplementedException();
+        await _unitOfWork.Page.CreateAsync(page);
     }
 
     public Task DeleteAsync(int id)

@@ -40,6 +40,7 @@ builder.Services.AddTransient<IAdminService, AdminService>();
 builder.Services.AddTransient<INotificationService, NotificationService>();
 builder.Services.AddTransient<IPaymentService, PaymentServicce>();
 builder.Services.AddTransient<IPresentationServise, PresentationServise>();
+builder.Services.AddTransient<IPageService, PageService>();
 builder.Services.AddTransient<IRedisService, RedisService>();
 
 // Configure
