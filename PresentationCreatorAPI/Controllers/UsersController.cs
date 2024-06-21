@@ -1,4 +1,5 @@
-﻿using PresentationCreatorAPI.Application.Interfaces;
+﻿using PresentationCreatorAPI.Application.Common.Utils;
+using PresentationCreatorAPI.Application.Interfaces;
 
 namespace PresentationCreator.Controllers
 {
@@ -17,9 +18,9 @@ namespace PresentationCreator.Controllers
 
         [HttpGet("users")]
         [Authorize]
-        public async Task<IActionResult> GetAllAsync()
+        public async Task<IActionResult> GetAllAsync([FromQuery] PaginationParams @params)
         {
-            return Ok(await _userService.GetAllAsync());
+            return Ok(await _userService.GetAllAsync(@params));
         }
 
         [HttpGet("user")]

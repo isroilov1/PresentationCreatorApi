@@ -1,5 +1,6 @@
 using PresentationCreatorAPI.Application.Interfaces;
 using PresentationCreatorAPI.Application.Services;
+using StackExchange.Redis;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -10,6 +11,17 @@ builder.Services.AddSwaggerGen();
 // Cache
 builder.Services.AddMemoryCache();
 
+//Redis
+builder.Services.Configure<ConfigurationOptions>(
+                builder.Configuration.GetSection("RedisCacheOptions"));
+
+builder.Services.AddStackExchangeRedisCache(options =>
+{
+    options.Configuration = builder.Configuration.GetConnectionString("RedisCacheConnectionString");
+    options.InstanceName = "UsersAPI";
+});
+
+//DbContext
 builder.Services.AddDbContext<AppDbContext>(options =>
 {
     options.UseSqlServer(builder.Configuration.GetConnectionString("LocalDb"));
@@ -27,7 +39,7 @@ builder.Services.AddTransient<IEmailService, EmailService>();
 builder.Services.AddTransient<IAdminService, AdminService>();
 builder.Services.AddTransient<INotificationService, NotificationService>();
 builder.Services.AddTransient<IPaymentService, PaymentServicce>();
-
+builder.Services.AddTransient<IRedisService, RedisService>();
 
 // Configure
 builder.Services.ConfigureJwtAuthorize(builder.Configuration);
@@ -38,6 +50,18 @@ builder.Services.AddScoped<IValidator<User>, UserValidator>();
 builder.Services.AddScoped<IValidator<Presentation>, PresentationValidator>();
 builder.Services.AddScoped<IValidator<Notification>, NotificationValidator>();
 builder.Services.AddScoped<IValidator<Payment>, PaymentValidator>();
+
+// cors policy
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowSpecificOrigin",
+        builder =>
+        {
+            builder.AllowAnyOrigin()
+                   .AllowAnyHeader()
+                   .AllowAnyMethod();
+        });
+});
 
 var app = builder.Build();
 
