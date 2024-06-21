@@ -49,6 +49,8 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
+app.UseCors("All");
+
 app.UseAuthentication();
 
 app.UseAuthorization();
