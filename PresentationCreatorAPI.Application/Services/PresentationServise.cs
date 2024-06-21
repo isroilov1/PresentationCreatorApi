@@ -8,14 +8,17 @@ using PresentationCreatorAPI.Application.Interfaces;
 using PresentationCreatorAPI.Application.presntations.Presentationpresntations;
 using PresentationCreatorAPI.Data.Interfaces;
 using PresentationCreatorAPI.Entites;
+using PresentationCreatorAPI.Enums;
 using System.Net;
 
 namespace PresentationCreatorAPI.Application.Services;
 
 public class PresentationServise(IUnitOfWork unitOfWork,
+                                 IPageService pageService,
                                  IValidator<Presentation> validator) : IPresentationServise
 {
     private readonly IUnitOfWork _unitOfWork = unitOfWork;
+    private readonly IPageService _pageService = pageService;
     private readonly IValidator<Presentation> _validator = validator;
 
     public async Task CreateAsync(AddPresentationDto dto, int userId)
@@ -34,8 +37,13 @@ public class PresentationServise(IUnitOfWork unitOfWork,
             throw new StatusCodeException(HttpStatusCode.NotFound, "Foydalanuvchi topilmadi!");
         presentation.UserId = userId;
         presentation.User = user;
-        PresentationFileCreator.CreatePresentation(presentation);
         await _unitOfWork.Presentation.CreateAsync(presentation);
+
+        await _pageService.CreateThemePageAsync(presentation);
+        PresentationFileCreator.CreatePresentation(presentation);
+
+        // Pagelar yaratilishi kerak
+        await _unitOfWork.Presentation.UpdateAsync(presentation);
     }
 
     public Task DeleteAsync(int id)

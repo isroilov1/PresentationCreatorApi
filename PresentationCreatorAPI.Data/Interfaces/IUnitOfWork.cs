@@ -5,4 +5,5 @@ public interface IUnitOfWork
     IPaymentRepository Payment { get; }
     INotificationRepository Notification { get; }
     IUserRepository User { get; }
+    IPageRepository Page { get; }
 }
