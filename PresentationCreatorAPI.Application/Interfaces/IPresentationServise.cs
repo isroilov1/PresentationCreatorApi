@@ -1,13 +1,15 @@
 ﻿using Application.DTOs.PageDtos;
 using PresentationCreatorAPI.Application.DTOs.PageDtos;
+using PresentationCreatorAPI.Application.DTOs.PresentationDtos;
+using PresentationCreatorAPI.Application.presntations.Presentationpresntations;
 
 namespace PresentationCreatorAPI.Application.Interfaces;
 
 public interface IPresentationServise
 {
-    Task CreateAsync(AddPageDto page);
-    Task UpdateAsync(UpdatePageDto page);
+    Task CreateAsync(AddPresentationDto dto, int userId);
+    Task UpdateAsync(UpdatePresentationDto dto);
     Task<PageDto> GetByIdAsync(int id);
-    Task<List<PageDto>> GetAllPagesAsync();
+    Task<List<PresentationDto>> GetAllPagesAsync();
     Task DeleteAsync(int id);
 }

@@ -1,4 +1,5 @@
-﻿using PresentationCreatorAPI.Entites;
+﻿using Microsoft.AspNetCore.Http;
+using PresentationCreatorAPI.Entites;
 
 namespace PresentationCreatorAPI.Application.DTOs.PresentationDtos;
 
@@ -9,7 +10,7 @@ public class AddPresentationDto
     public byte PageCount { get; set; }
     public int Template { get; set; }
     public string Language { get; set; } = string.Empty;
-    public string FilePath { get; set; } = string.Empty;
+    public IFormFile File { get; set; } = null!;
     public int UserId { get; set; }
 
     public static implicit operator Presentation(AddPresentationDto dto)
@@ -21,7 +22,6 @@ public class AddPresentationDto
             PageCount = dto.PageCount,
             Template = dto.Template,
             Language = dto.Language,
-            FilePath = dto.FilePath,
             UserId = dto.UserId
         };
     }
