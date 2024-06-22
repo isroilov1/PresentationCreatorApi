@@ -1,5 +1,6 @@
 using PresentationCreatorAPI.Application.Interfaces;
 using PresentationCreatorAPI.Application.Services;
+using Serilog;
 using StackExchange.Redis;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -10,6 +11,10 @@ builder.Services.AddSwaggerGen();
 
 // Cache
 builder.Services.AddMemoryCache();
+
+//Serilog
+builder.Host.UseSerilog((hostingContext, loggerConfiguration) =>
+loggerConfiguration.ReadFrom.Configuration(hostingContext.Configuration));
 
 //Redis
 builder.Services.Configure<ConfigurationOptions>(
