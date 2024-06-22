@@ -18,6 +18,7 @@ public class AppDbContext(DbContextOptions<AppDbContext> options)
         new User
         {
             Id = 1,
+            CreatedAt = DateTime.UtcNow,
             FullName = "Isroilov Ismoiljon",
             Email = "isroilov0905@gmail.com",
             PhoneNumber = "+998997979898",

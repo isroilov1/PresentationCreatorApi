@@ -70,11 +70,12 @@ public class AccountService(IUnitOfWork ofWork,
     {
         var user = await _ofWork.User.GetByEmailAsync(dto.Email);
 
-        if (user is not null) throw new StatusCodeException(HttpStatusCode.AlreadyReported, "Ushbu email bilan allaqachon ro'yxatdan o'tilgan!");
+        if (user is not null) 
+            throw new StatusCodeException(HttpStatusCode.AlreadyReported, "Ushbu email bilan allaqachon ro'yxatdan o'tilgan!");
 
         var userbyphone = await _ofWork.User.GetByPhoneNumberAsync(dto.PhoneNumber);
-
-        if (userbyphone is not null) throw new StatusCodeException(HttpStatusCode.AlreadyReported, "Ushbu telefon raqami bilan allaqachon ro'yxatdan o'tilgan!");
+        if (userbyphone is not null) 
+            throw new StatusCodeException(HttpStatusCode.AlreadyReported, "Ushbu telefon raqami bilan allaqachon ro'yxatdan o'tilgan!");
 
         var result = await _validator.ValidateAsync(dto);
         if (!result.IsValid)
