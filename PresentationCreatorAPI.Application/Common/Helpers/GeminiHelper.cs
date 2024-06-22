@@ -11,9 +11,8 @@ public class GeminiHelper
     public static async Task<List<string>> GetTitlesFromGeminiAsync(string theme, PresentationLanguage language)
     {
         string apiKey = "AIzaSyDHzIy7ZJSEpHB9hSbcz8fwWUabY9CUaZw";
-        string query = $"I need 20 titles on {theme} in {language} language";
+        string query = $"i need only 18 topics related for {theme} topic in {language} and it must be only topics and numbers nothing more";
         string cseId = "0aa7d95ba3daf77dd0418c878fe7a370f552fff1";
-        List<string> titles = new List<string>();
         byte numTitles = 20;
         HttpClient client = new HttpClient();
 
@@ -23,17 +22,15 @@ public class GeminiHelper
         request.Content.Headers.ContentType = new MediaTypeHeaderValue("application/json");
 
         HttpResponseMessage response = await client.SendAsync(request);
-        if (response.EnsureSuccessStatusCode().StatusCode != HttpStatusCode.OK)
+        if (response.StatusCode != HttpStatusCode.OK)
             throw new StatusCodeException(HttpStatusCode.BadRequest, "Geminidan so'rov qabul qilishda muammo");
         string responseBody = await response.Content.ReadAsStringAsync();
         JObject json = JObject.Parse(responseBody);
-        var items = json["items"];
-        foreach (var item in items)
-        {
-            if (titles.Count >= numTitles) break;
-            string title = item["title"].ToString();
-            titles.Add(title);
-        }
+        var text = json["candidates"]?[0]?["content"]?["parts"]?[0]?["text"]?.ToString();
+        if (text is null)
+            throw new StatusCodeException(HttpStatusCode.BadRequest, "So'rov bo'yicha hech qanday ma'lumot topilmadi!");
+        List<string> titles = new List<string>(text.Split(new[] { "\n" }, StringSplitOptions.RemoveEmptyEntries));
+        
         return titles;
     }
 }
