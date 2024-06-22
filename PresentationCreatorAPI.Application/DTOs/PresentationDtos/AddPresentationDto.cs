@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using PresentationCreatorAPI.Domain.Enums;
 using PresentationCreatorAPI.Entites;
 
 namespace PresentationCreatorAPI.Application.DTOs.PresentationDtos;
@@ -9,7 +9,7 @@ public class AddPresentationDto
     public string Author { get; set; } = string.Empty;
     public byte PageCount { get; set; }
     public int Template { get; set; }
-    public string Language { get; set; } = string.Empty;
+    public PresentationLanguage Language { get; set; }
 
     public static implicit operator Presentation(AddPresentationDto dto)
     {

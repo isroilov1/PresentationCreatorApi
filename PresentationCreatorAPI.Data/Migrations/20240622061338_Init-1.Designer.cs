@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using PresentationCreatorAPI.Data;
 
@@ -11,9 +12,11 @@ using PresentationCreatorAPI.Data;
 namespace PresentationCreatorAPI.Data.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240622061338_Init-1")]
+    partial class Init1
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -237,7 +240,7 @@ namespace PresentationCreatorAPI.Data.Migrations
                         {
                             Id = 1,
                             Balance = 20000,
-                            CreatedAt = new DateTime(2024, 6, 22, 7, 0, 16, 43, DateTimeKind.Utc).AddTicks(9880),
+                            CreatedAt = new DateTime(2024, 6, 22, 6, 13, 37, 810, DateTimeKind.Unspecified).AddTicks(6963),
                             Email = "isroilov0905@gmail.com",
                             FullName = "Isroilov Ismoiljon",
                             IsVerified = true,
