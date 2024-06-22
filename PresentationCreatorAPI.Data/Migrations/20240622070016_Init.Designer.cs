@@ -12,8 +12,8 @@ using PresentationCreatorAPI.Data;
 namespace PresentationCreatorAPI.Data.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20240621140754_wfegrthjujhgf")]
-    partial class wfegrthjujhgf
+    [Migration("20240622070016_Init")]
+    partial class Init
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -241,7 +241,7 @@ namespace PresentationCreatorAPI.Data.Migrations
                         {
                             Id = 1,
                             Balance = 20000,
-                            CreatedAt = new DateTime(2024, 6, 21, 14, 7, 51, 179, DateTimeKind.Unspecified).AddTicks(3299),
+                            CreatedAt = new DateTime(2024, 6, 22, 7, 0, 16, 43, DateTimeKind.Utc).AddTicks(9880),
                             Email = "isroilov0905@gmail.com",
                             FullName = "Isroilov Ismoiljon",
                             IsVerified = true,
