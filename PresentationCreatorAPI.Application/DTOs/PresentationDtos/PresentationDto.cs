@@ -29,7 +29,7 @@ public class PresentationDto
             Author = presntation.Author,
             PageCount = presntation.PageCount,
             Template = presntation.Template,
-            Language = presntation.Language,
+            Language = presntation.Language.ToString(),
             FilePath = presntation.FilePath,
             CreatedAt = formattedDate,
             Pages = presntation.Pages.Select(u => (PageDto)u).ToList()

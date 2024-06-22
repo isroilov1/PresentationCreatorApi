@@ -1,18 +1,12 @@
 ﻿using Application.DTOs.PageDtos;
-using DocumentFormat.OpenXml.Presentation;
-using DocumentFormat.OpenXml.Spreadsheet;
 using FluentValidation;
 using PresentationCreatorAPI.Application.Common.Exceptions;
 using PresentationCreatorAPI.Application.Common.Helpers;
 using PresentationCreatorAPI.Application.Common.Validators;
-using PresentationCreatorAPI.Application.DTOs;
 using PresentationCreatorAPI.Application.DTOs.PresentationDtos;
-using PresentationCreatorAPI.Application.DTOs.UserDtos;
 using PresentationCreatorAPI.Application.Interfaces;
 using PresentationCreatorAPI.Application.presntations.Presentationpresntations;
 using PresentationCreatorAPI.Data.Interfaces;
-using PresentationCreatorAPI.Entites;
-using PresentationCreatorAPI.Enums;
 using System.Net;
 using Presentation = PresentationCreatorAPI.Entites.Presentation;
 
@@ -44,9 +38,13 @@ public class PresentationServise(IUnitOfWork unitOfWork,
 
         // Pagelar yaratilishi kerak
         await _pageService.CreateThemePageAsync(presentation);
+        await _pageService.CreatePlanPageAsync(presentation);
+
+        // Taqdimot fileni yaratish
         PresentationFileCreator.CreatePresentation(presentation);
 
         await _unitOfWork.Presentation.UpdateAsync(presentation);
+
         //User update qilish
         user.PresentationCount += 1;
         if (user.Presentations == null)
@@ -61,14 +59,14 @@ public class PresentationServise(IUnitOfWork unitOfWork,
     }
 
     public async Task<List<PresentationDto>> GetAllAsync()
-{
-    var presentations = await _unitOfWork.Presentation.GetAllIncludeAsync();
-    if (presentations is null)
-        throw new StatusCodeException(HttpStatusCode.NotFound, "Taqdimotlar topilmadi!");
-    
-    return presentations.Select(u => (PresentationDto)u).ToList();
+    {
+        var presentations = await _unitOfWork.Presentation.GetAllIncludeAsync();
+        if (presentations is null)
+            throw new StatusCodeException(HttpStatusCode.NotFound, "Taqdimotlar topilmadi!");
 
-}
+        return presentations.Select(u => (PresentationDto)u).ToList();
+
+    }
     public Task<PageDto> GetByIdAsync(int id)
     {
         throw new NotImplementedException();

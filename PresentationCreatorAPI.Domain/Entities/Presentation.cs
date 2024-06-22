@@ -1,4 +1,6 @@
-﻿namespace PresentationCreatorAPI.Entites;
+﻿using PresentationCreatorAPI.Domain.Enums;
+
+namespace PresentationCreatorAPI.Entites;
 
 public class Presentation : BaseEntity
 {
@@ -6,7 +8,7 @@ public class Presentation : BaseEntity
     public string Author { get; set; } = string.Empty;
     public byte PageCount { get; set; }
     public int Template { get; set; }
-    public string Language { get; set; } = string.Empty;
+    public PresentationLanguage Language { get; set; }
     public List<Page> Pages { get; set; } = null!;
     public string FilePath { get; set; } = string.Empty;
     public int UserId {  get; set; }
