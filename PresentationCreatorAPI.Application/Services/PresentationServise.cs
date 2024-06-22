@@ -1,8 +1,10 @@
 ﻿using Application.DTOs.PageDtos;
+using DocumentFormat.OpenXml.Presentation;
 using FluentValidation;
 using PresentationCreatorAPI.Application.Common.Exceptions;
 using PresentationCreatorAPI.Application.Common.Helpers;
 using PresentationCreatorAPI.Application.Common.Validators;
+using PresentationCreatorAPI.Application.DTOs;
 using PresentationCreatorAPI.Application.DTOs.PresentationDtos;
 using PresentationCreatorAPI.Application.Interfaces;
 using PresentationCreatorAPI.Application.presntations.Presentationpresntations;
@@ -10,6 +12,7 @@ using PresentationCreatorAPI.Data.Interfaces;
 using PresentationCreatorAPI.Entites;
 using PresentationCreatorAPI.Enums;
 using System.Net;
+using Presentation = PresentationCreatorAPI.Entites.Presentation;
 
 namespace PresentationCreatorAPI.Application.Services;
 
@@ -29,14 +32,12 @@ public class PresentationServise(IUnitOfWork unitOfWork,
 
         var presentation = (Presentation)dto;
         string rootPath = $"uploads/presentations/{userId}";
-        string filePath = FileHelper.SavePresentationFile(dto.File, rootPath);
-        presentation.FilePath = filePath;
+        presentation.FilePath = FileHelper.PresentationFilePathCreator(rootPath);
 
-        var user = await _unitOfWork.User.GetByIdIncludeAsync(userId);
+        var user = await _unitOfWork.User.GetByIdAsync(userId);
         if (user is null)
             throw new StatusCodeException(HttpStatusCode.NotFound, "Foydalanuvchi topilmadi!");
         presentation.UserId = userId;
-        presentation.User = user;
         await _unitOfWork.Presentation.CreateAsync(presentation);
 
         await _pageService.CreateThemePageAsync(presentation);
@@ -51,9 +52,10 @@ public class PresentationServise(IUnitOfWork unitOfWork,
         throw new NotImplementedException();
     }
 
-    public Task<List<PresentationDto>> GetAllPagesAsync()
+    public async Task<List<PresentationDto>> GetAllAsync()
     {
-        throw new NotImplementedException();
+        var presentations = await _unitOfWork.Presentation.GetAllIncludeAsync();
+        return presentations!.Select(x => (PresentationDto)x.Pages.Select(u => u.PageType.ToString())).ToList();
     }
 
     public Task<PageDto> GetByIdAsync(int id)

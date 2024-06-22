@@ -1,5 +1,6 @@
 ﻿using Application.DTOs.PageDtos;
 using FluentValidation;
+using PresentationCreatorAPI.Application.DTOs;
 using PresentationCreatorAPI.Application.DTOs.PageDtos;
 using PresentationCreatorAPI.Application.Interfaces;
 using PresentationCreatorAPI.Data.Interfaces;
@@ -51,9 +52,10 @@ public class PageService(IUnitOfWork unitOfWork,
         throw new NotImplementedException();
     }
 
-    public Task<List<PageDto>> GetAllPagesAsync()
+    public async Task<List<PageDto>> GetAllAsync()
     {
-        throw new NotImplementedException();
+        var payments = await _unitOfWork.Page.GetAllAsync();
+        return payments.Select(x => (PageDto)x).ToList();
     }
 
     public Task<PageDto> GetByIdAsync(int id)

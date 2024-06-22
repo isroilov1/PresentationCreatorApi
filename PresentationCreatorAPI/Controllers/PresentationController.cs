@@ -1,5 +1,6 @@
 ﻿using PresentationCreatorAPI.Application.DTOs.PresentationDtos;
 using PresentationCreatorAPI.Application.Interfaces;
+using PresentationCreatorAPI.Application.Services;
 
 namespace PresentationCreatorAPI.Controllers;
 
@@ -16,5 +17,12 @@ public class PresentationController(IPresentationServise presentationServise) : 
         var userId = int.Parse(HttpContext.User.FindFirst("Id")!.Value);
         await _presentationServise.CreateAsync(dto, userId);
         return Ok();
+    }
+
+    [HttpGet("presentations")]
+    //[Authorize(Roles = "Admin")]
+    public async Task<IActionResult> GetAllAsync()
+    {
+        return Ok(await _presentationServise.GetAllAsync());
     }
 }

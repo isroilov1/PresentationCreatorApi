@@ -12,7 +12,6 @@ public class PresentationDto
     public string Language { get; set; } = string.Empty;
     public List<Page> Pages { get; set; } = null!;
     public string FilePath { get; set; } = string.Empty;
-    public int UserId { get; set; }
     public string CreatedAt { get; set; } = string.Empty;
 
     public static implicit operator PresentationDto(Presentation presntation)
@@ -23,13 +22,13 @@ public class PresentationDto
 
         return new PresentationDto
         {
+            Id = presntation.Id,
             Theme = presntation.Theme,
             Author = presntation.Author,
             PageCount = presntation.PageCount,
             Template = presntation.Template,
             Language = presntation.Language,
             FilePath = presntation.FilePath,
-            UserId = presntation.UserId,
             CreatedAt = formattedDate,
             Pages = presntation.Pages.Select(n => new Page
             {

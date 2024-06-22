@@ -13,6 +13,6 @@ public interface IPageService
     Task CreateDescriptionForWordsPageAsync(string title);
     Task UpdateAsync(UpdatePageDto page);
     Task<PageDto> GetByIdAsync(int id);
-    Task<List<PageDto>> GetAllPagesAsync();
+    Task<List<PageDto>> GetAllAsync();
     Task DeleteAsync(int id);
 }
