@@ -1,4 +1,5 @@
-﻿using PresentationCreatorAPI.Entites;
+﻿using PresentationCreatorAPI.Application.Common.Helpers;
+using PresentationCreatorAPI.Entites;
 
 namespace PresentationCreatorAPI.Application.DTOs.UserDtos;
 public class UserDto
@@ -23,7 +24,8 @@ public class UserDto
     {
         var tzTashkent = TimeZoneInfo.FindSystemTimeZoneById("Asia/Tashkent");
         var tashkentTime = TimeZoneInfo.ConvertTimeFromUtc(user.CreatedAt, tzTashkent);
-        string formattedDate = tashkentTime.ToString("dd-MM-yyyy HH:mm");
+        //string formattedDate = tashkentTime.ToString("dd-MM-yyyy HH:mm");
+        string formattedDate = TimeHelper.TimeFormat(user.CreatedAt);
 
         return new UserDto()
         {
