@@ -1,4 +1,5 @@
-﻿using PresentationCreatorAPI.Entites;
+﻿using PresentationCreatorAPI.Application.Common.Helpers;
+using PresentationCreatorAPI.Entites;
 
 namespace Application.DTOs.PageDtos;
 
@@ -9,6 +10,7 @@ public class PageDto
     public string Text { get; set; } = string.Empty;
     public string ImagePath { get; set; } = string.Empty;
     public string PageType { get; set; } = string.Empty;
+    public string CreatedAt { get; set; } = string.Empty;
     public int PresentationId { get; set; }
 
     public static implicit operator PageDto(Page page)
@@ -21,6 +23,7 @@ public class PageDto
             ImagePath = page.ImagesPath,
             PageType = page.PageType.ToString(),
             PresentationId = page.PresentationId,
+            CreatedAt = TimeHelper.TimeFormat(page.CreatedAt)
         };
     }
 }

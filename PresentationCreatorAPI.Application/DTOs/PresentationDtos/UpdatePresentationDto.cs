@@ -14,8 +14,7 @@ public class UpdatePresentationDto : AddPresentationDto
             Author = dto.Author,
             PageCount = dto.PageCount,
             Template = dto.Template,
-            Language = dto.Language,
-            UserId = dto.UserId
+            Language = dto.Language
         };
     }
 }
