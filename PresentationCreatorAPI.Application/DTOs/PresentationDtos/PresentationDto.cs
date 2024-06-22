@@ -1,4 +1,6 @@
-﻿using PresentationCreatorAPI.Entites;
+﻿using Application.DTOs.PageDtos;
+using PresentationCreatorAPI.Application.Common.Helpers;
+using PresentationCreatorAPI.Entites;
 
 namespace PresentationCreatorAPI.Application.presntations.Presentationpresntations;
 
@@ -10,44 +12,27 @@ public class PresentationDto
     public byte PageCount { get; set; }
     public int Template { get; set; }
     public string Language { get; set; } = string.Empty;
-    public List<Page> Pages { get; set; } = null!;
+    public List<PageDto> Pages { get; set; } = null!;
     public string FilePath { get; set; } = string.Empty;
-    public int UserId { get; set; }
     public string CreatedAt { get; set; } = string.Empty;
 
     public static implicit operator PresentationDto(Presentation presntation)
     {
         var tzTashkent = TimeZoneInfo.FindSystemTimeZoneById("Asia/Tashkent");
         var tashkentTime = TimeZoneInfo.ConvertTimeFromUtc(presntation.CreatedAt, tzTashkent);
-        string formattedDate = tashkentTime.ToString("dd-MM-yyyy HH");
+        string formattedDate = TimeHelper.TimeFormat(presntation.CreatedAt);
 
         return new PresentationDto
         {
+            Id = presntation.Id,
             Theme = presntation.Theme,
             Author = presntation.Author,
             PageCount = presntation.PageCount,
             Template = presntation.Template,
             Language = presntation.Language,
             FilePath = presntation.FilePath,
-            UserId = presntation.UserId,
             CreatedAt = formattedDate,
-            Pages = presntation.Pages.Select(n => new Page
-            {
-                Id = n.Id,
-                Title = n.Title,
-                Text = n.Text,
-                ImagesPath = n.ImagesPath,
-                PageType = n.PageType,
-                PresentationId = n.PresentationId
-            }).ToList()
-            //Notifications = user.Notifications?.Select(n => new Notification
-            //{
-            //    Id = n.Id,
-            //    Message = n.Message,
-            //    Status = n.Status,
-            //    SenderId = n.SenderId,
-            //    RecipientIds = n.RecipientIds
-            //}).ToList(),
+            Pages = presntation.Pages.Select(u => (PageDto)u).ToList()
         };
     }
 }

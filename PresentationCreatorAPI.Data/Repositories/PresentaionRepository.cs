@@ -14,4 +14,10 @@ public class PresentationRepository(AppDbContext dbContext) : GenericRepository<
         await _dbContext.SaveChangesAsync();
         return presentation.Id;
     }
+
+    public async Task<List<Presentation>?> GetAllIncludeAsync()
+         => await _dbContext.Presentation.Include(u => u.Pages).ToListAsync();
+
+    public async Task<Presentation?> GetByIdIncludeAsync(int id)
+        => await _dbContext.Presentation.Include(u => u.Pages).FirstOrDefaultAsync(p => p.Id == id);
 }

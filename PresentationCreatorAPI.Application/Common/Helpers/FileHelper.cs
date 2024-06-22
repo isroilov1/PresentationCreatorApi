@@ -25,23 +25,16 @@ public static class FileHelper
         return filePath;
     }
 
-    public static string SavePresentationFile(IFormFile file, string rootPath)
+    public static string PresentationFilePathCreator(string rootPath)
     {
-        if (file == null || file.Length == 0)
-            throw new ArgumentException("File is invalid.");
 
         // Fayl yo'li mavjud bo'lmasa, uni yaratish
         if (!Directory.Exists(rootPath))
             Directory.CreateDirectory(rootPath);
 
         // Generate unique file name to avoid conflicts
-        var fileName = Path.GetFileNameWithoutExtension(file.FileName) + "_" + Guid.NewGuid() + Path.GetExtension(file.FileName) + ".pptx";
+        var fileName = "Talabajon_" + Guid.NewGuid() + ".pptx";
         var filePath = Path.Combine(rootPath, fileName);
-
-        using (var stream = new FileStream(filePath, FileMode.Create))
-        {
-            file.CopyTo(stream);
-        }
 
         return filePath;
     }
