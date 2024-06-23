@@ -34,7 +34,8 @@ public class PageService(IUnitOfWork unitOfWork,
     public async Task CreatePlanPageAsync(Presentation presentation)
     {
         var plan = PresentationHelper.GetPlanWithLang(presentation.Language);
-        var plans = PresentationHelper.GetTitlesAsync(presentation.Language, presentation.Theme);
+        //var plans = PresentationHelper.GetTitlesAsync(presentation.Language, presentation.Theme);
+        var plans = "AAAAA";
         var page = new Page
         {
             Title = plan,

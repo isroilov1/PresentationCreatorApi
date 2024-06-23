@@ -28,6 +28,8 @@ public class PresentationServise(IUnitOfWork unitOfWork,
 
         var presentation = (Presentation)dto;
         string rootPath = $"uploads/presentations/{userId}";
+        if(!Directory.Exists(rootPath))
+            Directory.CreateDirectory(rootPath);
         presentation.FilePath = FileHelper.PresentationFilePathCreator(rootPath);
 
         var user = await _unitOfWork.User.GetByIdAsync(userId);
