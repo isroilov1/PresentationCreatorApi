@@ -1,6 +1,6 @@
 ﻿using PresentationCreatorAPI.Domain.Enums;
 
-namespace PresentationCreatorAPI.Entites;
+namespace PresentationCreatorAPI.Domain.Entites;
 
 public class Presentation : BaseEntity
 {

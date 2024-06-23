@@ -1,5 +1,5 @@
 ﻿using PresentationCreatorAPI.Application.Common.Helpers;
-using PresentationCreatorAPI.Entites;
+using PresentationCreatorAPI.Domain.Entites;
 
 namespace Application.DTOs.PageDtos;
 

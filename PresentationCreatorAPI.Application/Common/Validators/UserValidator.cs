@@ -1,5 +1,5 @@
 ﻿using FluentValidation;
-using PresentationCreatorAPI.Entites;
+using PresentationCreatorAPI.Domain.Entites;
 
 namespace PresentationCreatorAPI.Application.Common.Validators;
 

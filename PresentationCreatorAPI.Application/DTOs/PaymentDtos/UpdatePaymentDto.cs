@@ -1,5 +1,5 @@
 ﻿using Microsoft.AspNetCore.Http;
-using PresentationCreatorAPI.Entites;
+using PresentationCreatorAPI.Domain.Entites;
 using PresentationCreatorAPI.Enums;
 
 namespace PresentationCreatorAPI.Application.DTOs;

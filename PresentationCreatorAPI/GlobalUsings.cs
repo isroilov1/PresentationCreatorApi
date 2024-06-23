@@ -11,5 +11,5 @@ global using PresentationCreatorAPI.Application.Common.Validators;
 global using PresentationCreatorAPI.Application.Middlewares;
 global using PresentationCreatorAPI.Data.Interfaces;
 global using PresentationCreatorAPI.Data;
-global using PresentationCreatorAPI.Entites;
+global using PresentationCreatorAPI.Domain.Entites;
 global using PresentationCreatorAPI.Repositories;

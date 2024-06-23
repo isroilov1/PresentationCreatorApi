@@ -12,8 +12,7 @@ public class GeminiHelper
     {
         string apiKey = "AIzaSyDHzIy7ZJSEpHB9hSbcz8fwWUabY9CUaZw";
         string query = $"i need only 18 topics related for {theme} topic in {language} and it must be only topics and numbers nothing more";
-        string cseId = "0aa7d95ba3daf77dd0418c878fe7a370f552fff1";
-        byte numTitles = 20;
+        
         HttpClient client = new HttpClient();
 
         HttpRequestMessage request = new HttpRequestMessage(HttpMethod.Post, $"https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent?key={apiKey}");
@@ -27,6 +26,9 @@ public class GeminiHelper
         string responseBody = await response.Content.ReadAsStringAsync();
         JObject json = JObject.Parse(responseBody);
         var text = json["candidates"]?[0]?["content"]?["parts"]?[0]?["text"]?.ToString();
+        
+        // Faylga yozish
+        await File.WriteAllTextAsync("geminiresponsetext.txt", text);
         if (text is null)
             throw new StatusCodeException(HttpStatusCode.BadRequest, "So'rov bo'yicha hech qanday ma'lumot topilmadi!");
         List<string> titles = new List<string>(text.Split(new[] { "\n" }, StringSplitOptions.RemoveEmptyEntries));

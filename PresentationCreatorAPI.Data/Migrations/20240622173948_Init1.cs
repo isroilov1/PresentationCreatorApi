@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace PresentationCreatorAPI.Data.Migrations
 {
     /// <inheritdoc />
-    public partial class Init : Migration
+    public partial class Init1 : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -95,7 +95,7 @@ namespace PresentationCreatorAPI.Data.Migrations
                     Author = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     PageCount = table.Column<byte>(type: "tinyint", nullable: false),
                     Template = table.Column<int>(type: "int", nullable: false),
-                    Language = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Language = table.Column<int>(type: "int", nullable: false),
                     FilePath = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     UserId = table.Column<int>(type: "int", nullable: false),
                     CreatedAt = table.Column<DateTime>(type: "datetime2", nullable: false)
@@ -138,7 +138,7 @@ namespace PresentationCreatorAPI.Data.Migrations
             migrationBuilder.InsertData(
                 table: "Users",
                 columns: new[] { "Id", "Balance", "CreatedAt", "Email", "FullName", "IsVerified", "Password", "PhoneNumber", "PresentationCount", "ReferalBonus", "ReferalId", "Role", "TelegramId", "TotalPayments" },
-                values: new object[] { 1, 20000, new DateTime(2024, 6, 22, 7, 0, 16, 43, DateTimeKind.Utc).AddTicks(9880), "isroilov0905@gmail.com", "Isroilov Ismoiljon", true, "6724ce39c81234bc9a25eca98b634a94a913e514a2191371b63b30dd3869c754", "+998997979898", 0, false, 0, 1, 0, 0 });
+                values: new object[] { 1, 20000, new DateTime(2024, 6, 22, 17, 39, 48, 305, DateTimeKind.Utc).AddTicks(2429), "isroilov0905@gmail.com", "Isroilov Ismoiljon", true, "6724ce39c81234bc9a25eca98b634a94a913e514a2191371b63b30dd3869c754", "+998997979898", 0, false, 0, 1, 0, 0 });
 
             migrationBuilder.CreateIndex(
                 name: "IX_Notification_UserId",

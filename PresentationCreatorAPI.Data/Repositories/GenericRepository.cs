@@ -1,6 +1,5 @@
 ﻿using PresentationCreatorAPI.Data.Interfaces;
 using Microsoft.EntityFrameworkCore;
-using PresentationCreatorAPI.Entites;
 
 namespace PresentationCreatorAPI.Data;
 
