@@ -2,7 +2,7 @@
 using PresentationCreatorAPI.Application.DTOs.UserDtos;
 using PresentationCreatorAPI.Application.Interfaces;
 using PresentationCreatorAPI.Data.Interfaces;
-using PresentationCreatorAPI.Entites;
+using PresentationCreatorAPI.Domain.Entites;
 using PresentationCreatorAPI.Enums;
 using System.Net;
 namespace PresentationCreatorAPI.Application.Services;

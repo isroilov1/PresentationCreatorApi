@@ -1,4 +1,4 @@
-﻿using PresentationCreatorAPI.Entites;
+﻿using PresentationCreatorAPI.Domain.Entites;
 
 namespace PresentationCreatorAPI.Application.DTOs;
 public class AddNotificationDto

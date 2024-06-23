@@ -1,6 +1,6 @@
 ﻿using Application.DTOs.PageDtos;
 using PresentationCreatorAPI.Application.DTOs.PageDtos;
-using PresentationCreatorAPI.Entites;
+using PresentationCreatorAPI.Domain.Entites;
 
 namespace PresentationCreatorAPI.Application.Interfaces;
 

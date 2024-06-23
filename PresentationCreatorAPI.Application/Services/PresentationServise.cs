@@ -8,7 +8,7 @@ using PresentationCreatorAPI.Application.Interfaces;
 using PresentationCreatorAPI.Application.presntations.Presentationpresntations;
 using PresentationCreatorAPI.Data.Interfaces;
 using System.Net;
-using Presentation = PresentationCreatorAPI.Entites.Presentation;
+using Presentation = PresentationCreatorAPI.Domain.Entites.Presentation;
 
 namespace PresentationCreatorAPI.Application.Services;
 

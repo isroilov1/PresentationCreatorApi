@@ -5,7 +5,7 @@ using PresentationCreatorAPI.Application.Common.Utils;
 using PresentationCreatorAPI.Application.DTOs.UserDtos;
 using PresentationCreatorAPI.Application.Interfaces;
 using PresentationCreatorAPI.Data.Interfaces;
-using PresentationCreatorAPI.Entites;
+using PresentationCreatorAPI.Domain.Entites;
 using System.Net;
 namespace PresentationCreatorAPI.Application.Services;
 

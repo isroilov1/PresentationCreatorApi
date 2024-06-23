@@ -1,5 +1,5 @@
 ﻿using PresentationCreatorAPI.Application.DTOs.UserDtos;
-using PresentationCreatorAPI.Entites;
+using PresentationCreatorAPI.Domain.Entites;
 
 namespace PresentationCreatorAPI.Application.Interfaces;
 

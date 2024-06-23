@@ -1,5 +1,5 @@
 ﻿using PresentationCreatorAPI.Application.Common.Helpers;
-using PresentationCreatorAPI.Entites;
+using PresentationCreatorAPI.Domain.Entites;
 
 namespace PresentationCreatorAPI.Application.DTOs.UserDtos;
 public class UserDto
