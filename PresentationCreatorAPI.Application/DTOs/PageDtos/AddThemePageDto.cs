@@ -1,6 +1,4 @@
-﻿using PresentationCreatorAPI.Entites;
-
-namespace PresentationCreatorAPI.Application.DTOs.PageDtos;
+﻿namespace PresentationCreatorAPI.Application.DTOs.PageDtos;
 
 public class AddThemePageDto
 {

@@ -1,0 +1,1 @@
+﻿global using PresentationCreatorAPI.Domain.Entites;

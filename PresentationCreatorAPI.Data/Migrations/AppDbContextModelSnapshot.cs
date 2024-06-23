@@ -237,7 +237,7 @@ namespace PresentationCreatorAPI.Data.Migrations
                         {
                             Id = 1,
                             Balance = 20000,
-                            CreatedAt = new DateTime(2024, 6, 22, 7, 0, 16, 43, DateTimeKind.Utc).AddTicks(9880),
+                            CreatedAt = new DateTime(2024, 6, 22, 17, 39, 48, 305, DateTimeKind.Utc).AddTicks(2429),
                             Email = "isroilov0905@gmail.com",
                             FullName = "Isroilov Ismoiljon",
                             IsVerified = true,

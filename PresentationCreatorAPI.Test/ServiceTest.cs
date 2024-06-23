@@ -7,7 +7,7 @@ using PresentationCreatorAPI.Application.DTOs.UserDtos;
 using PresentationCreatorAPI.Application.Interfaces;
 using PresentationCreatorAPI.Application.Services;
 using PresentationCreatorAPI.Data.Interfaces;
-using PresentationCreatorAPI.Entites;
+using PresentationCreatorAPI.Domain.Entites;
 
 #pragma warning disable
 namespace PresentationCreatorAPI.Tests;

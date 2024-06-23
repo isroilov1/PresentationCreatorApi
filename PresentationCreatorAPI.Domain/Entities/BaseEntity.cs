@@ -1,4 +1,4 @@
-﻿namespace PresentationCreatorAPI.Entites;
+﻿namespace PresentationCreatorAPI.Domain.Entites;
 
 public class BaseEntity
 {

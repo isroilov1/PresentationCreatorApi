@@ -12,7 +12,7 @@ using PresentationCreatorAPI.Data;
 namespace PresentationCreatorAPI.Data.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20240622061338_Init-1")]
+    [Migration("20240622173948_Init1")]
     partial class Init1
     {
         /// <inheritdoc />
@@ -240,7 +240,7 @@ namespace PresentationCreatorAPI.Data.Migrations
                         {
                             Id = 1,
                             Balance = 20000,
-                            CreatedAt = new DateTime(2024, 6, 22, 6, 13, 37, 810, DateTimeKind.Unspecified).AddTicks(6963),
+                            CreatedAt = new DateTime(2024, 6, 22, 17, 39, 48, 305, DateTimeKind.Utc).AddTicks(2429),
                             Email = "isroilov0905@gmail.com",
                             FullName = "Isroilov Ismoiljon",
                             IsVerified = true,

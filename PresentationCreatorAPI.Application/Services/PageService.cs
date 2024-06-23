@@ -4,8 +4,8 @@ using PresentationCreatorAPI.Application.Common.Helpers;
 using PresentationCreatorAPI.Application.DTOs.PageDtos;
 using PresentationCreatorAPI.Application.Interfaces;
 using PresentationCreatorAPI.Data.Interfaces;
+using PresentationCreatorAPI.Domain.Entites;
 using PresentationCreatorAPI.Domain.Enums;
-using PresentationCreatorAPI.Entites;
 using PresentationCreatorAPI.Enums;
 
 namespace PresentationCreatorAPI.Application.Services;

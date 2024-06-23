@@ -1,5 +1,5 @@
 ﻿using PresentationCreatorAPI.Domain.Enums;
-using PresentationCreatorAPI.Entites;
+using PresentationCreatorAPI.Domain.Entites;
 
 namespace PresentationCreatorAPI.Application.DTOs.PresentationDtos;
 
