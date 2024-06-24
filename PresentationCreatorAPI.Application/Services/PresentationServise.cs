@@ -36,12 +36,25 @@ public class PresentationServise(IUnitOfWork unitOfWork,
         if (user is null)
             throw new StatusCodeException(HttpStatusCode.NotFound, "Foydalanuvchi topilmadi!");
         presentation.UserId = userId;
+        var titles = await GeminiHelper.GetTitlesFromGeminiAsync(dto.Theme, dto.Language);
+        presentation.Titles = titles;
+
+        // Images uploads
+        byte count = 0;
+        var pageCount = presentation.PageCount - 2;
+        while (pageCount > 0) 
+        {
+            pageCount = pageCount - 3;
+            count++;
+        }
+        var images = await FileHelper.UploadImagesForTheme(presentation.Theme, count);
+        presentation.ImagesPaths = images;
         await _unitOfWork.Presentation.CreateAsync(presentation);
 
         // Pagelar yaratilishi kerak
         await _pageService.CreateThemePageAsync(presentation);
         await _pageService.CreatePlanPageAsync(presentation);
-
+        
         // Taqdimot fileni yaratish
         PresentationFileCreator.CreatePresentation(presentation);
 

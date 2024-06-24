@@ -1,34 +1,39 @@
-﻿
+﻿using DocumentFormat.OpenXml;
+using DocumentFormat.OpenXml.Packaging;
+using DocumentFormat.OpenXml.Presentation;
+using A = DocumentFormat.OpenXml.Drawing;
 using PresentationEntity = PresentationCreatorAPI.Domain.Entites.Presentation;
 
 namespace PresentationCreatorAPI.Application.Common.Helpers;
-
-using Aspose.Slides;
-using Aspose.Slides.Export;
 
 public class PresentationFileCreator
 {
     public static void CreatePresentation(PresentationEntity presentationEntity)
     {
-        // Create presentation
-        using (var p = new Presentation())
-        {
-            // Read image
-            var svgContent = File.ReadAllText("image.svg");
+        // Create a presentation document
+        PresentationDocument presentationDocument = PresentationDocument.Create("uploads/presentations/1/pres.pptx", PresentationDocumentType.Presentation);
 
-            // Add image to image collection
-            //var emfImage = p.Images.AddFromSvg(svgContent);
+        // Add a presentation part
+        PresentationPart presentationPart = presentationDocument.AddPresentationPart();
+        presentationPart.Presentation = new Presentation();
 
-            var emfContent = File.ReadAllBytes("wwwroot/assets/templates/1/1.png");
+        // Add a slide part
+        SlidePart slidePart = presentationPart.AddNewPart<SlidePart>();
+        Slide slide = new Slide(new CommonSlideData(new ShapeTree()));
+        slidePart.Slide = slide;
 
-            // EMF rasmni Aspose.Slides presentationsiga qo'shish
-            var emfImage = p.Images.AddImage(new MemoryStream(emfContent));
+        // Save the changes to the presentation part
+        slidePart.Slide.Save();
 
-            // Add image to slide
-            p.Slides[0].Shapes.AddPictureFrame(ShapeType.Rectangle, 0, 0, emfImage.Width, emfImage.Height, emfImage);
+        // Add slide part to presentation
+        SlideIdList slideIdList = presentationPart.Presentation.AppendChild(new SlideIdList());
+        SlideId slideId = slideIdList.AppendChild(new SlideId() { RelationshipId = presentationPart.GetIdOfPart(slidePart) });
 
-            // Save presentation
-            p.Save("presentation.pptx", SaveFormat.Pptx);
-        }
-        }
+        // Save the presentation document
+        presentationPart.Presentation.Save();
+
+        // Close the presentation document
+        //presentationDocument.Close();
     }
+}
+ 

@@ -10,6 +10,8 @@ public class Presentation : BaseEntity
     public int Template { get; set; }
     public PresentationLanguage Language { get; set; }
     public List<Page> Pages { get; set; } = null!;
+    public List<string> Titles { get; set; } = null!;
+    public List<string> ImagesPaths { get; set; } = null!;
     public string FilePath { get; set; } = string.Empty;
     public int UserId {  get; set; }
     [ForeignKey(nameof(UserId))]

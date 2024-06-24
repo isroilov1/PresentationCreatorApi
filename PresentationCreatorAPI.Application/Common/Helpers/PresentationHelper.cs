@@ -18,9 +18,19 @@ public class PresentationHelper
         return plan;
     } 
 
-    public static Task<List<string>> GetTitlesAsync(PresentationLanguage language, string theme)
+    public static async Task<List<string>> GetTitlesAsync(PresentationLanguage language, string theme)
     {
-        var text = GeminiHelper.GetTitlesFromGeminiAsync(theme, language);
+        //var titles = await GeminiHelper.GetTitlesFromGeminiAsync(theme, language);
+        string text = await File.ReadAllTextAsync("geminiresponsetext.txt");
+        List<string> titles = new List<string>(text.Split(new[] { "\n" }, StringSplitOptions.RemoveEmptyEntries));
+
+        return titles;
+    }
+
+    public static async Task<string> GetInformationAsync(PresentationLanguage language, string theme)
+    {
+        var text = await GeminiHelper.GetInfoFromGeminiAsync(theme, language);
+        //string text = await File.ReadAllTextAsync("geminiresponseinformation.txt");
         return text;
     }
 }
