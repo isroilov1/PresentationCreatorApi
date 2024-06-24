@@ -8,8 +8,8 @@ public interface IPageService
 {
     Task CreateThemePageAsync(Presentation presentation);
     Task CreatePlanPageAsync(Presentation presentation);
-    Task CreateInformationPageAsync(Presentation presentation, string title, byte pageNumber);
-    Task CreateInformationWithImagePageAsync(Presentation presentation, string title);
+    Task CreateInformationPageAsync(Presentation presentation, byte pageNumber);
+    Task CreateInformationWithImagePageAsync(Presentation presentation, byte pageNumber);
     Task CreateDescriptionForWordsPageAsync(Presentation presentation, string title);
     Task UpdateAsync(UpdatePageDto page);
     Task<PageDto> GetByIdAsync(int id);

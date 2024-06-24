@@ -32,7 +32,6 @@
 
   <ItemGroup>
     <Folder Include="uploads\presentations\" />
-    <Folder Include="uploads\presentations\1\" />
     <Folder Include="wwwroot\assets\" />
   </ItemGroup>
 
