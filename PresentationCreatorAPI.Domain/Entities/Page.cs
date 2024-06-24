@@ -2,6 +2,7 @@
 
 public class Page : BaseEntity
 {
+    public byte PageNumber { get; set; }
     public string Title { get; set; } = string.Empty;
     public string Text { get; set; } = string.Empty;
     public string ImagesPath { get; set; } = string.Empty;

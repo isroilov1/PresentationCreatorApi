@@ -1,18 +1,18 @@
-1. The Psychology of Typing Errors
-2. The History of Keyboard Design
-3. Ergonomics and Keyboard Layout
-4. Computer Programming and Keystroke Efficiency
-5. The Impact of Technology on Communication
-6. The Future of Text Input
-7. The Role of Keyboards in Accessibility
-8.  The Cultural Significance of Letters and Symbols
-9.  The Art of Typography
-10.  The Science of Human-Computer Interaction
-11.  The Evolution of Language and Writing Systems
-12.  The Relationship Between Language and Thought
-13.  The Impact of Digital Communication on Society
-14.  The Ethics of Artificial Intelligence and Automation
-15.  The Future of Work and the Role of Technology
-16.  The Impact of Technology on Education
-17.  The Use of Technology in Art and Design
-18.  The Social and Economic Implications of Technology 
+1. Macroeconomics
+2. Microeconomics
+3. International Economics
+4. Development Economics
+5. Labor Economics
+6. Public Finance
+7. Monetary Economics
+8. Econometrics
+9. Behavioral Economics
+10. Game Theory
+11. Finance
+12. Health Economics
+13. Environmental Economics
+14. Urban Economics
+15. Economic History
+16. Economic Development
+17. Economic Inequality
+18. Globalization 

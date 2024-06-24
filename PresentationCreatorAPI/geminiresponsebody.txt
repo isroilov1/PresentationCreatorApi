@@ -1,0 +1,39 @@
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "1. Macroeconomics\n2. Microeconomics\n3. International Economics\n4. Development Economics\n5. Labor Economics\n6. Public Finance\n7. Monetary Economics\n8. Econometrics\n9. Behavioral Economics\n10. Game Theory\n11. Finance\n12. Health Economics\n13. Environmental Economics\n14. Urban Economics\n15. Economic History\n16. Economic Development\n17. Economic Inequality\n18. Globalization \n"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0,
+      "safetyRatings": [
+        {
+          "category": "HARM_CATEGORY_SEXUALLY_EXPLICIT",
+          "probability": "NEGLIGIBLE"
+        },
+        {
+          "category": "HARM_CATEGORY_HATE_SPEECH",
+          "probability": "NEGLIGIBLE"
+        },
+        {
+          "category": "HARM_CATEGORY_HARASSMENT",
+          "probability": "NEGLIGIBLE"
+        },
+        {
+          "category": "HARM_CATEGORY_DANGEROUS_CONTENT",
+          "probability": "NEGLIGIBLE"
+        }
+      ]
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 23,
+    "candidatesTokenCount": 96,
+    "totalTokenCount": 119
+  }
+}

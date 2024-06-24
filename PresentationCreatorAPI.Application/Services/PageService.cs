@@ -1,4 +1,6 @@
 ﻿using Application.DTOs.PageDtos;
+using DocumentFormat.OpenXml.Bibliography;
+using DocumentFormat.OpenXml.Wordprocessing;
 using FluentValidation;
 using PresentationCreatorAPI.Application.Common.Helpers;
 using PresentationCreatorAPI.Application.DTOs.PageDtos;
@@ -20,22 +22,46 @@ public class PageService(IUnitOfWork unitOfWork,
         throw new NotImplementedException();
     }
 
-    public async Task CreateInformationPageAsync(Presentation presentation, string title, byte pageNumber)
+    public async Task CreateInformationPageAsync(Presentation presentation, byte pageNumber)
     {
-        byte titleIndex = 1;
+        byte titleIndex = (byte)(pageNumber - 2);
         var page = new Page
         {
+            PageNumber = pageNumber,
             Title = presentation.Titles[titleIndex],
             Text = await PresentationHelper.GetInformationAsync(presentation.Language, presentation.Titles[titleIndex]),
-            PageType = PresentationPageType.Plan,
+            PageType = PresentationPageType.Information,
             PresentationId = presentation.Id
         };
         await _unitOfWork.Page.CreateAsync(page);
     }
 
-    public Task CreateInformationWithImagePageAsync(Presentation presentation, string title)
+    public async Task CreateInformationWithImagePageAsync(Presentation presentation, byte pageNumber)
     {
-        throw new NotImplementedException();
+        byte titleIndex = (byte)(pageNumber - 2);
+        byte imageIndex = 0;
+        if (pageNumber <= 5)
+            imageIndex = 0;
+        else if (pageNumber <= 8)
+            imageIndex = 1;
+        else if (pageNumber <= 11)
+            imageIndex = 2;
+        else if (pageNumber <= 14)
+            imageIndex = 3;
+        else if (pageNumber <= 17)
+            imageIndex = 4;
+        else if (pageNumber <= 20)
+            imageIndex = 5;
+        var page = new Page
+        {
+            PageNumber = pageNumber,
+            Title = presentation.Titles[titleIndex],
+            Text = await PresentationHelper.GetInformationAsync(presentation.Language, presentation.Titles[titleIndex]),
+            PageType = PresentationPageType.InformationWithImage,
+            ImagesPath = presentation.ImagesPaths[imageIndex],
+            PresentationId = presentation.Id
+        };
+        await _unitOfWork.Page.CreateAsync(page);
     }
 
     public async Task CreatePlanPageAsync(Presentation presentation)
@@ -46,6 +72,7 @@ public class PageService(IUnitOfWork unitOfWork,
         //var plans = "AAAAA";
         var page = new Page
         {
+            PageNumber = 2,
             Title = plan,
             Text = string.Join("\n", firstThreeElements),
             PageType = PresentationPageType.Plan,
@@ -58,6 +85,7 @@ public class PageService(IUnitOfWork unitOfWork,
     {
         var page = new Page
         {
+            PageNumber = 1,
             Title = presentation.Theme,
             Text = presentation.Author,
             PageType = PresentationPageType.Theme,
