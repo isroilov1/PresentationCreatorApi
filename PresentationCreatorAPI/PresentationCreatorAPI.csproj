@@ -7,6 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Aspose.Slides.NET" Version="24.6.0" />
     <PackageReference Include="DocumentFormat.OpenXml" Version="3.0.2" />
     <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="8.0.6" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.6">
@@ -27,6 +28,12 @@
   <ItemGroup>
     <ProjectReference Include="..\PresentationCreatorAPI.Application\PresentationCreatorAPI.Application.csproj" />
     <ProjectReference Include="..\PresentationCreatorAPI.Data\PresentationCreatorAPI.Data.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="uploads\presentations\" />
+    <Folder Include="uploads\presentations\1\" />
+    <Folder Include="wwwroot\assets\" />
   </ItemGroup>
 
 </Project>

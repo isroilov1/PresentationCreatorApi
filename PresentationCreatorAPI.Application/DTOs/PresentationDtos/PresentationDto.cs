@@ -12,9 +12,11 @@ public class PresentationDto
     public byte PageCount { get; set; }
     public int Template { get; set; }
     public string Language { get; set; } = string.Empty;
-    public List<PageDto> Pages { get; set; } = null!;
     public string FilePath { get; set; } = string.Empty;
     public string CreatedAt { get; set; } = string.Empty;
+    public List<string> Titles { get; set; } = new List<string>();
+    public List<string> ImagesPaths { get; set; } = new List<string>();
+    public List<PageDto> Pages { get; set; } = null!;
 
     public static implicit operator PresentationDto(Presentation presntation)
     {
@@ -32,6 +34,8 @@ public class PresentationDto
             Language = presntation.Language.ToString(),
             FilePath = presntation.FilePath,
             CreatedAt = formattedDate,
+            Titles = presntation.Titles,
+            ImagesPaths = presntation.ImagesPaths,
             Pages = presntation.Pages.Select(u => (PageDto)u).ToList()
         };
     }

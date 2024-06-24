@@ -5,7 +5,6 @@ using PresentationCreatorAPI.Application.DTOs.PageDtos;
 using PresentationCreatorAPI.Application.Interfaces;
 using PresentationCreatorAPI.Data.Interfaces;
 using PresentationCreatorAPI.Domain.Entites;
-using PresentationCreatorAPI.Domain.Enums;
 using PresentationCreatorAPI.Enums;
 
 namespace PresentationCreatorAPI.Application.Services;
@@ -21,9 +20,17 @@ public class PageService(IUnitOfWork unitOfWork,
         throw new NotImplementedException();
     }
 
-    public Task CreateInformationPageAsync(Presentation presentation, string title)
+    public async Task CreateInformationPageAsync(Presentation presentation, string title, byte pageNumber)
     {
-        throw new NotImplementedException();
+        byte titleIndex = 1;
+        var page = new Page
+        {
+            Title = presentation.Titles[titleIndex],
+            Text = await PresentationHelper.GetInformationAsync(presentation.Language, presentation.Titles[titleIndex]),
+            PageType = PresentationPageType.Plan,
+            PresentationId = presentation.Id
+        };
+        await _unitOfWork.Page.CreateAsync(page);
     }
 
     public Task CreateInformationWithImagePageAsync(Presentation presentation, string title)
@@ -34,11 +41,13 @@ public class PageService(IUnitOfWork unitOfWork,
     public async Task CreatePlanPageAsync(Presentation presentation)
     {
         var plan = PresentationHelper.GetPlanWithLang(presentation.Language);
-        var plans = PresentationHelper.GetTitlesAsync(presentation.Language, presentation.Theme);
+        var plans = await PresentationHelper.GetTitlesAsync(presentation.Language, presentation.Theme);
+        var firstThreeElements = plans.Take(3);
+        //var plans = "AAAAA";
         var page = new Page
         {
             Title = plan,
-            Text = plans.ToString(),
+            Text = string.Join("\n", firstThreeElements),
             PageType = PresentationPageType.Plan,
             PresentationId = presentation.Id
         };

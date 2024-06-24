@@ -1,1 +1,18 @@
-1. Public Perception of Government Services\n2. Consumer Satisfaction with Local Businesses\n3. Community Engagement in Local Issues\n4. Attitudes Towards Environmental Sustainability\n5. Public Opinion on Healthcare Reform\n6. Public Safety and Crime Prevention\n7. Transportation Needs and Preferences\n8. Access to Affordable Housing\n9. Education Quality and Accessibility\n10. Employment Opportunities and Job Satisfaction\n11. Cultural Diversity and Inclusion\n12. Social Media Use and Impact\n13. Health and Wellness Practices\n14. Financial Literacy and Planning\n15. Civic Engagement and Voter Participation\n16. Technology Adoption and Use\n17. Tourism and Leisure Activities\n18. Local Economic Development Initiatives \n
+1. The Psychology of Typing Errors
+2. The History of Keyboard Design
+3. Ergonomics and Keyboard Layout
+4. Computer Programming and Keystroke Efficiency
+5. The Impact of Technology on Communication
+6. The Future of Text Input
+7. The Role of Keyboards in Accessibility
+8.  The Cultural Significance of Letters and Symbols
+9.  The Art of Typography
+10.  The Science of Human-Computer Interaction
+11.  The Evolution of Language and Writing Systems
+12.  The Relationship Between Language and Thought
+13.  The Impact of Digital Communication on Society
+14.  The Ethics of Artificial Intelligence and Automation
+15.  The Future of Work and the Role of Technology
+16.  The Impact of Technology on Education
+17.  The Use of Technology in Art and Design
+18.  The Social and Economic Implications of Technology 
