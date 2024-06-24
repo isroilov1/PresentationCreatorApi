@@ -36,7 +36,7 @@ public class PresentationServise(IUnitOfWork unitOfWork,
         if (user is null)
             throw new StatusCodeException(HttpStatusCode.NotFound, "Foydalanuvchi topilmadi!");
         presentation.UserId = userId;
-        var titles = await GeminiHelper.GetTitlesFromGeminiAsync(dto.Theme, dto.Language);
+        var titles = await PresentationHelper.GetTitlesAsync(dto.Language, dto.Theme);
         presentation.Titles = titles;
 
         // Images uploads
@@ -52,12 +52,35 @@ public class PresentationServise(IUnitOfWork unitOfWork,
         await _unitOfWork.Presentation.CreateAsync(presentation);
 
         // Pagelar yaratilishi kerak
+        pageCount = presentation.PageCount;
+        byte pageNumber = 1;
         await _pageService.CreateThemePageAsync(presentation);
+        pageNumber++;
         await _pageService.CreatePlanPageAsync(presentation);
-        
-        // Taqdimot fileni yaratish
-        PresentationFileCreator.CreatePresentation(presentation);
+        pageNumber++;
+        await _pageService.CreateInformationPageAsync(presentation, pageNumber);
+        pageNumber++;
+        await _pageService.CreateInformationPageAsync(presentation, pageNumber);
+        pageNumber++;
+        await _pageService.CreateInformationWithImagePageAsync(presentation, pageNumber);
+        while(presentation.PageCount > pageNumber)
+        {
+            pageNumber++;
+            await _pageService.CreateInformationPageAsync(presentation, pageNumber);
+            if (presentation.PageCount <= pageNumber)
+                break;
+            pageNumber++;
+            await _pageService.CreateInformationPageAsync(presentation, pageNumber);
+            if (presentation.PageCount <= pageNumber)
+                break;
+            pageNumber++;
+            await _pageService.CreateInformationWithImagePageAsync(presentation, pageNumber);
+        }
 
+
+        // Taqdimot fileni yaratish
+        var filePath = await PresentationFileCreator.CreatePresentation(presentation);
+        presentation.FilePath = filePath;
         await _unitOfWork.Presentation.UpdateAsync(presentation);
 
         //User update qilish

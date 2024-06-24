@@ -1,0 +1,16 @@
+## Finance Topic 11: **Financial Modeling**
+
+Financial modeling is a crucial tool in finance, used to project future financial performance and assess potential scenarios. It involves creating mathematical representations of a company's or project's financial situation, often using spreadsheets.  
+
+**Key elements:**
+
+* **Assumptions:**  Estimates about future events, like sales growth or interest rates, form the foundation of the model.
+* **Formulas:**  Mathematical equations connect assumptions to financial outputs, such as revenue, expenses, and cash flow.
+* **Scenarios:**  Multiple sets of assumptions are used to test the sensitivity of the model's output to different conditions.
+
+**Applications:**
+
+* **Valuation:**  Estimating the value of a company or asset.
+* **Investment Analysis:**  Evaluating potential investment opportunities.
+* **Budgeting and Forecasting:**  Planning future financial operations and resource allocation.
+* **Risk Management:**  Identifying and quantifying potential risks and their impact. 

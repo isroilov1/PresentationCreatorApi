@@ -130,14 +130,17 @@ public static class FileHelper
 
         List<string> returnLists = new List<string>();
         // URL manzillarni olish
+        var rootPath = "uploads/images/";
+        if (!Directory.Exists(rootPath))
+            Directory.CreateDirectory(rootPath);
         int count = 0;
         foreach (Match match in matches)
         {
             string url = match.Value;
-            if (url.EndsWith(".jpg") || url.EndsWith(".png"))
+            if (url.EndsWith(".jpg") || url.EndsWith(".png") && returnLists.Contains(url))
             {
                 count++;
-                var path = $"image{count}_{Guid.NewGuid()}.jpg";
+                var path = rootPath + $"image{count}_{Guid.NewGuid()}.jpg";
                 await DownloadImage(url, path);
                 returnLists.Add(path);
                 if (count == 3)

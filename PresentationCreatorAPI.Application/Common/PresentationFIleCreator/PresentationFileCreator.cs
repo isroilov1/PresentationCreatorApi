@@ -1,17 +1,18 @@
 ﻿using DocumentFormat.OpenXml;
 using DocumentFormat.OpenXml.Packaging;
 using DocumentFormat.OpenXml.Presentation;
-using A = DocumentFormat.OpenXml.Drawing;
 using PresentationEntity = PresentationCreatorAPI.Domain.Entites.Presentation;
 
 namespace PresentationCreatorAPI.Application.Common.Helpers;
 
 public class PresentationFileCreator
 {
-    public static void CreatePresentation(PresentationEntity presentationEntity)
+    public static async Task<string> CreatePresentation(PresentationEntity presentationEntity)
     {
         // Create a presentation document
-        PresentationDocument presentationDocument = PresentationDocument.Create("uploads/presentations/1/pres.pptx", PresentationDocumentType.Presentation);
+        string root = "uploads/presentations/";
+        var filePath = FileHelper.PresentationFilePathCreator(root);
+        PresentationDocument presentationDocument = PresentationDocument.Create(filePath, PresentationDocumentType.Presentation);
 
         // Add a presentation part
         PresentationPart presentationPart = presentationDocument.AddPresentationPart();
@@ -34,6 +35,7 @@ public class PresentationFileCreator
 
         // Close the presentation document
         //presentationDocument.Close();
+        return filePath;
     }
 }
  
