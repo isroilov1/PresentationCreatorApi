@@ -51,23 +51,18 @@ public class AdminService(IUnitOfWork work) : IAdminService
     public async Task UpdateBalanceAsync(UpdateUserBalanceDto dto)
     {
         var model = await _work.User.GetByIdIncludeAsync(dto.Id);
-        if (model is null)
+        if (model is null && dto.PhoneNumber is not null)
+        {
+            model = await _work.User.GetByPhoneNumberAsync(dto.PhoneNumber);
+            if (model is null)
+                throw new StatusCodeException(HttpStatusCode.NotFound, "Foydalanuvchi topilmadi");
+        }
+        else if(model is null)
             throw new StatusCodeException(HttpStatusCode.NotFound, "Foydalanuvchi topilmadi");
-        dto.Balance = dto.IsAdd ? model.Balance + dto.Balance : model.Balance - dto.Balance;
 
-        var user = (User)dto;
-        user.FullName = model.FullName;
-        user.PhoneNumber = model.PhoneNumber;
-        user.Email = model.Email;
-        user.CreatedAt = model.CreatedAt;
-        user.Password = model.Password;
-        user.ReferalId = model.ReferalId;
-        user.PresentationCount = model.PresentationCount;
-        user.IsVerified = model.IsVerified;
-        user.TotalPayments = model.TotalPayments;
+        model.Balance = dto.IsAdd ? model.Balance + dto.Balance : model.Balance - dto.Balance;
 
-        await _work.User.UpdateAsync(user);
-        throw new StatusCodeException(HttpStatusCode.OK, "Foydalanuvchi balansi yangilandi");
+        await _work.User.UpdateAsync(model);
     }
 }
 

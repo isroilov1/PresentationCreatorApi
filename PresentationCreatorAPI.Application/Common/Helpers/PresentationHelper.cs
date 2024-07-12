@@ -29,8 +29,9 @@ public class PresentationHelper
 
     public static async Task<string> GetInformationAsync(PresentationLanguage language, string theme)
     {
-        var text = await GeminiHelper.GetInfoFromGeminiAsync(theme, language);
-        //string text = await File.ReadAllTextAsync("geminiresponseinformation.txt");
+        //var text = await GeminiHelper.GetInfoFromGeminiAsync(theme, language);
+        //await File.WriteAllTextAsync("geminiresponseinformation.txt", text.Replace("**", "").Replace("\n\n", "\n"));
+        string text = await File.ReadAllTextAsync("geminiresponseinformation.txt");
         return text;
     }
 }

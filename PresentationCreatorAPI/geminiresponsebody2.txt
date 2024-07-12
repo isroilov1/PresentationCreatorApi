@@ -4,7 +4,7 @@
       "content": {
         "parts": [
           {
-            "text": "Monetary economics focuses on the role of money in the economy. It examines how money supply, interest rates, and inflation affect economic activity. Key areas include:\n\n* **Money supply and banking:** The creation and control of money by central banks and commercial banks.\n* **Interest rates and monetary policy:** How central banks manipulate interest rates to influence inflation, output, and employment.\n* **Inflation and deflation:** The rise and fall in the general price level, and their impact on economic decision-making.\n* **Exchange rates and international finance:** How monetary policy affects the value of a currency in relation to others.\n* **Financial markets and institutions:** The role of financial markets in allocating capital and facilitating transactions. \n\nMonetary economics provides insights into how to manage economic fluctuations, promote stable prices, and foster economic growth. \n"
+            "text": "## Monetary Economics:\n\n**Monetary economics** studies the role of money in the economy, focusing on:\n\n* **Money supply:** The total amount of money in circulation.\n* **Interest rates:** The cost of borrowing money.\n* **Inflation:** A general increase in prices.\n* **Central banking:** Institutions that manage monetary policy.\n\nKey concepts include:\n\n* **Money demand:** The amount of money people want to hold.\n* **Money neutrality:** The idea that changes in the money supply only affect nominal variables like prices, not real variables like output.\n* **The Phillips curve:** Shows the relationship between inflation and unemployment.\n* **Monetary policy tools:** Central banks use tools like interest rate adjustments and open market operations to influence the economy. \n\nUnderstanding monetary economics is crucial for policymakers and individuals alike, helping to navigate economic fluctuations and promote stability.\n"
           }
         ],
         "role": "model"
@@ -33,7 +33,7 @@
   ],
   "usageMetadata": {
     "promptTokenCount": 40,
-    "candidatesTokenCount": 169,
-    "totalTokenCount": 209
+    "candidatesTokenCount": 180,
+    "totalTokenCount": 220
   }
 }

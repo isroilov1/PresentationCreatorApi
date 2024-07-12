@@ -1,11 +1,9 @@
-﻿using Application.DTOs.PageDtos;
-using FluentValidation;
+﻿using FluentValidation;
 using PresentationCreatorAPI.Application.Common.Exceptions;
 using PresentationCreatorAPI.Application.Common.Helpers;
 using PresentationCreatorAPI.Application.Common.Validators;
 using PresentationCreatorAPI.Application.DTOs.PresentationDtos;
 using PresentationCreatorAPI.Application.Interfaces;
-using PresentationCreatorAPI.Application.presntations.Presentationpresntations;
 using PresentationCreatorAPI.Data.Interfaces;
 using System.Net;
 using Presentation = PresentationCreatorAPI.Domain.Entites.Presentation;
@@ -28,7 +26,7 @@ public class PresentationServise(IUnitOfWork unitOfWork,
 
         var presentation = (Presentation)dto;
         string rootPath = $"uploads/presentations/{userId}";
-        if(!Directory.Exists(rootPath))
+        if (!Directory.Exists(rootPath))
             Directory.CreateDirectory(rootPath);
         presentation.FilePath = FileHelper.PresentationFilePathCreator(rootPath);
 
@@ -42,7 +40,7 @@ public class PresentationServise(IUnitOfWork unitOfWork,
         // Images uploads
         byte count = 0;
         var pageCount = presentation.PageCount - 2;
-        while (pageCount > 0) 
+        while (pageCount > 0)
         {
             pageCount = pageCount - 3;
             count++;
@@ -63,7 +61,7 @@ public class PresentationServise(IUnitOfWork unitOfWork,
         await _pageService.CreateInformationPageAsync(presentation, pageNumber);
         pageNumber++;
         await _pageService.CreateInformationWithImagePageAsync(presentation, pageNumber);
-        while(presentation.PageCount > pageNumber)
+        while (presentation.PageCount > pageNumber)
         {
             pageNumber++;
             await _pageService.CreateInformationPageAsync(presentation, pageNumber);
@@ -80,7 +78,11 @@ public class PresentationServise(IUnitOfWork unitOfWork,
 
         // Taqdimot fileni yaratish
         var filePath = await PresentationFileCreator.CreatePresentation(presentation);
-        presentation.FilePath = filePath;
+
+        //static void RunScript(string script)
+
+
+        presentation.FilePath = filePath.Replace("wwwroot/", "");
         await _unitOfWork.Presentation.UpdateAsync(presentation);
 
         //User update qilish
@@ -91,9 +93,20 @@ public class PresentationServise(IUnitOfWork unitOfWork,
         await _unitOfWork.User.UpdateAsync(user);
     }
 
-    public Task DeleteAsync(int id)
+    public async Task DeleteAsync(int id)
     {
-        throw new NotImplementedException();
+        var presentation = await _unitOfWork.Presentation.GetByIdAsync(id);
+        if (presentation == null)
+            throw new StatusCodeException(HttpStatusCode.NotFound, "Taqdimot topilmadi.");
+        var imagesPaths = presentation.ImagesPaths;
+        foreach (var imagePath in imagesPaths)
+        {
+            if (!string.IsNullOrEmpty(imagePath) && File.Exists(imagePath))
+            {
+                File.Delete(imagePath);
+            }
+        }
+        await _unitOfWork.Presentation.DeleteAsync(presentation);
     }
 
     public async Task<List<PresentationDto>> GetAllAsync()
@@ -102,16 +115,35 @@ public class PresentationServise(IUnitOfWork unitOfWork,
         if (presentations is null)
             throw new StatusCodeException(HttpStatusCode.NotFound, "Taqdimotlar topilmadi!");
 
-        return presentations.Select(u => (PresentationDto)u).ToList();
+        return presentations.Select(u => (PresentationDto)u).Reverse().ToList();
 
     }
-    public Task<PageDto> GetByIdAsync(int id)
+    public async Task<PresentationDto> GetByIdAsync(int id)
     {
-        throw new NotImplementedException();
+        var presentation = await _unitOfWork.Presentation.GetByIdAsync(id);
+        if (presentation == null)
+            throw new StatusCodeException(HttpStatusCode.NotFound, "Taqdimot topilmadi!");
+
+        return (PresentationDto)presentation;
     }
 
-    public Task UpdateAsync(UpdatePresentationDto dto)
+    public async Task<List<PresentationDto>> GetByUserAsync(int userId)
     {
-        throw new NotImplementedException();
+        var user = await _unitOfWork.User.GetByIdIncludeAsync(userId);
+        if (user is null)
+            throw new StatusCodeException(HttpStatusCode.NotFound, "Foydalanuvchi topilmadi");
+
+        var presentations = user.Presentations;
+        if (presentations is null)
+            throw new StatusCodeException(HttpStatusCode.NotFound, "Ushbu foydalanuvchining taqdimotlari mavjud emas!");
+        return presentations.Select(x => (PresentationDto)x).ToList();
+    }
+
+    public async Task UpdateAsync(UpdatePresentationDto dto)
+    {
+        var presentation = await _unitOfWork.Presentation.GetByIdAsync(dto.Id);
+        if (presentation == null)
+            throw new StatusCodeException(HttpStatusCode.NotFound, "Taqdimot topilmadi!");
+        
     }
 }

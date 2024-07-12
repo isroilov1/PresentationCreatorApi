@@ -9,7 +9,7 @@ namespace PresentationCreatorAPI.Controllers
         private readonly IPageService _pageService = pageService;
 
         [HttpGet("pages")]
-        //[Authorize(Roles = "Admin")]
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> GetAllAsync()
         {
             return Ok(await _pageService.GetAllAsync());

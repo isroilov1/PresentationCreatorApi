@@ -49,7 +49,7 @@ public class AdminsController(IAdminService adminService,
     {
         var accepterId = int.Parse(HttpContext.User.FindFirst("Id")!.Value);
         var status = PaymentStatus.Rejected;
-        await _paymentService.AcceptPaymentAsync(paymentId, status, adminCaption, accepterId);
+        await _paymentService.RejectPaymentAsync(paymentId, status, adminCaption, accepterId);
         return Ok();
     }
 

@@ -1,5 +1,6 @@
 ﻿using PresentationCreatorAPI.Application.Common.Helpers;
 using PresentationCreatorAPI.Domain.Entites;
+using PresentationCreatorAPI.Enums;
 
 namespace PresentationCreatorAPI.Application.DTOs.UserDtos;
 public class UserDto
@@ -10,21 +11,20 @@ public class UserDto
     public string PhoneNumber { get; set; } = string.Empty;
     public string Password { get; set; } = string.Empty;
     public int Balance { get; set; } = 4000;
-    public int ReferalId { get; set; }
+    public int? ReferalId { get; set; }
+    public bool ReferalBonus { get; set; }
     public string Role { get; set; } = string.Empty;
     public bool IsVerified { get; set; } = false;
     public int PresentationCount { get; set; } = 0;
     public int? TotalPayments { get; set; }
     public string CreatedAt { get; set; } = string.Empty;
+    public int? TelegramId { get; set; }
     public int PaymentsCount { get; set; }
     public int NotificationsCount { get; set; }
     public int PresentationsCount { get; set; }
 
     public static implicit operator UserDto(User user)
     {
-        var tzTashkent = TimeZoneInfo.FindSystemTimeZoneById("Asia/Tashkent");
-        var tashkentTime = TimeZoneInfo.ConvertTimeFromUtc(user.CreatedAt, tzTashkent);
-        //string formattedDate = tashkentTime.ToString("dd-MM-yyyy HH:mm");
         string formattedDate = TimeHelper.TimeFormat(user.CreatedAt);
 
         return new UserDto()
@@ -39,10 +39,12 @@ public class UserDto
             Role = user.Role.ToString(),
             CreatedAt = formattedDate,
             ReferalId = user.ReferalId,
+            ReferalBonus = user.ReferalBonus,
+            TelegramId = user.TelegramId,
             TotalPayments = user.TotalPayments,
             PresentationCount = user.PresentationCount,
             PresentationsCount = user.Presentations?.Count() ?? 0,
-            PaymentsCount = user.Payments?.Count() ?? 0,
+            PaymentsCount = user.Payments?.Select(u => u.Status = PaymentStatus.Accepted).Count() ?? 0,
             NotificationsCount = user.Notifications?.Count() ?? 0
             //Notifications = user.Notifications?.Select(n => new Notification
             //{

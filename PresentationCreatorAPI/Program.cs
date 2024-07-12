@@ -33,6 +33,8 @@ builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking);
 });
 
+builder.Services.AddHttpClient();
+
 // Unit Of Work
 builder.Services.AddTransient<IUnitOfWork, UnitOfWork>();
 
@@ -79,6 +81,8 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
+app.UseStaticFiles();
+
 app.UseHttpsRedirection();
 
 app.UseCors("All");
@@ -91,6 +95,5 @@ app.MapControllers();
 
 app.UseMiddleware<ExceptionHandleMiddleware>();
 
-app.UseStaticFiles();
 
 app.Run();

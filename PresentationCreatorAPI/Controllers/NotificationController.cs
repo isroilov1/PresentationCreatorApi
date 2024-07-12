@@ -26,6 +26,7 @@ public class NotificationController(INotificationService notificationService) : 
     }
 
     [HttpGet("{id}")]
+    [Authorize]
     public async Task<IActionResult> GetAsync(int id)
     {
         var userId = int.Parse(HttpContext.User.FindFirst("Id")!.Value);

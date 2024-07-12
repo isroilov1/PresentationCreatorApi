@@ -1,0 +1,213 @@
+﻿@using PresentationCreator.MVC.Areas.Admin.Models
+@using PresentationCreatorAPI.Application.Interfaces
+
+@{
+    ViewData["Title"] = "Presentation";
+}
+@model PresentationViewModel
+@inject IUserService _userService
+
+<div class="col-12 mt-4">
+    <div class="bg-secondary rounded h-100 p-4">
+        <h3 class="mb-4">Presentations Table</h3>
+        <div class="table-responsive">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col">Theme</th>
+                        <th scope="col">Author</th>
+                        <th scope="col">PageCount</th>
+                        <th scope="col">Language</th>
+                        <th scope="col">CreatedAt</th>
+                        <th scope="col">Template</th>
+                        <th scope="col">Pages</th>
+                        <th scope="col">Titles</th>
+                        <th scope="col">Images</th>
+                        <th scope="col">Owner</th>
+                        <th scope="col"><span style="font-size: large"><i class="bi bi-cloud-arrow-down"></i></span></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model.Presentations)
+                    {
+                        <tr>
+                            <th scope="row">@item.Id</th>
+                            <td><span style="font-size: 10px;">@item.Theme</span></td>
+                            <td><span style="font-size: 10px;">@item.Author</span></td>
+                            <td><span style="font-size: 12px;">@item.PageCount</span></td>
+                            <td><span style="font-size: smaller;">@item.Language</span></td>
+                            <td><span style="font-size: 10px;">@item.CreatedAt</span></td>
+                            <td>
+                                <span style="font-size: smaller;">
+                                    @item.Template
+                                    <img src="~/assets/img/tolov.jpg" alt="@item.Template" style="height: 70px; width: auto; cursor: pointer" data-bs-toggle="modal" data-bs-target="#imageModal">
+                                </span>
+                            </td>
+                            <td>
+                                <button type="button" class="btn btn-outline-warning m-2" data-bs-toggle="modal" data-bs-target="#pagesModal" data-pages='@System.Text.Json.JsonSerializer.Serialize(item.Pages)'>
+                                    @{var a = 1;}
+                                    <span style="font-size: 10px;">
+                                        <i class="bi bi-stickies"></i> Pages
+                                    </span>
+                                </button>
+                            </td>
+                            <td>
+                                <button type="button" class="btn btn-outline-warning m-2" data-bs-toggle="modal" data-bs-target="#titlesModal" data-titles="@String.Join(",", item.Titles)">
+                                    <span style="font-size: 10px;">
+                                        <i class="bi bi-file-earmark"></i> Titles
+                                    </span>
+                                </button>
+                            </td>
+                            <td>
+                                <button type="button" class="btn btn-outline-warning m-2" data-bs-toggle="modal" data-bs-target="#imagesModal" data-images='@System.Text.Json.JsonSerializer.Serialize(item.ImagesPaths)'>
+                                    <span style="font-size: 10px;">
+                                        @item.ImagesPaths.Count() <i class="bi bi-file-earmark-image"></i>
+                                    </span>
+                                </button>
+                            </td>
+                            <td><span style="font-size: 10px;">@((await _userService.GetByIdAsync(item.UserId)).FullName)</span></td>
+                            <td>
+                                <button type="button" class="btn btn-outline-success m-2">
+                                    <a href="@("https://localhost:7042/" + item.FilePath)" target="_blank" style="text-decoration:none; color:#2e5a0e;">
+                                        <span style="font-size: 14px;">
+                                            <i class="bi bi-download"></i>
+                                        </span>
+                                    </a>
+                                </button>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<!-- Modal for Pages -->
+<div class="modal fade" id="pagesModal" tabindex="-1" aria-labelledby="pagesModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="pagesModalLabel">Presentation Pages</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="row" id="pagesContainer">
+                    <!-- Pages will be populated here -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal for Titles -->
+<div class="modal fade" id="titlesModal" tabindex="-1" aria-labelledby="titlesModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="titlesModalLabel">Presentation Titles</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <ul id="titlesList" class="list-group">
+                    <!-- Titles will be populated here -->
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal for Images -->
+<div class="modal fade" id="imagesModal" tabindex="-1" aria-labelledby="imagesModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="imagesModalLabel">Images Preview</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body text-center">
+                <div id="imagesContainer">
+                    <!-- Images will be populated here -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        var titlesModal = document.getElementById('titlesModal');
+        titlesModal.addEventListener('show.bs.modal', function (event) {
+            var button = event.relatedTarget;
+            var titles = button.getAttribute('data-titles').split(',');
+
+            var titlesList = document.getElementById('titlesList');
+            titlesList.innerHTML = '';
+
+            titles.forEach(function (title) {
+                var listItem = document.createElement('li');
+                listItem.classList.add('list-group-item');
+                listItem.textContent = title;
+                titlesList.appendChild(listItem);
+            });
+        });
+
+        var pagesModal = document.getElementById('pagesModal');
+        pagesModal.addEventListener('show.bs.modal', function (event) {
+            var button = event.relatedTarget;
+            var pages = JSON.parse(button.getAttribute('data-pages'));
+
+            var pagesContainer = document.getElementById('pagesContainer');
+            pagesContainer.innerHTML = '';
+
+            pages.forEach(function (page) {
+                var pageCard = document.createElement('div');
+                pageCard.classList.add('col-md-12', 'mb-4'); // Adjusted col-md-12 to col-md-4 for grid layout
+
+                var imageUrl = "https://localhost:7042/" + page.ImagePath; // Construct the full image URL
+
+                pageCard.innerHTML = `
+                <div class="card">
+                    <img src="${imageUrl}" class="card-img-top" alt="${page.Title}">
+                    ${imageUrl}
+                    <div class="card-body">
+                        <h5 class="card-title">${page.Title}</h5>
+                        <p class="card-text">${page.Text}</p>
+                        <p class="card-text"><small class="text-muted">Page ${page.PageNumber} - ${page.PageType}</small></p>
+                    </div>
+                </div>
+            `;
+                pagesContainer.appendChild(pageCard);
+            });
+        });
+
+
+        var imageModal = document.getElementById('imageModal');
+        imageModal.addEventListener('show.bs.modal', function (event) {
+            var button = event.relatedTarget;
+            var imageUrl = button.getAttribute('src');
+            var modalImage = document.getElementById('modalImage');
+            modalImage.src = imageUrl;
+        });
+    });
+
+    document.addEventListener('DOMContentLoaded', function () {
+        var imagesModal = document.getElementById('imagesModal');
+        imagesModal.addEventListener('show.bs.modal', function (event) {
+            var button = event.relatedTarget;
+            var images = JSON.parse(button.getAttribute('data-images'));
+
+            var imagesContainer = document.getElementById('imagesContainer');
+            imagesContainer.innerHTML = '';
+
+            images.forEach(function (imageUrl) {
+                var imageElement = document.createElement('img');
+                imageElement.src = "https://localhost:7042/" + imageUrl;
+                imageElement.classList.add('img-fluid', 'mb-4');
+                imagesContainer.appendChild(imageElement);
+            });
+        });
+    });
+</script>

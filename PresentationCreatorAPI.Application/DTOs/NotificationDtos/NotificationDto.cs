@@ -1,4 +1,5 @@
-﻿using PresentationCreatorAPI.Domain.Entites;
+﻿using PresentationCreatorAPI.Application.Common.Helpers;
+using PresentationCreatorAPI.Domain.Entites;
 
 namespace PresentationCreatorAPI.Application.DTOs;
 public class NotificationDto : AddNotificationDto
@@ -11,9 +12,7 @@ public class NotificationDto : AddNotificationDto
     
     public static implicit operator NotificationDto(Notification notification)
     {
-        var tzTashkent = TimeZoneInfo.FindSystemTimeZoneById("Asia/Tashkent");
-        var tashkentTime = TimeZoneInfo.ConvertTimeFromUtc(notification.CreatedAt, tzTashkent);
-        string formattedDate = tashkentTime.ToString("dd-MM-yyyy HH");
+        string formattedDate = TimeHelper.TimeFormat(notification.CreatedAt);
 
         return new NotificationDto()
         {

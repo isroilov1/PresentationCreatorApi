@@ -8,6 +8,6 @@ public class TimeHelper
     {
         var tzTashkent = TimeZoneInfo.FindSystemTimeZoneById("Asia/Tashkent");
         var tashkentTime = TimeZoneInfo.ConvertTimeFromUtc(time, tzTashkent);
-        return tashkentTime.ToString("dd-MM-yyyy HH:mm");
+        return tashkentTime.ToString("MM-dd-yyyy HH:mm");
     }
 }

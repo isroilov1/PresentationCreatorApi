@@ -1,6 +1,4 @@
 ﻿using Application.DTOs.PageDtos;
-using DocumentFormat.OpenXml.Bibliography;
-using DocumentFormat.OpenXml.Wordprocessing;
 using FluentValidation;
 using PresentationCreatorAPI.Application.Common.Helpers;
 using PresentationCreatorAPI.Application.DTOs.PageDtos;

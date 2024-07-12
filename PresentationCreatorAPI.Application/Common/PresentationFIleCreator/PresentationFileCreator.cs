@@ -1,41 +1,33 @@
-﻿using DocumentFormat.OpenXml;
-using DocumentFormat.OpenXml.Packaging;
-using DocumentFormat.OpenXml.Presentation;
+﻿using Python.Runtime;
 using PresentationEntity = PresentationCreatorAPI.Domain.Entites.Presentation;
 
-namespace PresentationCreatorAPI.Application.Common.Helpers;
-
-public class PresentationFileCreator
+namespace PresentationCreatorAPI.Application.Common.Helpers
 {
-    public static async Task<string> CreatePresentation(PresentationEntity presentationEntity)
+    public class PresentationFileCreator
     {
-        // Create a presentation document
-        string root = "uploads/presentations/";
-        var filePath = FileHelper.PresentationFilePathCreator(root);
-        PresentationDocument presentationDocument = PresentationDocument.Create(filePath, PresentationDocumentType.Presentation);
+        //public static async Task<string> CreatePresentation(PresentationEntity presentationEntity)
+        //{
+            
+        //}
 
-        // Add a presentation part
-        PresentationPart presentationPart = presentationDocument.AddPresentationPart();
-        presentationPart.Presentation = new Presentation();
+        public static async Task<string> CreatePresentation(PresentationEntity presentationEntity)
+        {
+            // Python DLL joylashgan yo'lni ko'rsating
+            Runtime.PythonDLL = @"C:\Users\Victus\AppData\Local\Programs\Python\Python311\python311.dll";
+            PythonEngine.Initialize();
+            string scriptName = "createpresentationfile";
 
-        // Add a slide part
-        SlidePart slidePart = presentationPart.AddNewPart<SlidePart>();
-        Slide slide = new Slide(new CommonSlideData(new ShapeTree()));
-        slidePart.Slide = slide;
+            using (Py.GIL())
+            {
+                // Python skripti joylashgan yo'lni `sys.path` ga qo'shing
+                dynamic sys = Py.Import("sys");
+                sys.path.append(@"D:\Dot net Projects\github\PresentationCreatorAPI\Python"); // Bu yo'lni o'zingizning yo'lingizga o'zgartiring
 
-        // Save the changes to the presentation part
-        slidePart.Slide.Save();
-
-        // Add slide part to presentation
-        SlideIdList slideIdList = presentationPart.Presentation.AppendChild(new SlideIdList());
-        SlideId slideId = slideIdList.AppendChild(new SlideId() { RelationshipId = presentationPart.GetIdOfPart(slidePart) });
-
-        // Save the presentation document
-        presentationPart.Presentation.Save();
-
-        // Close the presentation document
-        //presentationDocument.Close();
-        return filePath;
+                // Python skriptini import qiling va funksiyani chaqirish
+                dynamic pythonScript = Py.Import(scriptName);
+                dynamic result = pythonScript.run_async_function(presentationEntity);
+                return result;
+            }
+        }
     }
 }
- 

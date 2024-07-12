@@ -7,7 +7,6 @@ using System.Security.Claims;
 using System.Text;
 
 namespace PresentationCreatorAPI.Application.Services;
-
 public class AuthManager(IConfiguration config) : IAuthManager
 {
     private readonly IConfiguration _config = config.GetSection("Jwt");
@@ -18,7 +17,7 @@ public class AuthManager(IConfiguration config) : IAuthManager
         {
             new Claim("Id", user.Id.ToString()),
             new Claim(ClaimTypes.Name, user.FullName),
-            new Claim(ClaimTypes.Role, user.Role.ToString()),
+            new Claim(ClaimTypes.Role, user.Role.ToString()),                           
             new Claim(ClaimTypes.Email, user.Email),
             new Claim(ClaimTypes.MobilePhone, user.PhoneNumber)
         };

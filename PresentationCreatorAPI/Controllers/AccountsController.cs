@@ -1,7 +1,4 @@
-﻿using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Mvc;
-using PresentationCreatorAPI.Application.DTOs.UserDtos;
-using PresentationCreatorAPI.Application.Interfaces;
+﻿using PresentationCreatorAPI.Application.Interfaces;
 
 namespace PresentationCreator.Controllers;
 
@@ -23,7 +20,7 @@ public class AccountsController(IAccountService accountService) : ControllerBase
     public async Task<IActionResult> LoginAsync([FromForm] LoginDto dto)
     {
         var result = await _accountService.LoginAsync(dto);
-        return Ok($"Bearer {result}");
+        return Ok($"{result}");
     }
     [HttpPost("sendcode")]
     public async Task<IActionResult> SendCodeAsync([FromForm] string email)

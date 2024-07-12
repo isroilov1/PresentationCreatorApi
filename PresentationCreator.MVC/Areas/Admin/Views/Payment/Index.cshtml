@@ -1,0 +1,162 @@
+﻿@using PresentationCreatorAPI.Application.Interfaces
+@using PresentationCreatorAPI.Enums
+@{
+    ViewData["Title"] = "Payments";
+}
+@model PresentationCreator.MVC.Areas.Admin.Models.PaymentViewModel
+@inject IUserService _userService
+
+<div class="col-12 mt-4">
+    <div class="bg-secondary rounded h-100 p-4">
+        <h3 class="mb-4">Payments</h3>
+        <div class="table-responsive">
+            <div class="transaction-list">
+                @foreach (var item in Model.Payments)
+                {
+                    <hr class="transaction-divider">
+                    <div class="transaction d-flex justify-content-center">
+                        <div class="transaction-icon">
+                            <img src="https://localhost:7042/@item.FilePath" alt="deposit" style="height: 100px; width: auto; cursor: pointer" data-bs-toggle="modal" data-bs-target="#imageModal">
+                        </div>
+                        <div class="transaction-details" style="width: 400px">
+                            <div class="transaction-user mb-2">ID: @item.UserId | @((await _userService.GetByIdAsync(item.UserId)).FullName)</div>
+                            <div class="transaction-description">@item.Caption</div>
+                            <div class="transaction-date mt-1" style="font-size: 10px;">@item.CreatedAt</div>
+                        </div>
+                        <div class="transaction-amount" style="color: green; width: 220px">+@item.Summa so'm</div>
+                        <div class="for-status-buttons d-flex justify-content-end">
+                            @if (item.Status == PaymentStatus.Expected.ToString())
+                            {
+                                <button class="btn btn-info rounded-pill m-2 payment-status-icon"><i class="bi bi-stopwatch-fill"></i></button>
+                                <form asp-area="admin" asp-controller="payment" asp-action="acceptpayment" style="margin-right: 20px">
+                                    <input asp-for="@Model.Payment.Id" type="hidden" value="@item.Id" class="form-control">
+                                    <input asp-for="@Model.Payment.AdminCaption" type="text" class="form-control" placeholder="Admin caption...">
+                                    <button type="submit" class="btn btn-outline-success payment-status-icon"><i class="bi bi-check2-circle"></i></button>
+                                </form>
+                                <form asp-area="admin" asp-controller="payment" asp-action="rejectpayment" style="margin-right: 20px">
+                                    <input asp-for="@Model.Payment.Id" type="hidden" value="@item.Id" class="form-control">
+                                    <input asp-for="@Model.Payment.AdminCaption" type="text" class="form-control" placeholder="Admin caption...">
+                                    <button type="submit" class="btn btn-outline-primary payment-status-icon"><i class="bi bi-ban"></i></button>
+                                </form>
+                            }
+                            else if (item.Status == PaymentStatus.Accepted.ToString())
+                            {
+                                <div class="status-container">
+                                    <button class="btn btn-success rounded-pill m-2" payment-status-icon"><i class="bi bi-check2-circle"></i></button>
+                                    @if (item.AdminCaption != null)
+                                    {
+                                        <div class="transaction-description d-flex justify-content-end">@item.AdminCaption</div>
+                                    }
+                                </div>
+                            }
+                            else if (item.Status == PaymentStatus.Rejected.ToString())
+                            {
+                                <div class="status-container">
+                                    <button class="btn btn-danger rounded-pill m-2 payment-status-icon"><i class="bi bi-ban"></i></button>
+                                    @if (item.AdminCaption != null)
+                                    {
+                                        <div class="transaction-description d-flex justify-content-end" style="font-size: 13px; font-weight: bold;">@item.AdminCaption</div>
+                                    }
+                                </div>
+                            }
+                        </div>
+
+                    </div>
+                }
+                <!-- Add more transactions as needed -->
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="imageModalLabel">Image Preview</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body text-center">
+                <img id="modalImage" src="" alt="Full image" class="modal-image">
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        var imageModal = document.getElementById('imageModal');
+        imageModal.addEventListener('show.bs.modal', function (event) {
+            var button = event.relatedTarget; // Rasmga bosilganda modalni ochuvchi tugma
+            var imageUrl = button.getAttribute('src'); // Rasmning URL manzili
+            var modalImage = document.getElementById('modalImage');
+            modalImage.src = imageUrl; // Modal ichidagi rasmga URL manzilini o'zlashtirish
+        });
+    });
+</script>
+
+<style>
+    .transaction-list {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .transaction {
+        display: flex;
+        align-items: center;
+        margin-bottom: 15px;
+    }
+
+    .transaction-icon {
+        margin-right: 15px;
+        width: 200px
+    }
+
+    .transaction-details {
+        flex-grow: 1;
+    }
+
+    .transaction-description {
+        font-size: 16px;
+        font-weight: bold;
+    }
+
+    .transaction-date {
+        font-size: 12px;
+        color: gray;
+    }
+
+    .transaction-amount {
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    .transaction-user{
+        font-size: 22px;
+        font-weight: bold;
+        color: red;
+    }
+
+    .transaction-divider {
+        width: 100%;
+        border: 1px solid #ddd;
+        margin: 15px 0;
+    }
+
+    .modal-image {
+        max-width: 70%;
+        max-height: 100%;
+    }
+
+    .for-status-buttons{
+        width: 250px;
+    }
+
+    .status-container {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end; /* or align-items: flex-start; depending on your needs */
+    }
+
+</style>

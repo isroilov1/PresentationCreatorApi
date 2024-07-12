@@ -2,7 +2,7 @@
 using PresentationCreatorAPI.Application.Common.Helpers;
 using PresentationCreatorAPI.Domain.Entites;
 
-namespace PresentationCreatorAPI.Application.presntations.Presentationpresntations;
+namespace PresentationCreatorAPI.Application.DTOs.PresentationDtos;
 
 public class PresentationDto
 {
@@ -14,6 +14,7 @@ public class PresentationDto
     public string Language { get; set; } = string.Empty;
     public string FilePath { get; set; } = string.Empty;
     public string CreatedAt { get; set; } = string.Empty;
+    public int UserId { get; set; }
     public List<string> Titles { get; set; } = new List<string>();
     public List<string> ImagesPaths { get; set; } = new List<string>();
     public List<PageDto> Pages { get; set; } = null!;
@@ -34,6 +35,7 @@ public class PresentationDto
             Language = presntation.Language.ToString(),
             FilePath = presntation.FilePath,
             CreatedAt = formattedDate,
+            UserId = presntation.UserId,
             Titles = presntation.Titles,
             ImagesPaths = presntation.ImagesPaths,
             Pages = presntation.Pages.Select(u => (PageDto)u).ToList()

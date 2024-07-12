@@ -112,7 +112,7 @@ public class PaymentServicce(IUnitOfWork unitOfWork,
     public async Task<List<PaymentDto>> GetAllAsync()
     {
         var payments = await _unitOfWork.Payment.GetAllAsync();
-        return payments.Select(x => (PaymentDto)x).ToList();
+        return payments.Select(x => (PaymentDto)x).Reverse().ToList();
     }
 
     public async Task<PaymentDto> GetByIdAsync(int id)

@@ -102,5 +102,18 @@ public class UserService(IUnitOfWork unitOfWork,
         await _unitOfWork.User.UpdateAsync(user);
         throw new StatusCodeException(HttpStatusCode.OK, "Foydalanuvchi ma'lumotlari yangilandi");
     }
+
+
+    public async Task<List<UserDto>> GetAllWithoutpagination()
+    {
+        var users = await _unitOfWork.User.GetAllIncludeAsync();
+        if (users is null)
+            throw new StatusCodeException(HttpStatusCode.NotFound, "Foydalanuvchilar mavjud emas!");
+
+        var userDtos = users.Select(x => (UserDto)x).ToList();
+        userDtos.Reverse();
+
+        return userDtos;
+    }
 }
 

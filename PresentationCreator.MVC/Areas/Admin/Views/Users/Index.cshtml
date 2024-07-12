@@ -1,0 +1,285 @@
+﻿@using PresentationCreator.MVC.Areas.Admin.Models
+@model UsersViewModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div class="mt-4">
+    <div class="m-n2">
+        <button type="button" class="btn btn-outline-primary m-2" onclick="location.href='@Url.Action("UpdateBalance", "Users", new { area = "admin" })'">
+            <i class="bi bi-exposure"></i> Update Balance
+        </button>
+        <button type="button" class="btn btn-outline-primary m-2" data-bs-toggle="modal" data-bs-target="#exampleModal" data-user-id="2">
+            <i class="bi bi-person-gear"></i> Change Role
+        </button>
+
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">New message</h5>
+                        <button type="button" onclick="hide" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+
+                    </div>
+                    <div class="modal-body">
+                        <form asp-area="admin" asp-controller="admin" asp-action="ChangeRole" method="post">
+                            <div class="form-group">
+                                <label for="recipient-name" class="col-form-label text-black">UserId:</label>
+                                <input asp-for="@Model.User.Id" type="text" class="form-control" id="recipient-name" name="UserId" value="2">
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" onclick="hide" class="btn btn-secondary" id="closeButton">Close</button>
+                        <button type="submit" class="btn btn-primary" id="saveButton">Save</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="col-12 mt-4">
+    <div class="bg-secondary rounded h-100 p-4">
+        <h3 class="mb-4">Users Table</h3>
+        <div class="table-responsive">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col">FullName</th>
+                        <th scope="col">Phone</th>
+                        <th scope="col">Balance</th>
+                        <th scope="col">Payments</th>
+                        <th scope="col">PayCnt</th>
+                        <th scope="col">IsVerified</th>
+                        <th scope="col">CreatedAt</th>
+                        <th scope="col">PresCnt</th>
+                        <th scope="col">ReferalId</th>
+                        <th scope="col">RefBonus</th>
+                        <th scope="col">TelegramId</th>
+                        <th scope="col">Role</th>
+                        <th scope="col"><span style="font-size: large"><i class="bi bi-envelope-arrow-up"></i></span></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model.Users)
+                    {
+                        <tr>
+                            @{
+                                var userId = item.Id;
+                            }
+                            <th scope="row">@item.Id</th>
+                            <td><span style="font-size: smaller;">@item.FullName</span></td>
+                            <td><span style="font-size: smaller;">@item.PhoneNumber</span></td>
+                            <td><span style="font-size: smaller;">@item.Balance</span></td>
+                            <td><span style="font-size: smaller;">@item.TotalPayments</span></td>
+                            <td><span style="font-size: smaller;">@item.PaymentsCount</span></td>
+                            <td>
+                                <div class="custom-checkbox">
+                                    <input type="checkbox" id="isVerified-@item.Id" disabled @(item.IsVerified ? "checked" : "") />
+                                    <label for="isVerified-@item.Id"></label>
+                                </div>
+                            </td>
+                            <td><span style="font-size: 10px;">@item.CreatedAt</span></td>
+                            <td><span style="font-size: smaller;">@item.PresentationCount</span></td>
+                            <td><span style="font-size: smaller;">@item.ReferalId</span></td>
+                            <td>
+                                <div class="custom-checkbox">
+                                    <input type="checkbox" id="referalBonus-@item.Id" disabled @(item.ReferalBonus ? "checked" : "") />
+                                    <label for="referalBonus-@item.Id"></label>
+                                </div>
+                            </td>
+                            <td><span style="font-size: smaller;">@item.TelegramId</span></td>
+                            <td>
+                                @if(item.Role == "Admin"){
+                                    <span style="font-size: smaller; color: gold">
+                                        @item.Role
+                                    </span>
+                                }
+                                else{
+                                    <span style="font-size: smaller;">@item.Role</span>
+                                    }
+
+                            </td>
+                            <td>
+                                <button type="button" class="btn btn-outline-primary m-2" data-bs-toggle="modal" data-bs-target="#messageModal" data-user-id="@item.Id">
+                                    <i class="bi bi-chat-dots"></i>
+                                </button>
+                                <div class="modal fade" id="messageModal" tabindex="-1" role="dialog" aria-labelledby="messageModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="messageModalLabel">New message</h5>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <form asp-area="admin" asp-controller="notification" asp-action="sendtouser">
+                                                    <div class="form-group">
+                                                        <input asp-for="@Model.Notification.RecipientIds" type="hidden" class="form-control" id="message-text" value="@userId">
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="message-text" class="col-form-label">Message:</label>
+                                                        <input asp-for="@Model.Notification.Message" class="form-control" placeholder="Xabar matnini kiriting...">
+                                                        <span asp-validation-for="Notification.Message" class="text-danger"></span>
+                                                    </div>
+                                                    @if (!ViewData.ModelState.IsValid)
+                                                    {
+                                                        <div class="mb-3">
+                                                            @foreach (var error in ViewData.ModelState.Values.SelectMany(v => v.Errors))
+                                                            {
+                                                                <div class="text-danger">@error.ErrorMessage</div>
+                                                            }
+                                                        </div>
+                                                    }
+                                                </form>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                                <button type="button" class="btn btn-primary" id="sendButton">Send message</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<style>
+    .custom-checkbox {
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        position: relative;
+        cursor: pointer;
+    }
+
+        .custom-checkbox input[type="checkbox"] {
+            display: none;
+        }
+
+        .custom-checkbox label {
+            display: block;
+            width: 20px;
+            height: 20px;
+            border: 1px solid #ddd;
+            border-radius: 3px;
+            background: white; /* Asl holati uchun oq rang */
+            position: relative;
+        }
+
+        .custom-checkbox input[type="checkbox"]:checked + label {
+            background: #5cb85c; /* Yashil rang */
+        }
+
+        .custom-checkbox label::after {
+            content: '';
+            position: absolute;
+            width: 6px;
+            height: 12px;
+            border: solid white;
+            border-width: 0 2px 2px 0;
+            top: 2px;
+            left: 7px;
+            transform: rotate(45deg);
+            display: none;
+        }
+
+        .custom-checkbox input[type="checkbox"]:checked + label::after {
+            display: block;
+        }
+</style>
+
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        var exampleModal = document.getElementById('exampleModal');
+        var myModal = new bootstrap.Modal(exampleModal); // Modal oynasini tanlang
+
+        // "Save" tugmasi uchun
+        var saveButton = exampleModal.querySelector('#saveButton');
+        saveButton.addEventListener('click', function () {
+            var recipientInput = exampleModal.querySelector('#recipient-name');
+            var recipientValue = recipientInput.value.trim(); // Qiymatni olib tashlang va pastlab chiqishni olib tashlang
+
+            if (recipientValue === '') {
+                alert(`UserId bo'sh bo'lmasin!`); // Xatolik xabarni chiqaring
+                return; // Qiymat kiritilmagan bo'lsa funksiya tugatiladi
+            }
+
+            // Modal uchun UserId-ni o'zlashtirish
+            exampleModal.addEventListener('show.bs.modal', function (event) {
+                var button = event.relatedTarget; // Modalni ochgan tugma
+                var userId = button.getAttribute('data-user-id'); // data-user-id atributi
+
+                var recipientInput = messageModal.querySelector('#recipient-name');
+                recipientInput.value = userId; // UserId-ni inputga o'zlashtirish
+            });
+
+            // Agar shart bajarilsa, formani submit qiling
+            var form = exampleModal.querySelector('form');
+            form.submit(); // Formani submit qilish
+
+            // Modal oynasini yopish
+            myModal.hide();
+        });
+    });
+
+    document.addEventListener('DOMContentLoaded', function () {
+        var exampleModal = document.getElementById('messageModal');
+        
+        var exampleModal = document.getElementById('messageModal');
+
+        // Modal uchun UserId-ni o'zlashtirish
+        exampleModal.addEventListener('show.bs.modal', function (event) {
+            var button = event.relatedTarget; // Modalni ochgan tugma
+            var userId = button.getAttribute('data-user-id'); // data-user-id atributi
+
+            var recipientInput = exampleModal.querySelector('#message-text');
+            recipientInput.value = userId; // UserId-ni inputga o'zlashtirish
+        });
+
+        var myModal = new bootstrap.Modal(exampleModal); // Modal oynasini tanlang
+
+        // "Save" tugmasi uchun
+        var saveButton = exampleModal.querySelector('#sendButton');
+        saveButton.addEventListener('click', function () {
+            var recipientInput = exampleModal.querySelector('#message-text');
+            var recipientValue = recipientInput.value.trim(); // Qiymatni olib tashlang va pastlab chiqishni olib tashlang
+
+            if (recipientValue === '') {
+                alert('UserId cannot be empty!'); // Xatolik xabarni chiqaring
+                return; // Qiymat kiritilmagan bo'lsa funksiya tugatiladi
+            }
+
+            // Agar shart bajarilsa, formani submit qiling
+            var form = exampleModal.querySelector('form');
+            form.submit(); // Formani submit qilish
+
+            // Modal oynasini yopish
+            myModal.hide();
+        });
+
+        // "Close" tugmasi uchun
+        var closeButton = exampleModal.querySelector('#closeButton');
+        closeButton.addEventListener('click', function () {
+            myModal.hide(); // Modal oynasini yopish
+        });
+
+        // "X" tugmasi uchun
+        var xButton = exampleModal.querySelector('.modal-header .close');
+        xButton.addEventListener('click', function () {
+            myModal.hide(); // Modal oynasini yopish
+        });
+    });
+</script>

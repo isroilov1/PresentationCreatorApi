@@ -12,7 +12,7 @@ public class UserRepository(AppDbContext dbContext) : GenericRepository<User>(db
     public async Task<User?> GetByEmailAsync(string email)
         => await _dbContext.Users.Include(u => u.Notifications).Include(p => p.Payments).FirstOrDefaultAsync(mail => mail.Email == email);
 
-    public async Task<User?> GetByIdIncludeAsync(int id)
+    public async Task<User?> GetByIdIncludeAsync(int? id)
         => await _dbContext.Users.Include(u => u.Notifications).Include(p => p.Payments).FirstOrDefaultAsync(p => p.Id == id);
 
     public async Task<User?> GetByPhoneNumberAsync(string phoneNumber)

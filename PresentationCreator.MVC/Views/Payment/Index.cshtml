@@ -1,0 +1,71 @@
+﻿@model IEnumerable<PaymentViewModel>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <title>Hisobotlar <i class="bi bi-credit-card"></i></title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="~/assets/css/payments.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>To'lovlar</h1>
+        </div>
+        <div class="date-selector">
+            <button>Aprel</button>
+            <button>May</button>
+            <button class="active">Iyun</button>
+            <button>Iyun</button>
+        </div>
+        <div class="transaction-list">
+            <div class="transaction">
+                <div class="transaction-icon"><img src="img/tolov.jpg" alt="deposit"></div>
+                <div class="transaction-details">
+                    <div>alifmobiuZ rekvizit</div>
+                    <div class="transaction-date">28 iyun 10:18</div>
+                </div>
+                <div class="transaction-amount" style="color: green;">+10 010 so'm</div>
+            </div>
+            <div class="transaction">
+                <div class="transaction-icon"><img src="img/tolov.jpg" alt="deposit"></div>
+                <div class="transaction-details">
+                    <div>Agrobankmobile HUMO P2P</div>
+                    <div class="transaction-date">28 iyun 07:36</div>
+                </div>
+                <div class="transaction-amount" style="color: green;">+5 000 so'm</div>
+            </div>
+            <!-- Add more transactions as needed -->
+        </div>
+        <div class="menu">
+            <div class="menu-item active">
+                <img src="icons/home.png" alt="Home">
+                <div>Asosiy</div>
+            </div>
+            <div class="menu-item">
+                <img src="icons/payment.png" alt="To'lov">
+                <div>To'lov</div>
+            </div>
+            <div class="menu-item">
+                <img src="icons/transfer.png" alt="O'tkazmalar">
+                <div>O'tkazmalar</div>
+            </div>
+            <div class="menu-item">
+                <img src="icons/report.png" alt="Hisobotlar">
+                <div>Hisobotlar</div>
+            </div>
+            <div class="menu-item">
+                <img src="icons/services.png" alt="Xizmatlar">
+                <div>Xizmatlar</div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

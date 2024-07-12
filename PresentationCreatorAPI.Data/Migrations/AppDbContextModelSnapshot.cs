@@ -108,11 +108,9 @@ namespace PresentationCreatorAPI.Data.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<string>("AdminCaption")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Caption")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("CreatedAt")
@@ -227,13 +225,13 @@ namespace PresentationCreatorAPI.Data.Migrations
                     b.Property<bool>("ReferalBonus")
                         .HasColumnType("bit");
 
-                    b.Property<int>("ReferalId")
+                    b.Property<int?>("ReferalId")
                         .HasColumnType("int");
 
                     b.Property<int>("Role")
                         .HasColumnType("int");
 
-                    b.Property<int>("TelegramId")
+                    b.Property<int?>("TelegramId")
                         .HasColumnType("int");
 
                     b.Property<int>("TotalPayments")
@@ -248,7 +246,7 @@ namespace PresentationCreatorAPI.Data.Migrations
                         {
                             Id = 1,
                             Balance = 20000,
-                            CreatedAt = new DateTime(2024, 6, 24, 10, 22, 25, 230, DateTimeKind.Utc).AddTicks(1498),
+                            CreatedAt = new DateTime(2024, 7, 10, 10, 42, 30, 323, DateTimeKind.Utc).AddTicks(9257),
                             Email = "isroilov0905@gmail.com",
                             FullName = "Isroilov Ismoiljon",
                             IsVerified = true,
@@ -256,9 +254,7 @@ namespace PresentationCreatorAPI.Data.Migrations
                             PhoneNumber = "+998997979898",
                             PresentationCount = 0,
                             ReferalBonus = false,
-                            ReferalId = 0,
                             Role = 1,
-                            TelegramId = 0,
                             TotalPayments = 0
                         });
                 });

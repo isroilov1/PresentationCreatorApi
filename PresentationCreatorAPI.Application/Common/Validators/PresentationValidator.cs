@@ -25,7 +25,11 @@ public class PresentationValidator : AbstractValidator<Presentation>
 
         RuleFor(x => x.PageCount)
             .NotNull()
-            .WithMessage("Sahifalar soni bo'sh bolmasligi kerak");
+            .WithMessage("Sahifalar soni bo'sh bolmasligi kerak")
+            .GreaterThanOrEqualTo((byte)5)
+            .WithMessage("Sahifalar soni kamida 5ta bo'lishi kerak")
+            .LessThanOrEqualTo((byte)20)
+            .WithMessage("Sahifalar soni maximum 20ta bo'lishi kerak");
 
         RuleFor(x => x.Template)
             .NotEmpty()

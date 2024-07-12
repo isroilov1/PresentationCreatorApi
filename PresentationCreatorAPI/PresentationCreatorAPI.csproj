@@ -31,8 +31,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="uploads\presentations\" />
     <Folder Include="wwwroot\assets\" />
+    <Folder Include="wwwroot\uploads\presentation\" />
   </ItemGroup>
 
 </Project>

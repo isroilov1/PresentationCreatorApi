@@ -1,6 +1,5 @@
 ﻿using PresentationCreatorAPI.Application.DTOs.PresentationDtos;
 using PresentationCreatorAPI.Application.Interfaces;
-using PresentationCreatorAPI.Application.Services;
 
 namespace PresentationCreatorAPI.Controllers;
 
@@ -24,5 +23,28 @@ public class PresentationController(IPresentationServise presentationServise) : 
     public async Task<IActionResult> GetAllAsync()
     {
         return Ok(await _presentationServise.GetAllAsync());
+    }
+
+    [HttpGet("{id}")]
+    [Authorize]
+    public async Task<IActionResult> GetAsync(int id)
+    {
+        return Ok(await _presentationServise.GetByIdAsync(id));
+    }
+
+    [HttpGet("user")]
+    [Authorize]
+    public async Task<IActionResult> GetByUserAsync()
+    {
+        var userId = int.Parse(HttpContext.User.FindFirst("Id")!.Value);
+        return Ok(await _presentationServise.GetByUserAsync(userId));
+    }
+
+    [HttpDelete("id")]
+    [Authorize(Roles = "Admin")]
+    public async Task<IActionResult> DeleteAsync(int id)
+    {
+        await _presentationServise.DeleteAsync(id);
+        return Ok();
     }
 }

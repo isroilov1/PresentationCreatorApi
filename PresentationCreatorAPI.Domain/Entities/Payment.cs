@@ -1,10 +1,14 @@
-﻿namespace PresentationCreatorAPI.Domain.Entites;
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace PresentationCreatorAPI.Domain.Entites;
 
 public class Payment : BaseEntity
 {
+    [Required]
     public int Summa { get; set; }
-    public string Caption { get; set; } = string.Empty;
-    public string AdminCaption { get; set; } = string.Empty;
+    public string? Caption { get; set; } = string.Empty;
+    public string? AdminCaption { get; set; } = string.Empty;
+    [Required]
     public string FilePath { get; set; } = null!;
     public PaymentStatus Status { get; set; } = PaymentStatus.Expected;
     public int UserId { get; set; }

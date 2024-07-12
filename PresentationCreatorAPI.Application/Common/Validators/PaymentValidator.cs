@@ -12,6 +12,9 @@ public class PaymentValidator : AbstractValidator<Payment>
             .WithMessage("Summa bo'sh bo'lmasligi kerak")
             .MustAsync((summa, cancellationToken) => BeLessThan500(summa, cancellationToken))
             .WithMessage("Summa 500 dan kam bo'lmasligi kerak!");
+        RuleFor(x => x.Caption)
+            .MaximumLength(200)
+            .WithMessage("Izoh 200 belgidan oshmasligi kerak!");
         RuleFor(x => x.FilePath)
             .NotNull()
             .WithMessage("File bo'sh bo'lmasligi kerak");
