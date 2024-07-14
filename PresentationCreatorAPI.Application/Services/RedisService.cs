@@ -21,4 +21,5 @@ public class RedisService(IDistributedCache cache) : IRedisService
             SlidingExpiration = TimeSpan.FromMinutes(1)
         });
     }
+
 }

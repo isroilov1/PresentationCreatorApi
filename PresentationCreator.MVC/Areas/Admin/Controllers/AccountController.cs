@@ -2,6 +2,7 @@
 using PresentationCreatorAPI.Application.Common.Exceptions;
 using PresentationCreatorAPI.Application.DTOs.UserDtos;
 using PresentationCreatorAPI.Application.Interfaces;
+using System.IdentityModel.Tokens.Jwt;
 
 namespace PresentationCreator.MVC.Areas.Admin.Controllers;
 
@@ -25,7 +26,7 @@ public class AccountController(IAccountService authService,
         //var user = await _userService.GetByPhoneNumberAsync(dto.PhoneNumber);
         dto.PhoneNumber = "+998997979898";
         var user = await _userService.GetByPhoneNumberAsync(dto.PhoneNumber);
-        if(user.Role == "User")
+        if (user.Role == "User")
             ModelState.AddModelError(string.Empty, "No acsess for your account.");
         try
         {
@@ -59,13 +60,14 @@ public class AccountController(IAccountService authService,
         catch (StatusCodeException ex)
         {
             ModelState.AddModelError(string.Empty, ex.Message);
-        }catch (HttpRequestException ex)
+        }
+        catch (HttpRequestException ex)
         {
             ModelState.AddModelError(string.Empty, "Server bilan bog'lanishda xatolik yuz berdi.");
         }
 
         return View(dto);
-        
+
     }
 
     [HttpPost]

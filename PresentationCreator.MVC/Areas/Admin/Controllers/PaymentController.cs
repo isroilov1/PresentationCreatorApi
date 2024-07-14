@@ -1,11 +1,8 @@
-﻿using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Mvc;
-using Newtonsoft.Json;
+﻿using Microsoft.AspNetCore.Mvc;
 using PresentationCreatorAPI.Application.Common.Exceptions;
 using PresentationCreatorAPI.Application.DTOs;
 using PresentationCreatorAPI.Application.DTOs.UserDtos;
 using PresentationCreatorAPI.Application.Interfaces;
-using PresentationCreatorAPI.Domain.Entites;
 using PresentationCreatorAPI.Enums;
 using PaymentViewModel = PresentationCreator.MVC.Areas.Admin.Models.PaymentViewModel;
 
@@ -32,7 +29,7 @@ public class PaymentController(IPaymentService paymentService) : Controller
     }
 
     [HttpPost]
-    public async Task<IActionResult >AcceptPayment(PaymentViewModel dto)
+    public async Task<IActionResult> AcceptPayment(PaymentViewModel dto)
     {
         try
         {
@@ -48,7 +45,7 @@ public class PaymentController(IPaymentService paymentService) : Controller
             ModelState.AddModelError(string.Empty, ex.Message);
             return RedirectToAction("index", "payment");
         }
-        catch(ValidatorException ex)
+        catch (ValidatorException ex)
         {
             ModelState.AddModelError(string.Empty, ex.Message);
             return RedirectToAction("index", "payment");

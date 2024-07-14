@@ -46,7 +46,6 @@
                             </td>
                             <td>
                                 <button type="button" class="btn btn-outline-warning m-2" data-bs-toggle="modal" data-bs-target="#pagesModal" data-pages='@System.Text.Json.JsonSerializer.Serialize(item.Pages)'>
-                                    @{var a = 1;}
                                     <span style="font-size: 10px;">
                                         <i class="bi bi-stickies"></i> Pages
                                     </span>
@@ -171,7 +170,6 @@
                 pageCard.innerHTML = `
                 <div class="card">
                     <img src="${imageUrl}" class="card-img-top" alt="${page.Title}">
-                    ${imageUrl}
                     <div class="card-body">
                         <h5 class="card-title">${page.Title}</h5>
                         <p class="card-text">${page.Text}</p>

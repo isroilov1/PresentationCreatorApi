@@ -64,7 +64,7 @@ builder.Services.AddScoped<IValidator<Page>, PageValidator>();
 // cors policy
 builder.Services.AddCors(options =>
 {
-    options.AddPolicy("AllowSpecificOrigin",
+    options.AddPolicy("AllowAll",
         builder =>
         {
             builder.AllowAnyOrigin()
@@ -75,7 +75,10 @@ builder.Services.AddCors(options =>
 
 var app = builder.Build();
 
-if (app.Environment.IsDevelopment())
+//app.Urls.Add("http://127.0.0.1:5000");
+//app.Urls.Add("http://192.168.0.67:5000");
+
+if (app.Environment.IsDevelopment() || app.Environment.IsProduction())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
@@ -94,6 +97,5 @@ app.UseAuthorization();
 app.MapControllers();
 
 app.UseMiddleware<ExceptionHandleMiddleware>();
-
 
 app.Run();

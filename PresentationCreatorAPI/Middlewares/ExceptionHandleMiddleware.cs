@@ -1,5 +1,7 @@
 ﻿using Newtonsoft.Json;
 using PresentationCreatorAPI.Application.Common.Exceptions;
+using PresentationCreatorAPI.Application.Interfaces;
+using System.IdentityModel.Tokens.Jwt;
 
 namespace PresentationCreatorAPI.Application.Middlewares;
 
