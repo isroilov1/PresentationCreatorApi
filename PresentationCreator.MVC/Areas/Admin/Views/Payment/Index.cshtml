@@ -23,7 +23,18 @@
                             <div class="transaction-description">@item.Caption</div>
                             <div class="transaction-date mt-1" style="font-size: 10px;">@item.CreatedAt</div>
                         </div>
-                        <div class="transaction-amount" style="color: green; width: 220px">+@item.Summa so'm</div>
+                        @if(item.Status == PaymentStatus.Rejected.ToString())
+                        {
+                            <div class="transaction-amount" style="color: red; width: 220px">@item.Summa so'm</div>
+                        }
+                        else if (item.Status == PaymentStatus.Expected.ToString())
+                        {
+                            <div class="transaction-amount" style="color: blue; width: 220px">@item.Summa so'm</div>
+                        }
+                        else
+                        {
+                            <div class="transaction-amount" style="color: green; width: 220px">+@item.Summa so'm</div>
+                        }
                         <div class="for-status-buttons d-flex justify-content-end">
                             @if (item.Status == PaymentStatus.Expected.ToString())
                             {

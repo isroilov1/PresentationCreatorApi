@@ -1,5 +1,4 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using PresentationCreatorAPI.Domain.Entites;
 using PresentationCreatorAPI.Enums;
 
 namespace PresentationCreatorAPI.Data;
