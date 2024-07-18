@@ -1,0 +1,12 @@
+version: '3.4'
+
+services:
+  presentationcreatorapi:
+    image: presentationcreatorapi
+    build:
+      context: .
+      dockerfile: PresentationCreatorAPI/Dockerfile
+    ports:
+      - "8080:80"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
