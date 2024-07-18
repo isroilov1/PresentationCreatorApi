@@ -36,6 +36,7 @@
                             <div class="transaction-amount" style="color: green; width: 220px">+@item.Summa so'm</div>
                         }
                         <div class="for-status-buttons d-flex justify-content-end">
+
                             @if (item.Status == PaymentStatus.Expected.ToString())
                             {
                                 <button class="btn btn-info rounded-pill m-2 payment-status-icon"><i class="bi bi-stopwatch-fill"></i></button>
