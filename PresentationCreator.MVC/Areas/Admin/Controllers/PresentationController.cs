@@ -27,7 +27,7 @@ public class PresentationController(IPresentationServise presentationServise,
 
         var client = _clientFactory.CreateClient();
         client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", accessToken);
-        var url = "https://localhost:7042/api/presentation/presentations";
+        var url = "https://localhost:5281/api/presentation/presentations";
 
         HttpResponseMessage response = await client.GetAsync(url);
 
