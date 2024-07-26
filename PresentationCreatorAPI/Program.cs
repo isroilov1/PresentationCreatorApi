@@ -29,7 +29,7 @@ builder.Services.AddStackExchangeRedisCache(options =>
 //DbContext
 builder.Services.AddDbContext<AppDbContext>(options =>
 {
-    options.UseSqlServer(builder.Configuration.GetConnectionString("LocalDb"));
+    options.UseNpgsql(builder.Configuration.GetConnectionString("LocalDb"));
     options.UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking);
 });
 
@@ -77,6 +77,7 @@ var app = builder.Build();
 
 //app.Urls.Add("http://127.0.0.1:5000");
 //app.Urls.Add("http://192.168.0.67:5000");
+
 
 if (app.Environment.IsDevelopment() || app.Environment.IsProduction())
 {

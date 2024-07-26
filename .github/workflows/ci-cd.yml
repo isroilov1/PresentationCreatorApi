@@ -1,0 +1,52 @@
+name: CI/CD Pipeline
+
+on:
+  push:
+    branches:
+      - isroilov  # Asosiy branchga push qilishda workflow ishga tushadi
+  pull_request:
+    branches:
+      - isroilov  # Asosiy branchga pull request qilganda workflow ishga tushadi
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Kodni tekshirib olish
+      uses: actions/checkout@v3
+
+    - name: .NET ni sozlash
+      uses: actions/setup-dotnet@v3
+      with:
+        dotnet-version: '8.0.6'  # Siz ishlatayotgan .NET versiyasini kiriting
+
+    - name: Qaramliklarni tiklash
+      run: dotnet restore PresentationCreatorAPI.sln
+
+    - name: Qurish
+      run: dotnet build PresentationCreatorAPI.sln --configuration Release
+
+    - name: Sinovlarni o'tkazish
+      run: dotnet test PresentationCreatorAPI.Test --configuration Release --no-build
+
+    - name: Nashr qilish
+      run: dotnet publish PresentationCreatorAPI.sln --configuration Release --output ./publish
+
+    - name: Arxivni yuklash
+      uses: actions/upload-artifact@v3
+      with:
+        name: published-artifact
+        path: ./publish
+
+  deploy:
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+    - name: Arxivni yuklab olish
+      uses: actions/download-artifact@v3
+      with:
+        name: published-artifact
+
+    - name: Serverga tarqatish
+      run: scp -r ./publish user@95.140.154.64:/root

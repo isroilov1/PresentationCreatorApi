@@ -19,7 +19,7 @@ builder.Services.AddSession(options =>
 });
 
 builder.Services.AddDbContext<AppDbContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("LocalDB")));
+    options.UseNpgsql(builder.Configuration.GetConnectionString("LocalDb")));
 
 //builder.Services.AddAuthentication(options =>
 //{

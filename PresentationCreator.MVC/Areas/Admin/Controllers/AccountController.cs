@@ -2,9 +2,6 @@
 using PresentationCreatorAPI.Application.Common.Exceptions;
 using PresentationCreatorAPI.Application.DTOs.UserDtos;
 using PresentationCreatorAPI.Application.Interfaces;
-using System.IdentityModel.Tokens.Jwt;
-using System.Net.Http;
-using System.Security.Authentication;
 
 namespace PresentationCreator.MVC.Areas.Admin.Controllers
 {

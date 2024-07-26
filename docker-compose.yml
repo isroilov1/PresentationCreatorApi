@@ -1,12 +1,50 @@
-version: '3.4'
-
+version: '3.8'
 services:
-  presentationcreatorapi:
-    image: presentationcreatorapi
+  backend-web-service:
+    image: nginx
+    volumes:
+      - ./docker/nginx/default.conf:/etc/nginx/nginx.conf depends_on:
+    depends_on:
+      - backend
+    ports:
+      - 80:80
+    networks:
+      net:
+        ipv4_address: 200.200.0.2
+  backend:
     build:
       context: .
-      dockerfile: PresentationCreatorAPI/Dockerfile
-    ports:
-      - "8080:80"
+      dockerfile: ./docker/dotnet/.dockerfile
+    networks:
+      net:
+        ipv4_address: 200.200.0.3
+  bd:
+    image: postgres
+    volumes:
+      - ./docker/bd/:/var/lib/postgresql/data/
     environment:
-      - ASPNETCORE_ENVIRONMENT=Development
+      POSTGRES_PASSWORD: Ismoiljon
+      POSTGRES_USER: root
+      POSTGRES_DB: PresentationDb
+      #POSTGRES_HOST: 0.0.0.0
+    ports:
+      - 5432:5432
+    networks:
+      net:
+        ipv4_address: 200.200.0.4
+adminer:
+  image: adminer
+  ports:
+    - 8080:8080
+  depends_on: 
+    - bd
+  networks:
+    net:
+      ipv4_address: 200.200.0.5
+networks:
+  net:
+    ipam:
+      driver: default
+      config:
+        - subnet: 200.200.0.0/8 
+          gateway: 200.200.0.1
